@@ -182,35 +182,29 @@ class CartController extends Controller{
         if(array_key_exists('toggle-checkboxes',$_SESSION['balance'])){
            //全选操作
           $list = $mod->where("userid={$_SESSION['userid']}")->select();
-          $this->assign('list',$list);
-          $this->display('Orders/balance');
         }else{
           //没有全选操作
           //将购物车的id号用逗号连接
           $checkItem = implode(',',$_SESSION['balance']['checkItem']);
           //查询选中的购物车信息
-         $list = $mod->where("id in({$checkItem})")->select();
-         $this->assign('list',$list);
-         // var_dump($list);
-         $this->display('Orders/balance');
+         $list = $mod->where("id in({$checkItem}) and userid={$_SESSION['userid']}")->select();
         }
+         $this->assign('list',$list);
+         $this->display('Orders/balance');
       }
 /********************************显示结算页面结束******************************************/
 
 /********************************立即购买开始*********************************************/
   public function nowBuy(){
-    //组装商品信息
-    //商品 单价 数量 小计 图片操作
     $vid = I("get.vid");
     if(!$vid || !isset($vid)){
         $this->error("请选择指定版本",U("Goods/index"));
         exit;
     }
 
-
     $condition = M('goods_version')->field('goods_id')->where("id={$vid}")->find();
 
-    $info = M('goods_info as i')->field('i.goods_name as gname,i.goods_id as goods_id,v.version as vname,v.price,v.store,i.sale,v.id as vid')->join("goods_version as v on i.id=v.goods_id")->where("v.id={$vid}")->find();
+    $info = M('goods_info as i')->field('i.goods_name as gname,i.id as goods_id,v.version as vname,v.price,v.store,i.sale,v.id as vid')->join("goods_version as v on i.id=v.goods_id")->where("v.id={$vid}")->find();
 
     $info['spic'] = M('goods_info as i')->join('goods_color as c on i.id=c.goods_id')->where("c.id={$_GET['cid']}")->find()['spic']; 
 
@@ -225,10 +219,10 @@ class CartController extends Controller{
 
     //用户id
     $info['userid'] = $_SESSION['userid'];
-
     //获取当前商品的库存数据
     $ver = M('goods_version');
     $ret = $ver->find($vid);
+   
     //判断购买数量是否合法
     if($info['gnum']>$ret['store']){
       $this->error("购买数量输入有误",U("Goods/product?version_id={$vid}"));
@@ -238,23 +232,12 @@ class CartController extends Controller{
     $ret['store'] -= $info['gnum'];
     $ver->where("id=".$vid)->save($ret);
 
-    //实例化购物车表
+    // //实例化购物车表
     $cart = M("cart");
+    // 
+    $condition = M('goods_version')->field('goods_id')->where("id={$vid}")->find();
 
-    //判断此商品是否在购物车里具有一模一样的
-    $resu = $cart->where("vid='{$info["vid"]}' AND cname='{$info["cname"]}' AND gname='{$info["gname"]}' AND userid={$_SESSION['userid']}")->find();
-
-       //执行添加
-        $_SESSION['cart'][$info['vid']]['price'] = $info['price'];
-        $_SESSION['cart'][$info['vid']]['gnum'] = $info['gnum'];
-        $_SESSION['cart'][$info['vid']]['vid'] = $info['vid'];
-        $_SESSION['cart'][$info['vid']]['spic'] = $info['spic'];
-        $_SESSION['cart'][$info['vid']]['gname'] = $info['gname'];
-        $res = $cart->add($info);
-        $cartId = $res;
-        $mod = M('Cart');
-        //判断是否是全选
-         //查询地址信息
+          //查询地址信息
          $address = M('Address');
          //默认地址
          $address_default = $address->where("status=1 AND uid={$_SESSION['userid']}")->find();
@@ -262,9 +245,7 @@ class CartController extends Controller{
          $address_nodefault = $address->where("status=0 AND uid={$_SESSION['userid']}")->select();
          $this->assign('address_default',$address_default);
          $this->assign('address_nodefault',$address_nodefault);
-          //没有全选操作
-          //查询选中的购物车信息
-         $list = $mod->where("id={$res}")->select();
+         $list[0] = $info;
          $this->assign('list',$list);
          // var_dump($list);
          $this->display('Orders/balance');        
