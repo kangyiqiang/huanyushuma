@@ -1,0 +1,541 @@
+<extend name="Public:public"/>
+<block name="title">{$title}</block>
+<block name="admin">
+  <script type="text/javascript" src="__PUBLIC__/Community/saved_resource(1)"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Community/jquery-1.6.4.js"></script> 
+  <link type="text/css" rel="stylesheet" href="__PUBLIC__/Community/index.beauty.css" source="combo"> 
+  <link type="text/css" rel="stylesheet" href="__PUBLIC__/Community/news-beauty1.css"> 
+  <link type="text/css" rel="stylesheet" href="__PUBLIC__/Community/saved_resource(2)" source="widget"> 
+  <script type="text/javascript" src="__PUBLIC__/Community/news-beauty2.js"></script> 
+  <style>
+.title .title_a {color: #000;}
+.freetrial .tit {height: 60px;background: url(http://img13.360buyimg.com/cms/jfs/t5614/300/3652001195/5296/99fbec35/5940b09eN73dbe9c3.png) no-repeat 0 0;}
+.atr_postarea .tit-topfirst{height: 60px;margin: 0 0 15px;background: url(http://img11.360buyimg.com/cms/jfs/t6391/79/522893890/5790/987722c9/5940b095N336f7824.png) no-repeat 0 0;text-indent: -9999px;}
+.info-box .info-msg {padding-top: 25px;}
+.info-box .info-msg .info-msg-top {display:none;}
+#container #info .mt {
+    border: 0
+}
+.info-box .info-msg .tit a {
+    color: #000;
+    font-weight: bold;
+}
+#container #info .mt h2 {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    line-height: 42px;
+    height: 42px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333
+}
+
+#container #info .mt h2:after {
+    content: "";
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 18px;
+    height: 17px;
+    margin-left: 9px;
+    margin-top: 3px;
+    position: relative;
+    top: 3px;
+    background: url(http://misc.360buyimg.com/user/club-circle/1.0.0/css/i/intelligent/club-icon.png) no-repeat 0 -522px;
+    _background-image: url(http://misc.360buyimg.com/user/club-circle/1.0.0/css/i/intelligent/club-icon8.png);
+    _position: static
+}
+
+#container #info .info-box {
+    padding-right: 10px;
+    border: 1px solid #ddd
+}
+
+#container #info .info-box .info-pic {
+    width: 380px;
+    height: 240px
+}
+
+#container #info .info-box .info-pic a {
+    width: 380px
+}
+
+#container #info .info-box .info-pic img {
+    width: 395px
+}
+
+#container #info .info-box .info-msg {
+    padding-top: 20px;
+    _padding-left: 0
+}
+
+#container #info .info-box .info-msg .tit {
+    color: #333;
+    font-weight: 400
+}
+
+#container #info .info-box .info-msg .tit span.sign {
+    background: #e6614f;
+    border-radius: 0
+}
+
+#container #info .info-box .info-msg .tit span.sign1 {
+    background-color: #ff955d
+}
+
+#container #info .info-box .info-msg .tit span.sign2 {
+    background-color: #7fd69a
+}
+
+#container #info .info-box .info-msg .tit span.sign3 {
+    background-color: #4cccde
+}
+
+#container #info .info-box .info-msg .tit span.sign4 {
+    background-color: #9a9edc
+}
+
+#container #info .info-box .info-msg .tit span.sign5 {
+    background-color: #7897ff
+}
+
+#container #info .info-box .info-msg .tit a:hover {
+    color: #333
+}
+
+#container #info .info-box .info-msg .op-btns {
+    text-align: right
+}
+
+#container #info .info-box .info-msg .op-btns .share .more {
+    background-image: url(http://misc.360buyimg.com/user/club-circle/1.0.0/css/i/intelligent/club-icon.png)
+}
+
+#container #info .info-box .info-msg .info-msg-top {
+    display: none
+}
+
+#container #info .info-box .info-msg .info-cont a {
+    color: #2791c6
+}
+
+#container #info .info-box .info-msg .tags {
+    color: #a8a8a8
+}
+
+#container #info .info-box .info-msg .tags a {
+    color: #33adbe
+}
+
+#container #info .info-box .info-left-arr {
+    left: 369px;
+    background: url(http://misc.360buyimg.com/user/club-circle/1.0.0/css/i/intelligent/curs.png) no-repeat 0 0
+}
+
+.info-box {
+    height: 240px;
+    margin-bottom: 20px;
+    background: #fff;
+    position: relative;
+    _position: static
+}
+
+.info-box .info-pic,.info-box .info-pic-link {
+    float: left;
+    width: 360px;
+    height: 240px;
+    z-index: 1;
+    _width: 320px
+}
+
+.info-box .info-pic img {
+    -webkit-transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    transition: transform .2s linear
+}
+
+.info-box .info-pic {
+    overflow: hidden;
+    position: relative;
+    _position: static
+}
+
+.info-box .info-pic a {
+    display: block;
+    width: 360px;
+    height: 340px;
+    overflow: hidden;
+    _width: 320px
+}
+
+.info-box .info-pic img {
+    -ms-interpolation-mode: bicubic
+}
+
+.info-box .info-pic img:hover {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateX(-10px)
+}
+
+.info-box .info-left-arr {
+    position: absolute;
+    left: 350px;
+    top: 0;
+    height: 240px;
+    width: 12px;
+    z-index: 2;
+    background: url(//misc.360buyimg.com/user/club-circle/1.0.0/css/i/club-info-arr.png);
+    _display: none
+}
+
+.info-box .info-left-arr b {
+    display: block;
+    width: 8px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 0
+}
+
+.info-box .info-msg {
+    padding-left: 10px;
+    padding-top: 20px;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    _position: static;
+    _padding-left: 0;
+    z-index: 2;
+    height: 220px;
+    background: #fff
+}
+
+.info-box .info-msg .info-msg-top {
+    position: absolute;
+    _display: none;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    background: url(//misc.360buyimg.com/user/club-circle/1.0.0/css/i/club-icon.png) 0 0
+}
+
+.info-box .info-msg .tit {
+    font-size: 18px;
+    font-family: "å¾®è½¯é›…é»‘";
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    overflow: hidden
+}
+
+.info-box .info-msg .tit span.sign {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: #e4393c;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 0 5px;
+    vertical-align: middle;
+    margin: -5px 5px 0 0;
+    font-weight: 400
+}
+
+.info-box .info-msg .tags {
+    position: relative;
+    _position: static;
+    margin-bottom: 10px
+}
+
+.info-box .info-msg .tags .extra-r {
+    position: absolute;
+    right: 0;
+    top: 0;
+    _position: static;
+    _display: inline;
+    _margin-left: 20px
+}
+
+.info-box .info-msg .info-cont {
+    color: #666
+}
+
+.info-box .info-msg .info-cont a {
+    color: #005ea7
+}
+
+.info-box .info-msg .info-cont p {
+    text-indent: 2em;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+.info-box .info-msg .op-btns {
+    margin-top: 20px;
+    *margin-top: 10px
+}
+
+.info-box .info-msg .op-btns .comment-nums,.info-box .info-msg .op-btns .share,.info-box .info-msg .op-btns .view-nums,.info-box .info-msg .op-btns .zan-nums {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #b0b0b0;
+    padding: 0 10px;
+    font-family: verdana;
+    margin-right: 10px;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.info-box .info-msg .op-btns .comment-nums b,.info-box .info-msg .op-btns .share b,.info-box .info-msg .op-btns .view-nums b,.info-box .info-msg .op-btns .zan-nums b {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    overflow: hidden;
+    margin: -2px 2px 0 0;
+    background-image: url(http://misc.360buyimg.com/user/club-circle/1.0.0/css/i/club-icon.png)
+}
+
+.info-box .info-msg .op-btns .view-nums b {
+    background-position: 0 -77px
+}
+
+.info-box .info-msg .op-btns .zan-nums b {
+    background-position: -16px -77px
+}
+
+.info-box .info-msg .op-btns .comment-nums b {
+    background-position: -16px -162px
+}
+
+.info-box .info-msg .op-btns .zan-nums:hover {
+    background: #fdeff0;
+    border-color: #e64649
+}
+
+.info-box .info-msg .op-btns .zan-nums:hover b {
+    background-position: 0 -161px
+}
+
+.info-box .info-msg .op-btns .share {
+    padding: 0 5px;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.info-box .info-msg .op-btns .share .more {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    overflow: hidden;
+    margin: -2px 2px 0 0;
+    background-image: url(//misc.360buyimg.com/user/club-circle/1.0.0/css/i/club-icon.png);
+    background-position: -32px -77px;
+    *margin-top: 4px
+}
+
+.info-box .info-msg .op-btns .share a {
+    display: none;
+    vertical-align: middle;
+    font-size: 12px;
+    padding-left: 17px;
+    line-height: 16px;
+    height: 16px;
+    margin: -2px 2px 0 0;
+    background-image: url(//misc.360buyimg.com/user/club-circle/1.0.0/css/i/share-icon.png);
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.info-box .info-msg .op-btns .share a.weibo {
+    background-position: 0 -1px
+}
+
+.info-box .info-msg .op-btns .share a.tqq {
+    background-position: -24px -1px
+}
+
+.info-box .info-msg .op-btns .share a.renren {
+    background-position: -48px -1px
+}
+
+.info-box .info-msg .op-btns .share a.kaixin {
+    background-position: -72px -1px
+}
+
+.info-box .info-msg .op-btns .share a.douban {
+    background-position: -96px -1px
+}
+
+.info-box .info-msg .op-btns .hover a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.info-box:hover .info-pic:before {
+    -webkit-animation: blinkAnim .4s ease-out backwards;
+    -moz-animation: blinkAnim .4s ease-out forwards
+}
+</style> 
+<div id="container"> 
+    <div class="w clearfix"> 
+        <div class="left"> 
+            <div id="info" class="atr_postarea"> 
+                <div class="tit-topfirst">
+                精华文章 
+                </div>
+                <if condition="$count gt 0">
+                    <foreach name="data" item="row">
+                        <div class="info-box"> 
+                            <div class="info-pic"> 
+                                <a clstag="poserpage|keycount|picnews|21513589" href="__MODULE__/Article/index/id/{$row.id}"> <img alt="" src="__ROOT__{$row.pic}"> </a> 
+                            </div> 
+                            <div class="info-left-arr">
+                            <b></b>
+                            </div> 
+                            <div class="info-msg"> 
+                                <div class="info-msg-top"></div> 
+                                <h4 class="tit">
+                                    <a clstag="poserpage|keycount|picnews|21513589" title="{$row.title}" target="_blank" href="__MODULE__/Article/index/id/{$row.id}"> {$row.title} </a> 
+                                </h4> 
+                                <div class="tags"> 
+                                    <div class="extra-r">
+                                    {$row.addtime|date="y-m-d",###} 
+                                    </div> 
+                                </div> 
+                                <div class="info-cont"> 
+                                <p> {$row.content}... <a clstag="poserpage|keycount|picnews|21513589" href="__MODULE__/Article/index/id/{$row.id}" target="_blank">阅读全文</a> </p> 
+                                </div> 
+                                <div class="op-btns">  
+                                    <a clstag="poserpage|keycount|picnews|21513589" class="comment-nums" title="『一柄在手，就能连尽所有？』—谜石三模游戏手柄 开箱上手" target="_blank" href="__MODULE__/Article/index/id/{$row.id}"><b></b>{$row.comment}</a> 
+                                    <div class="share"> 
+                                        <span class="more"></span> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div>
+                    </foreach>
+                <else /><h3>暂无数据</h3>
+                </if>
+    <!-- 文章结束 -->
+                <div id="page-more" class="page-more">
+                {$pageinfo}
+                </div> 
+            </div> 
+        </div> 
+    <div class="right"> 
+     <div class="wrapper-info">
+        <if condition="$_SESSION['islogin'] eq 2">
+            <if condition="$flag eq 1">
+                <div class="user-panel m" id="user-panel" data-siteid="20000121"> 
+                    <div class="user-info"> 
+                        <div class="user-img-unlogoin" style="background: url({$user['pic']}) no-repeat;background-size: 80px;"> 
+                        </div> 
+                        <div class="user-msg"> 
+                            <div class="user-unlogin-txt" style="font-size: 14px;">
+                                {$user['name']}
+                            </div> 
+                        </div> 
+                        <div class="user-info-line"></div> 
+                    </div> 
+                    <div class="login-ops"> 
+                        <a class="login-btn" target="_blank" href="__MODULE__/User/index">查看个人中心</a> 
+                    </div> 
+                </div>
+            <else /><div class="user-panel m" id="user-panel" data-siteid="20000121"> 
+                    <div class="user-info"> 
+                        <div class="user-img-unlogoin"> 
+                            <b></b> 
+                        </div> 
+                        <div class="user-msg"> 
+                            <div class="user-unlogin-txt" style="font-size: 14px;">
+                                {$_SESSION['username']}
+                            </div> 
+                        </div> 
+                        <div class="user-info-line"></div> 
+                    </div> 
+                    <div class="login-ops"> 
+                        <a class="login-btn" target="_blank" href="__MODULE__/User/index">查看个人中心</a> 
+                    </div> 
+                </div>
+            </if>
+            <else /><div class="user-panel m" id="user-panel" data-siteid="20000121"> 
+                <div class="user-info"> 
+                    <div class="user-img-unlogoin"> 
+                        <b></b> 
+                    </div> 
+                    <div class="user-msg"> 
+                        <div class="user-unlogin-txt">
+                            您还没有登录哦~ 
+                        </div> 
+                    </div> 
+                    <div class="user-info-line"></div> 
+                </div> 
+                <div class="login-ops"> 
+                    <a class="login-btn" href="__MODULE__/Login/login?returnurl=<?php echo base64_encode($_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']); ?>">登录查看我的信息</a> 
+                </div> 
+            </div>
+        </if>
+     </div> 
+     <a clstag="poserpage|keycount|right04|20000956" href="javascript:void(0)" target="_blank" title="寰宇数码" class="join"> <img alt="寰宇数码" src="__PUBLIC__/Community/59522ce8N97d125fa.jpg"> </a>  
+    </div> 
+    </div> 
+</div> 
+  <script type="text/javascript" src="__PUBLIC__/Community/saved_resource(3)"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Community/wl.js"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Community/index.beauty.js" source="widget"></script> 
+  <script type="text/javascript">
+    $(function() {
+    seajs.use(["jdf/1.0.0/ui/switchable/1.0.0/switchable"], function() {
+        var b = pageConfig.wideVersion && pageConfig.compatible;
+        var c = b ? 5 : 4;
+        $("#store").switchable({
+            type: "slider",
+            hasPage: !0,
+            mainClass: "store-item",
+            contentClass: "store-panel",
+            bodyClass: "store-cont",
+            prevClass: "prev",
+            nextClass: "next",
+            autoLock: !0,
+            width: 185,
+            step: 1,
+            visible: c,
+            speed: 720
+        }),
+        $("#store .store-item").length <= c && $("#store .prev, #store .next").hide()
+    })
+});
+</script> 
+  <script>
+        $("img").each(function(i,dom){
+            if(dom.src.indexOf("360buyimg.com") > 0){
+                dom.src = dom.src.replace("http:","");
+            }
+        });
+  </script>   
+<script src="__PUBLIC__/Community/td.js"></script><script src="__PUBLIC__/Community/y.html"></script><script src="__PUBLIC__/Community/r.html"></script></body></html>
+</block>

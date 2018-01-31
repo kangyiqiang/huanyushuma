@@ -1,0 +1,266 @@
+<extend name="Public:public" /> 
+  <block name="title">
+    商品列表 
+  </block> 
+  <block name="admin"> 
+   <script type="text/javascript" async="" src="__PUBLIC__/Goods/conversion_async.js"></script> 
+   <script async="" src="__PUBLIC__/Goods/gtm.js"></script> 
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+   <link rel="stylesheet" type="text/css" href="__PUBLIC__/Goods/list.css" media="all" /> 
+   <div class="w" id="J_crumbsBar"> 
+    <div class="crumbs-bar clearfix"> 
+     <div class="crumbs-nav"> 
+      <div class="crumbs-nav-main clearfix"> 
+       <div class="crumbs-nav-item one-level"> 
+        <a href="https://shouji.jd.com/" class="crumbs-link"></a> 
+       </div>
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="w" id="J_searchWrap"> 
+    <div class="container" id="J_container"> 
+     <div class="selector" id="J_selector"> 
+      <!-- 商品筛选 --> 
+      <div class="s-title" clstag="thirdtype|keycount|thirdtype|select"> 
+       <h3><b>{$val}</b><em>商品筛选</em></h3> 
+       <div class="st-ext">
+        共&nbsp;
+        <span>{$num}</span>个商品 
+       </div> 
+      </div> 
+      <div class="J_selectorLine s-line J_selectorFold">
+      <div class="sl-wrap">
+        <div class="sl-key">
+          <!-- <span>屏幕尺寸：</span> -->
+        </div>
+        <div class="sl-value">
+          <div class="sl-v-list">
+           <!--  <ul class="J_valueList">
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F64693&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_5.6英寸及以上" rel="nofollow"><i></i>5.6英寸及以上                                    </a>
+              </li>
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F30816&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_5.5-5.1英寸" rel="nofollow"><i></i>5.5-5.1英寸                                    </a>
+              </li>
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F30988&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_5.0-4.6英寸" rel="nofollow"><i></i>5.0-4.6英寸                                    </a>
+              </li>
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F30815&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_4.5-3.1英寸" rel="nofollow"><i></i>4.5-3.1英寸                                    </a>
+              </li>
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F11&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_其他" rel="nofollow"><i></i>其他                                    </a>
+              </li>
+              <li>
+                <a href="/list.html?cat=9987,653,655&amp;ev=244%5F30814&amp;sort=sort_dredisprice_asc&amp;trans=1&amp;JL=3_屏幕尺寸_3.0英寸及以下" rel="nofollow"><i></i>3.0英寸及以下                                    </a>
+              </li>
+            </ul> -->
+          </div>           
+        </div>
+      </div>
+    </div>
+     <div id="J_main" class="g-main2"> 
+      <div class="m-list"> 
+       <div class="ml-wrap"> 
+        <div class="filter" id="J_filter"> 
+        <div class="f-line top"> 
+          <div class="f-sort"> 
+           <if condition="$_GET eq null">
+           <a href="__MODULE__/Goods/index?type={$_GET['type']}&search={$_GET['search']}" class="curr">综合排序<i></i></a> 
+          <else/> <a href="__MODULE__/Goods/index?type={$_GET['type']}&search={$_GET['search']}" >综合排序<i></i></a> 
+           </if>
+           <if condition="$_GET['weight'] eq 'weight'">
+           <a href="__MODULE__/Goods/index/weight/weight?type={$_GET['type']}&search={$_GET['search']}" class="curr">重量<i></i></a> 
+           <else/><a href="__MODULE__/Goods/index/weight/weight?type={$_GET['type']}&search={$_GET['search']}">重量<i></i></a> 
+           </if>
+
+          <if condition="$_GET['price'] eq 'price'">
+           <a  href="__MODULE__/Goods/index/price/price?type={$_GET['type']}&search={$_GET['search']}" class="curr">价格<i></i></a>
+           <else/> <a  class="price" href="__MODULE__/Goods/index/price/price?type={$_GET['type']}&search={$_GET['search']}">价格<i></i></a>
+           </if> 
+
+            <if condition="$_GET['time'] eq 'time'">
+           <a  href="__MODULE__/Goods/index/time/time?type={$_GET['type']}&search={$_GET['search']}" id="time" class="curr">上架时间<i></i></a> 
+           <else/> <a  href="__MODULE__/Goods/index/time/time?type={$_GET['type']}&search={$_GET['search']}" id="time">上架时间<i></i></a> 
+           </if> 
+           
+          </div>
+
+          <div class="f-pager" id="J_topPage"> 
+           <span class="fp-text"> <b>1</b><em>/</em><i>{$totalPages}</i> </span> 
+           <a class="fp-prev " href=""> &lt; </a> 
+           <a class="fp-next" href=""> &gt; </a> 
+          </div> 
+          <span class="clr"></span> 
+         </div>  
+        </div> 
+        <div class="clr"></div> 
+        <div id="plist" class="goods-list-v2 J-goods-list gl-type-3 "> 
+         <ul class="gl-warp clearfix "> 
+
+      <!-- 遍历 -->
+     <volist name="list" id="vo" empty="暂时没有数据">       
+      <li class="gl-item"> 
+           <div class="gl-i-wrap j-sku-item" data-sku="3652063" venderid="1000000904" jdzy_shop_id="1000000904" data-sku_temp="3652063" data-i="1" data-soldoversea="7"> 
+            <div class="p-img" > 
+             <a target="_blank" href="__MODULE__/Goods/product/version_id/{$vo.version_id}" src="666"> 
+                  <div></div>
+
+                   <volist name="vo.spic" id="spic" empty="暂时没有数据" >
+                        <img width="220" height="220" data-img="1" src="__PUBLIC__/Uploads/goods_spic/{$spic}" title="{$vo.sale}" /> 
+                  </volist>
+              </a> 
+            </div> 
+            <div class="p-scroll"> 
+             <span class="ps-prev"> &lt; </span> 
+             <span class="ps-next"> &gt; </span> 
+             <div class="ps-wrap"> 
+              <ul class="ps-main"> 
+              <!-- 缩略图 -->
+             <volist name="vo.spic" id="spic" empty="暂时没有数据" >
+               <li class="ps-item" ids="555" spic="__PUBLIC__/Uploads/goods_spic/{$spic}"> <a title="" href="javascript:void(0);"><img  data-sku="3652063" width="25" height="25" class="loading-style2" src="__PUBLIC__/Uploads/goods_spic/{$spic}" /></a></li> 
+            </volist>
+             </ul> 
+            </div> 
+            <div class="p-price"> 
+             <strong class="J_price"><em>&yen;</em><i>{$vo.price}</i></strong> 
+             <strong class="J_price js_ys" style="display:none"><em>&yen;</em><i>1299.00</i></strong> 
+            </div> 
+            <div class="p-name p-name-type3"> 
+             <a target="_blank" title="{$vo.goods_name}" href="__MODULE__/Goods/product/version_id/{$vo.version_id}"> <em>{$vo.goods_name}</em> <i class="promo-words">{$vo.goods_name}</i> </a>
+              
+            <!-- 版本 -->
+            <span class="p-attribute">
+                <volist name="vo.version" id="row">
+                  <a title="{$row.version}" href="__MODULE__/Goods/product/version_id/{$vo.version_id}" target="_blank" class="attr"><b>{$row.version}</b></a>
+                </volist>
+             </span>
+            </div> 
+
+   
+            <div class="p-focus">
+             <a class="J_focus" data-sku="3652063" href="javascript:;"><i></i>关注</a>
+            </div> 
+            <div class="p-shop" data-score="4" data-reputation="0" data-shopid="" data-shop_name="荣耀官方旗舰店" data-done="1">
+             <span><a href="javascript:void(0);" title="荣耀官方旗舰店">欢迎来到寰宇数码自营店</a><em class="im-offline" title="供应商客服不在线，可留言" data-shopid="1000000904" venderid="1000000904"></em></span>
+            </div> 
+            <div class="p-icons J-pro-icons">
+             <i id="js-jdzy" class="goods-icons J-picon-tips" data-tips="&lt;div class=&quot;picon-tips&quot;&gt;&lt;i class=&quot;goods-icons&quot;&gt;自营&lt;/i&gt;&lt;em&gt;京东自营，品质保障&lt;/em&gt;&lt;/div&gt;">自营</i>
+             <i class="icons J-picon-tips" data-tips="&lt;div class=&quot;picon-tips&quot;&gt;&lt;i class=&quot;goods-icons&quot;&gt;满减&lt;/i&gt;&lt;/div&gt;&lt;em&gt;满减&lt;/em&gt;">满减</i> 
+            </div> 
+            <div class="p-stock" data-isdeliveryable="5" style="display: none" data-stock_v="1" data-stock_h="33"></div> 
+           </div> </li>
+     </volist>
+      <script type="text/javascript">
+          $('.ps-main li:first-child').children("a").addClass("curr");
+          $('.ps-main').children('*').mouseover(function(){
+                $(this).children("a").addClass("curr");
+                $(this).nextAll().children("a").removeClass("curr");
+                $(this).prevAll().children("a").removeClass("curr");
+                var img=$(this).attr('spic'); 
+                $(this).parents('.p-scroll').siblings('.p-img').find('img').attr('src',img);
+
+          })
+       </script>
+
+
+         </ul> 
+         <div class="clr"></div> 
+        </div> 
+        <div class="page clearfix"> 
+         <div class="p-wrap" id="J_bottomPage"> 
+        {$pageinfo} 
+
+        <script type="text/javascript">
+            //当前页
+            var p = $('.current').html()
+            if(p==null){p=1}
+            $('.fp-text>b').html(p);
+            // 总页数
+            var s = $('.fp-text').find('i').html();
+            
+            //下一页
+            var n = $('.num').attr('href');
+            //上一页
+            var u = $('.num').attr('href');
+            $('.fp-next').attr('href',n);
+            $('.fp-prev').attr('href',u);
+           
+            if(p==1){
+              $('.fp-prev').addClass('disabled');
+              $('.fp-prev').attr('href','javascript:void(0)');
+            }
+
+            if(s==p){
+              $('.fp-next').addClass('disabled');
+              $('.fp-next').attr('href','javascript:void(0)');
+            }
+            
+        </script>
+         <!--  <span class="p-num"> <a class="pn-prev disabled" href=""><i>&lt;</i><em>上一页</em></a> <a href="" class="curr">1</a> <b class="pn-break hide"> …</b> <a href="" class="hide ">-2</a> <a href="" class="hide ">-1</a> <a href="" class="hide ">0</a> <a href="" class="hide curr">1</a> <a href=";ms=6" class=" ">2</a> <a href="" class=" ">3</a> <b class="pn-break "> …</b> <a href="" class="">146</a> <a class="pn-next" href="">下一页<i>&gt;</i></a> </span> 
+          <span class="p-skip"> <em>共<b>146</b>页&nbsp;&nbsp;到第</em> <input class="input-txt" id="page_jump_num" maxlength="4" value="1" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" onkeydown="javascript:if(event.keyCode==13){page_jump();return false;}" /> <em>页</em> <a class="btn btn-default" href="javascript:page_jump();">确定</a> </span>  -->
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="m-aside"> 
+       <div class="aside-bar"> 
+        <div class="ab-goods u-ad-wrap" id="J_spread_goods" style="display: block;"> 
+         <span class="u-ad"></span> 
+         <div class="mt"> 
+          <h3>商品精选</h3> 
+         </div> 
+         <div class="mc"> 
+          <ul data="type=&quot;47&quot;" class="clearfix">
+          <volist name="jinp" id="val"> 
+           <li data-sku="11" onclick="log(&quot;search&quot;, &quot;list&quot;, &quot;https://list.jd.com/list.html?cat=9987,653,655&quot;, &quot;655&quot;, &quot;8&quot;, &quot;2&quot;, &quot;4406411&quot;, &quot;2&quot;, &quot;1&quot;, &quot;A&quot;)"> 
+            <div class="p-img"> 
+             <a target="_blank" href="__MODULE__/Goods/product/version_id/{$val['version_id']}" title="{$val['goods_name']}"> 
+                <img width="190" height="190" data-img="1" src="__PUBLIC__/Uploads/goods_spic/{$val['spic'][0]}" class="err-product" / 
+            </a> 
+            </div> 
+            <div class="p-name"> 
+             <a target="_blank" href="" title="{$val['goods_name']}"> <em>{$val['goods_name']}</em> </a> 
+            </div> 
+            <div class="p-price"> 
+             <strong class="price"><span class="J-p-4406411">￥{$val['price']}.00</span></strong> 
+             <span class="p-ico J-pt-4406411"><i class="goods-icons" title="购买本商品送赠品">赠品</i></span> 
+            </div> 
+            <div class="p-review">
+              {$val['sale']}
+            </div> 
+            </li> 
+            </volist>
+          </ul> 
+         </div>
+        </div> 
+        <div class="ab-goods" id="alsobuy"></div> 
+        <div class="ab-pic" id="J_promWrap_1"></div> 
+        <div class="ab-fa-img" id="J-book-fa-ad"></div> 
+       </div> 
+      </div> 
+      <div class="clr"></div> 
+     </div> 
+    </div> 
+    <span class="clr"></span> 
+    <div class="Tip360 w260" id="Collect_Tip"></div> 
+   </div> 
+   <script type="text/javascript" src="__PUBLIC__/Goods/saved_resource(3)"></script> 
+   <script type="text/javascript">
+                      seajs.use('product/list/1.0.5/js/main.js');
+                  </script> 
+   <script type="text/javascript" charset="GBK" src="__PUBLIC__/Goods/loadFa.js"></script> 
+   <!--footer start--> 
+   <!--猜你喜欢和最近预览--> 
+   <div class="w">
+    <div class="m bottom-ad" id="J_promWrap_94">
+     <a target="_blank" href="http://ccc-x.jd.com/dsp/nc?ext=aHR0cHM6Ly9pdGVtLmpkLmNvbS8yNDYwMDc1Lmh0bWw&amp;log=EmeAZtrHGq3hJD51Upa8Pa7RgsRZGA_t3FrQ5PJZ3ZvxJevmALHqF9v_MqjKEcWfVWMnW3hkbL3pyc4ix119slphQ6WdxcoAnWy0GtFeYFIuaExppX5h0ehM6bxyES5TlOVFr410H_K8HWiNMccDtK3LydvGUaqdFWvBfrR8gOBO4GJ6rpSopD6nMXm4rJT9Fyyrn0OwdD6Ep50xM8dFJL2uKna79FctCzv4gWsf7Vyz6z7oGWs-3qNj7dUnlhrJZOg6YVymbqzjb8PQPpIMeta4-BWq9GHJI5qkfLPhClw7kQuRPfeDb10vio-YTGklbtBCggZzLItgeEOIDi3fQ0QDxgl7JBJm7yWQL2shDRzwuaIZaQHNo52_3pQ3VAm8&amp;v=404" data-sku="1" onclick="log(&quot;search&quot;, &quot;list&quot;, &quot;https://list.jd.com/list.html?cat=9987,653,655&quot;, &quot;655&quot;, &quot;9&quot;, &quot;4&quot;, &quot;A&quot;)"><img width="1210" src="__PUBLIC__/Goods/5943751cN1517a055.jpg" /></a>
+    </div>
+   </div> 
+   <div id="GLOBAL_FOOTER" data-lazyload-fn="0"></div> 
+   <!--footer end--> 
+   <img width="1" height="1" src="__PUBLIC__/Goods/pre" /> 
+   <script src="__PUBLIC__/Goods/td.js"></script>
+   <script src="__PUBLIC__/Goods/y.html"></script> 
+  </block>

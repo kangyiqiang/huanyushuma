@@ -1,0 +1,166 @@
+@charset "UTF-8";
+body {
+  z-index: 1; }
+
+.recommend_wrap_span {
+  display: block;
+  width: 120px;
+  text-align: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px; }
+
+.over_ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.clear, .compare_list_wrap .list_nav:after {
+  clear: both;
+  content: '\20';
+  display: block; }
+
+.compare_list_wrap {
+  position: fixed;
+  bottom: -211px;
+  left: 50%;
+  margin-left: -595px;
+  z-index: 98;
+  background: #fff;
+  width: 1190px;
+  border: 1px solid #e6e6e6;
+  　　-webkit-box-shadow: 0 1px 3px 0 #e6e6e6;
+  　　-moz-box-shadow: 0 1px 3px 0 #e6e6e6;
+  　　-ms-box-shadow: 0 1px 3px 0 #e6e6e6;
+  box-shadow: 0 1px 3px 0 #e6e6e6; }
+  .compare_list_wrap .tip {
+    height: 30px;
+    line-height: 30px;
+    background: #ffeadc;
+    border: 1px solid #ff6600;
+    color: #ff6600;
+    font-size: 12px;
+    text-align: center; }
+  .compare_list_wrap .list_nav {
+    font-size: 0;
+    line-height: 1;
+    height: 46px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 10px; }
+    .compare_list_wrap .list_nav .nav_item {
+      float: left;
+      font-size: 16px;
+      line-height: 1;
+      margin: 0 20px;
+      cursor: pointer;
+      color: #333;
+      padding: 15px 0;
+      border-bottom: none; }
+    .compare_list_wrap .list_nav .hide_item {
+      float: right;
+      font-size: 12px; }
+  .compare_list_wrap .compare_list .list_item {
+    float: left;
+    padding: 25px 20px 25px 18px;
+    border-right: 1px solid #e6e6e6;
+    width: 234px; }
+    .compare_list_wrap .compare_list .list_item .item_img {
+      display: inline-block;
+      width: 80px;
+      height: 80px; }
+    .compare_list_wrap .compare_list .list_item .right {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 12px;
+      width: 140px;
+      *display: inline;
+      *zoom: 1; }
+    .compare_list_wrap .compare_list .list_item .item_name {
+      color: #333;
+      margin-bottom: 15px;
+      width: 140px;
+      height: 34px;
+      overflow: hidden; }
+    .compare_list_wrap .compare_list .list_item .item_price {
+      color: #ff6600;
+      font-weight: bold;
+      float: left; }
+    .compare_list_wrap .compare_list .list_item .item_delete {
+      float: right;
+      color: #ff6600;
+      font-weight: bold;
+      cursor: pointer; }
+    .compare_list_wrap .compare_list .list_item .left_text {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+      font-size: 42px;
+      color: #ccc;
+      text-align: center;
+      line-height: 80px;
+      *display: inline;
+      *zoom: 1; }
+    .compare_list_wrap .compare_list .list_item .right_text {
+      display: inline-block;
+      font-size: 12px;
+      color: #999;
+      width: 140px;
+      height: 80px;
+      vertical-align: top;
+      *display: inline;
+      *zoom: 1; }
+  .compare_list_wrap .compare_list .item_action {
+    width: 60px;
+    border-right: none;
+    font-size: 12px; }
+    .compare_list_wrap .compare_list .item_action .compare_btn {
+      display: block;
+      width: 54px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      background: #ff6600;
+      color: #fff;
+      margin-bottom: 18px;
+      border-radius: 2px;
+      cursor: pointer; }
+      .compare_list_wrap .compare_list .item_action .compare_btn a {
+        color: #fff; }
+    .compare_list_wrap .compare_list .item_action .clear_text {
+      color: #333;
+      cursor: pointer; }
+  .compare_list_wrap .compare_list .no_compare .compare_btn {
+    background: #999;
+    color: #f9f9f9; }
+
+.fade {
+  bottom: 0;
+  　　-webkit-transform: translateY(0);
+  　　-moz-transform: translateY(0);
+  　　-ms-transform: translateY(0);
+  transform: translateY(0);
+  　　-webkit-transition: all 0.5s ease;
+  　　-moz-transition: all 0.5s ease;
+  　　-ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.contrast_show {
+  bottom: -128px;
+  　　-webkit-transform: translateY(0);
+  　　-moz-transform: translateY(0);
+  　　-ms-transform: translateY(0);
+  transform: translateY(0);
+  　　-webkit-transition: all 0.5s ease;
+  　　-moz-transition: all 0.5s ease;
+  　　-ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .contrast_show .list_nav {
+    border-bottom: none; }
+
+/*# sourceMappingURL=compare_list_2.css.map */

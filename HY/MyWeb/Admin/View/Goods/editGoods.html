@@ -1,0 +1,126 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icol-application-edit"></i> 商品修改</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__URL__/update" method="post">
+                            <div class="mws-form-inline">
+                                <div class="mws-form-row">
+                                     <a type="button" href="__URL__/editInfo/id/{$info['id']}" class="btn info lable btn-success"><i class="icon-pacman"></i>　基本信息</a>
+                                     <div class="mws-form-item">
+                                       <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" >                                  
+                                             <tr  align="center"> 
+                                              <td width="300px"><b>商品名称</b></td>
+                                              <td align="left" class="text">{$info['goods_name']}</td>
+                                             </tr>
+                                             <tr  align="center"> 
+                                              <td width="300px"><b>商品类别</b></td>
+                                              <td align="left" class="text">
+                                                  <select class="large" name="type_id" style="border:none">
+                                                  <foreach name="list1" item="row">
+                                                   <option value="{$row['id']}"{$info['type_id']==$row['id']?'selected':''}  disabled>{$row['name']}</option>
+                                                  </foreach> 
+                                                  </select>
+                                              </td>
+                                             </tr>
+                                              <tr align="center"> 
+                                              <th>商品重量</th>
+                                              <td align="left" class="text">{$info['weight']}kg</td>
+                                             </tr>
+                                              <tr  align="center"> 
+                                              <th>增值业务</th>
+                                              <td align="left">{$info['add_server']}</td>
+                                             </tr>
+                                              <tr  align="center"> 
+                                              <th>商品促销</th>
+                                              <td align="left">{$info['sale']}</td>
+                                             </tr>
+                                             <tr  align="center"> 
+                                              <th>商品描述</th>
+                                              <td align="left">{$info['descr']}</td>
+                                             </tr>
+                                             <tr  align="center"> 
+                                              <th>商品状态</th>
+                                              <td align="left">{$info['status']==1?'上架':'下架'}</td>
+                                             </tr>
+                                       </table>
+                                       </div>
+                                </div>
+
+                                <div class="mws-form-row">
+                                    <a href="__URL__/editVersion/id/{$info['id']}" type="button" class="btn lable btn-success"><i class="icon-pacman"></i>　版本/价格/库存</a>
+                                      <div class="mws-form-item">
+                                       <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+                                        <thead> 
+                                         <tr role="row">
+                                         <!--  <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 300px;" aria-label="Browser: activate to sort column ascending">版本</th>
+                                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">价格</th>
+                                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">库存</th> -->
+                                         </tr> 
+                                        </thead> 
+                                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                          <if condition="!empty($version)">
+                                            <foreach name="version" item="row">
+                                             <tr  align="center"> 
+                                              <td width="300px" class=" ">{$row['version']}</td> 
+                                              <td class=" " align="left">￥&nbsp;{$row['price']}</td> 
+                                              <td class=" " align="left">{$row['store']}件</td>                                      
+                                           </tr>
+                                           </foreach>
+                                          <else />
+                                              <td colspan="7">没有数据</td> 
+                                          </if>
+                                        </tbody>
+                                       </table>
+                                       </div>
+                                </div>
+                               <div class="mws-form-row">
+                                     <a type="button" href="__URL__/editBpic/id/{$info['id']}" class="btn info lable btn-success"><i class="icon-pacman"></i>商品详情图</a>
+                                      <div class="mws-form-item">
+                                       <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" >  
+                                         <tr  align="center">
+                                         <td width="300px">商品详情图</td> 
+                                          <td align="left">
+                                          <foreach name="info['pic']" item="rows">
+                                          <img src="__PUBLIC__/Uploads/goods_bpic/{$rows}" style="width:100px;height:100px;border:5px solid #ccc"></foreach> 
+                                          </td>
+                                          </tr>
+                                       </table> 
+                                       </div>       
+                                </div>  
+                               <div class="mws-form-row">
+                                      <a type="button" href="__URL__/editColor/id/{$info['id']}" class="btn info lable btn-success"><i class="icon-pacman"></i>颜色/缩略图</a>
+                                    <div class="mws-form-item">
+                                       <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" >  
+                                          <if condition="!empty($color)">
+                                            <foreach name="color" item="row">
+                                             <tr  align="center"> 
+                                              <td width="300px">{$row['color_name']}</td>
+                                              <td align="left">
+                                              <foreach name="row['pic']" item="rows">
+                                                <img src="__PUBLIC__/Uploads/goods_spic/{$rows}" style="width:50px;height:58px;border:2px solid red">&nbsp;&nbsp;&nbsp;
+                                              </foreach>
+                                              </td>
+                                             </tr>
+                                           </foreach>
+                                          <else />
+                                              <td colspan="7">暂无数据</td> 
+                                          </if>
+                                       </table> 
+                                       </div>       
+                                </div>  
+                            </div>
+
+                          <div class="mws-button-row">
+                                <!-- <input value="修改" class="btn btn-success" type="submit"> -->
+                                <!-- <input value="重置" class="btn " type="reset"> -->
+                            </div>
+                        </form>
+                    </div>      
+                </div>
+</block>
+<block name="title">
+        后台用户添加操作
+</block>

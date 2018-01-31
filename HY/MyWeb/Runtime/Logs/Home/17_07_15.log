@@ -1,0 +1,1537 @@
+[ 2017-07-15T14:05:16+08:00 ] ::1 /jingdong/TP/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=0 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=8 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=51 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=52 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=53 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=54 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=55 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=56 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=9 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=57 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=58 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=59 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=60 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=61 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=10 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=44 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=46 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=45 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=47 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=48 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=50 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=30 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=62 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=63 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=64 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=66 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=68 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=31 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=69 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=70 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=71 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=72 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=73 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=2 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=11 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=74 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=75 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=76 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=77 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=12 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=78 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=79 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=80 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=81 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=82 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=83 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=86 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=85 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=13 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=87 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=88 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=89 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=90 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=14 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=91 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=92 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=93 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=112 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=113 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=114 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=115 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=4 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=15 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=96 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=97 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=98 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=99 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=100 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=16 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=101 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=102 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=103 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=104 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=94 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=105 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=106 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=107 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=95 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=108 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=109 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=110 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=111 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=5 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=17 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=121 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=122 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=123 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=124 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=19 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=125 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=126 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=127 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=128 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=129 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=116 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=117 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=118 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=119 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=120 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=6 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=20 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=130 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=131 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=21 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=133 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=134 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=135 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=136 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM goods_info as i [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as i' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM goods_info as i
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (51,52,53,54,55,56,57,58,59,60,61,44,46,45,47,48,50,62,63,64,66,68,69,70,71,72,73) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.001000s ]
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (74,75,76,77,78,79,80,81,83,86,85) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.001000s ]
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (87,88,89,90,91,92,93,113,114,115) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 30 行.
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 30 行.
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (121,122,123,124,125,126,127,128,129,117,118,119,120) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.000000s ]
+SQL: SELECT i.goods_name as gname,v.price,c.spic,i.type_id as tid,v.id as vid FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( type_id in (130,131,133,134,135,136) and status=1 ) GROUP BY v.goods_id LIMIT 4   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `articles` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `articles` WHERE ( type=1 ) ORDER BY addtime LIMIT 3   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `articles` WHERE ( type=2 ) ORDER BY addtime LIMIT 3   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `articles` WHERE ( type=3 ) ORDER BY addtime LIMIT 3   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `articles` WHERE ( type=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `articles` WHERE ( type=2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `articles` WHERE ( type=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM articles a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM articles a
+SQL: SELECT a.id,a.title,a.type,count(p.art_id) zan FROM articles a LEFT JOIN zan p ON p.art_id=a.id  GROUP BY p.art_id ORDER BY zan desc LIMIT 4   [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `lunbo` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `lunbo`  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lunbo` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `advert` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `advert`  [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `advert` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=0 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=8 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=51 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=52 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=53 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=54 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=55 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=56 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=9 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=57 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=58 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=59 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=60 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=61 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=10 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=44 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=46 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=45 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=47 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=48 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=50 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=30 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=62 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=63 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=64 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=66 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=68 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=31 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=69 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=70 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=71 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=72 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=73 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=2 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=11 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=74 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=75 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=76 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=77 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=12 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=78 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=79 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=80 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=81 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=82 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=83 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=86 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=85 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=3 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=13 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=87 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=88 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=89 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=90 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=14 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=91 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=92 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=93 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=112 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=113 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=114 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=115 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=4 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=15 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=96 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=97 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=98 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=99 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=100 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=16 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=101 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=102 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=103 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=104 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=94 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=105 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=106 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=107 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=95 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=108 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=109 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=110 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=111 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=5 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=17 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=121 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=122 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=123 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=124 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=19 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=125 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=126 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=127 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=128 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=129 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=116 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=117 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=118 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=119 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=120 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=6 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=20 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=130 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=131 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=21 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=133 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=134 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=135 )  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+SQL: SELECT * FROM `type` WHERE ( pid=136 )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 89 行.
+NOTIC: [8] Undefined variable: data E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\IndexController.class.php 第 93 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 337 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 345 行.
+NOTIC: [8] Undefined index: gname E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 623 行.
+NOTIC: [8] Undefined index: gname E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 636 行.
+NOTIC: [8] Undefined index: gname E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 675 行.
+NOTIC: [8] Use of undefined constant goods - assumed 'goods' E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 942 行.
+NOTIC: [8] Use of undefined constant goods - assumed 'goods' E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 942 行.
+NOTIC: [8] Use of undefined constant goods - assumed 'goods' E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 1167 行.
+NOTIC: [8] Use of undefined constant goods - assumed 'goods' E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 1167 行.
+NOTIC: [8] Undefined variable: list E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\f6bc4b5ce595111ffe270271d99944ae.php 第 1739 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:05:18+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( id=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=8 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=9 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=10 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=30 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=31 )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`goods_name`,`type_id`,`sale` FROM `goods_info` WHERE ( status=1  and type_id in (51,52,53,54,55,56,57,58,59,60,61,44,46,45,47,48,50,62,63,64,66,68,69,70,71,72,73) )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM goods_info as i [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as i' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM goods_info as i
+NOTIC: [8] Undefined variable: order E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 76 行.
+SQL: SELECT i.id,i.goods_name,i.type_id,i.sale,v.price,v.id as version_id,.
+			c.spic FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( status=1  and type_id in (51,52,53,54,55,56,57,58,59,60,61,44,46,45,47,48,50,62,63,64,66,68,69,70,71,72,73) ) GROUP BY i.id LIMIT 0,16   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 199  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 201  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: order E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 85 行.
+SQL: SELECT i.id,i.goods_name,i.type_id,i.sale,v.price,v.id as version_id,.
+			c.spic FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( status=1 )  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.002000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 199  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 201  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 204  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 205  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 206  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 207  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 321 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 450 行.
+NOTIC: [8] Undefined index: weight E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 451 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 452 行.
+NOTIC: [8] Undefined index: price E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 454 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 455 行.
+NOTIC: [8] Undefined index: time E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 457 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 458 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:05:22+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:06:13+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:07:10+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `type` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( id=1 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=1 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=8 )  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=9 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=10 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=30 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `type` WHERE ( pid=31 )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.001000s ]
+SQL: SELECT `id`,`goods_name`,`type_id`,`sale` FROM `goods_info` WHERE ( status=1  and type_id in (51,52,53,54,55,56,57,58,59,60,61,44,46,45,47,48,50,62,63,64,66,68,69,70,71,72,73) )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM goods_info as i [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as i' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM goods_info as i
+NOTIC: [8] Undefined variable: order E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 76 行.
+SQL: SELECT i.id,i.goods_name,i.type_id,i.sale,v.price,v.id as version_id,.
+			c.spic FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( status=1  and type_id in (51,52,53,54,55,56,57,58,59,60,61,44,46,45,47,48,50,62,63,64,66,68,69,70,71,72,73) ) GROUP BY i.id LIMIT 0,16   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 199  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 201  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: order E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 85 行.
+SQL: SELECT i.id,i.goods_name,i.type_id,i.sale,v.price,v.id as version_id,.
+			c.spic FROM goods_info as i INNER JOIN goods_version as v on i.id=v.goods_id INNER JOIN goods_color as c on i.id=c.goods_id  WHERE ( status=1 )  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 195  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 196  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 197  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 199  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 200  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 201  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 202  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 203  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 204  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 205  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 206  [ RunTime:0.001000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 207  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.000000s ]
+SQL: SELECT `version` FROM `goods_version` WHERE `goods_id` = 208  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 321 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 450 行.
+NOTIC: [8] Undefined index: weight E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 451 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 452 行.
+NOTIC: [8] Undefined index: price E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 454 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 455 行.
+NOTIC: [8] Undefined index: time E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 457 行.
+NOTIC: [8] Undefined index: search E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\e7ed31b5108ac682d6ebb8eeaf0918c5.php 第 458 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:07:11+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:08:16+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:08:38+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:09:07+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/197
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=197 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=198 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 198  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 198  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:11:50+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product/version_id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_info` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_info` WHERE ( id=194 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_color` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE `goods_id` = 194  [ RunTime:0.000000s ]
+SQL: SELECT goods_info.id as goods_id,goods_version.id as vid,goods_version.version as vname,goods_color.spic,goods_version.price as price FROM `goods_info` INNER JOIN goods_version on goods_info.id=goods_version.goods_id INNER JOIN goods_color on goods_info.id=goods_color.goods_id  GROUP BY goods_id LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 313 行.
+NOTIC: [8] Undefined index: cart E:\wamp\wamp\www\jingdong\TP\MyWeb\Runtime\Cache\Home\c98817faee0fc9860fde5e8eae0642a7.php 第 321 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid E:\wamp\wamp\www\jingdong\TP\MyWeb\Home\Controller\GoodsController.class.php 第 137 行.
+SQL: SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods_color` WHERE ( id= ) LIMIT 1  
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:03+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:12:04+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:12:04+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:05+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:05+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:12:06+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:06+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:07+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/plus?id=188&n=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE `id` = 188 LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:08+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/minus?id=188&n=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:12:08+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/minus?id=188&n=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:08+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/minus?id=188&n=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:09+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:09+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:10+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:10+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:10+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:12:11+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product?cid=84
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_color` WHERE ( id=84 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:30:36+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:30:37+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product?cid=84
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_color` WHERE ( id=84 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:37+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:38+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:30:38+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/product?cid=84
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_color` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_color` WHERE ( id=84 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:38+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:30:39+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:39+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:30:39+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:40+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:40+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:30:41+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:42+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:30:42+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:43+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:30:43+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:34:51+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-15T14:34:52+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-15T14:34:52+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=188 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-15T14:34:53+08:00 ] ::1 /jingdong/TP/index.php/Home/Goods/changeVersion?vid=187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods_version` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods_version` WHERE ( id=187 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

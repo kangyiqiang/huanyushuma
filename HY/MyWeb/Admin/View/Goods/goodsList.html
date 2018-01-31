@@ -1,0 +1,91 @@
+<extend name="Public:public"/>
+<block name="admin">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icol-application-view-tile"></i> 商品列表</span> 
+   </div> 
+   <!--  -->
+   <div class="mws-panel-inner-wrap">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">        
+            <div class="dataTables_filter" id="DataTables_Table_0_filter">
+            <form action="__MODULE__/Goods/index" method="get">
+                <label>商品名搜索: <input aria-controls="DataTables_Table_0" type="text" name="goods_name" value="{$Think.get.goods_name}"><input type="submit" class="icon-search" value="搜索"></label>
+            </form>
+            </div>
+            <table class="mws-table mws-datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+        </div> 
+    </div>
+
+   <!--  -->
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+     
+     
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+      <thead> 
+       <tr role="row">
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">商品ID</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">商品图片</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">商品名称</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">所属类别</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">状态</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">添加时间</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 126px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+       </tr> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <if condition="!empty($list)">
+          <foreach name="list" item="row">
+           <tr class="odd" align="center"> 
+            <td class=" ">{$row['id']}</td> 
+            <td class=" "><img src="__PUBLIC__/Uploads/goods_spic/{$row['goods_pic']}" style="width:60px;height:60px"></td> 
+            <td class=" ">{$row['goods_name']}</td> 
+            <td class=" ">{$row['type_name']}</td> 
+             <td class="status"><a class="btn" href="__MODULE__/Goods/status?status={$row['status']=='0'?'1':'0'}&id={$row['id']}">{$row['status']=='0'?"下架":"上架"}</a></td> 
+            <td class=" ">{$row['add_time'] | date="Y-m-d",###}</td> 
+            <td class=" ">
+            <if condition="$_SESSION['level'] gt $row['level'] OR $_SESSION['level'] eq 4">
+              <a href="__MODULE__/Goods/delete/id/{$row['id']}" class="btn btn-danger" onclick="if (confirm('确定删除此商品？')) return true; else return false;"><i class="icon-trash"></i></a>
+              <a href="__MODULE__/Goods/edit/id/{$row['id']}" class="btn btn-info"><i class="icon-th-list"></i></a>
+            </if>
+              </td>
+           </tr>
+         </foreach>
+        <else />
+            <td colspan="7" align="center"><font color="red">搜索不到该商品...</font></td> 
+        </if>
+      </tbody>
+     </table>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+      Showing 1 to 10 of 57 entries
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+      {$pageinfo}
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>
+<script type="text/javascript">
+
+  //双击修改商品状态
+  $('.status').dblclick(function(){
+    var status = $(this).html();
+    s=status=='显示'?0:1;
+    $post("__URL__/eidt/id/{$row['id']}",{s:s},function(data){
+      if(data==1){
+        alert('修改成功');
+      }else{
+         alert('修改失败');
+      }
+    });
+  })
+</script>
+</block>
+<block name="title">
+  用户列表页
+</block>

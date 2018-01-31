@@ -1,0 +1,84 @@
+<extend name="Public:public"/>
+<block name="admin">
+	<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icol-application-view-tile"></i> 用户模块</span> 
+   </div> 
+   <!--  -->
+   <div class="mws-panel-inner-wrap">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">        
+            <div class="dataTables_filter" id="DataTables_Table_0_filter">
+            <form action="__MODULE__/User/index" method="get">
+                <label>用户名搜索: <input aria-controls="DataTables_Table_0" type="text" name="username" value="{$Think.get.username}">
+                <label>权限搜索：</label>
+                  <select name="level"><option value="">--请选择--</option><option value="0" {$level=='0'?'selected':''}>禁用</option><option value="1" {$level=='1'?'selected':''}>普通会员</option><option value="2" {$level=='2'?'selected':''}>VIP会员</option><option value="3" {$level=='3'?'selected':''}>普通管理员</option><option value="4" {$level=='4'?'selected':''}>超级管理员</option></select><input type="submit" class="btn btn-info" value="搜索"></label>
+            </form>
+            </div>
+            <table class="mws-table mws-datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+        </div> 
+    </div>
+
+   <!--  -->
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+     
+     
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+      <thead> 
+       <tr role="row">
+        <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 30px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">ID</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Browser: activate to sort column ascending">用户名</th>
+        <!-- <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Platform(s): activate to sort column ascending">邮箱</th> -->
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">会员等级</th>
+        <!-- <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">手机号</th> -->
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 100px;" aria-label="Engine version: activate to sort column ascending">添加时间</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 126px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+       </tr> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <if condition="!empty($list)">
+        	<foreach name="list" item="row">
+  	       <tr class="odd" align="center"> 
+  	        <td class=" ">{$row['id']}</td> 
+  	        <td class=" ">{$row['username']}</td> 
+  	        <!-- <td class=" ">{$row['email']}</td>  -->
+            <td class=" "><font color="{$font[$row['level']]}">{$arr[$row['level']]}</font></td> 
+            <!-- <td class=" ">{$row['phone']}</td>  -->
+  	        <td class=" ">{$row['addtime'] | date="Y-m-d H:i:s",###}</td> 
+  	        <td class=" ">
+
+            <if condition="$_SESSION['level'] gt $row['level'] OR $_SESSION['level'] eq 4">
+              <a href="__MODULE__/User/delete/id/{$row['id']}" class="btn btn-danger" onclick="if (confirm('确定删除此账户？')) return true; else return false;"><i class="icon-trash"></i></a>
+              <a href="__MODULE__/User/edit/id/{$row['id']}" class="btn btn-success"><i class="icon-wrench"></i></a>
+              <a href="__MODULE__/User/info_index/id/{$row['id']}" class="btn btn-info"><i class="icon-th-list"></i></a>
+            </if>
+<!-- 
+            <if condition="$_SESSION['level'] eq 4 AND $row['level'] eq 3">
+            　<a href="__MODULE__/User/ass/id/{$row['id']}" class="btn btn-info"><i class="icon-user"></i></a> 
+            </if> -->
+              </td>
+  	       </tr>
+         </foreach>
+        <else />
+            <td colspan="5">暂无用户</td> 
+        </if>
+      </tbody>
+     </table>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+      Showing 1 to 10 of 57 entries
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+     	{$pageinfo}
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+	用户列表页
+</block>

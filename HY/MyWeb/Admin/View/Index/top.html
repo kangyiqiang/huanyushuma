@@ -1,0 +1,41 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <!-- Header -->
+    <div id="mws-header" class="clearfix">
+    
+        <!-- Logo Container -->
+        <div id="mws-logo-container">
+        
+            <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+            <div id="mws-logo-wrap">
+                <img src="__PUBLIC__/huanyu.jpg" alt="mws admin">
+            </div>
+        </div>
+        
+        <!-- User Tools (notifications, logout, profile, change password) -->
+        <div id="mws-user-tools" class="clearfix">
+        
+            
+            <!-- User Information and functions section -->
+            <div id="mws-user-info" class="mws-inset">
+            
+                <!-- User Photo -->
+                <div id="mws-user-photo">
+                    <img src="__PUBLIC__/Admin/example/profile.jpg" alt="User Photo">
+                </div>
+                
+                <!-- Username and Functions -->
+                <div id="mws-user-functions">
+                    <div id="mws-username">
+                        尊敬的管理员：{$_SESSION['username']}，欢迎您！
+                    </div>
+                    <ul>
+                        <li><a href="__ROOT__" target="_blank">去前台主页</a></li>
+                        <li><a href="__MODULE__/User/user_edit" target="right">修改个人信息</a></li>
+                        <li><a href="__MODULE__/Login/logout" onclick="if (confirm('确定退出？')) return true; else return false;">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

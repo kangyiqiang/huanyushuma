@@ -1,0 +1,115 @@
+<extend name="Public:public"/>
+<block name="admin">
+<style>
+    #bg-ms{
+        width: 1137px;
+        height: 500px;
+    }
+</style>
+<div id="mws-container" class="clearfix" style="margin-left: 0px;">
+    <div class="container">
+        <div class="mws-stat-container clearfix">
+                    
+                    <!-- Statistic Item -->
+                    <a class="mws-stat" href="#">
+                        <!-- Statistic Icon (edit to change icon) -->
+                        <span class="mws-stat-icon icol32-date"></span>
+                        
+                        <!-- Statistic Content -->
+                        <span class="mws-stat-content">
+                            <span class="mws-stat-title">{$time | date="Y",###}年</span>
+                            <span class="mws-stat-value">{$time | date="m月d日",###}</span>
+                        </span>
+                    </a>
+
+                    <a class="mws-stat" href="#">
+                        <!-- Statistic Icon (edit to change icon) -->
+                        <span class="mws-stat-icon icol32-time"></span>
+                        
+                        <!-- Statistic Content -->
+                        <span class="mws-stat-content">
+                            <span class="mws-stat-title" id="show1">星期一</span>
+                            <span class="mws-stat-value" id="show2">00:00:00</span>
+                        </span>
+                    </a>
+
+                    <a class="mws-stat" href="#">
+                        <!-- Statistic Icon (edit to change icon) -->
+                        <span class="mws-stat-icon {$icon}"></span>
+                        
+                        <!-- Statistic Content -->
+                        <span class="mws-stat-content">
+                            <span class="mws-stat-title">最{$weather.high} ~ 最{$weather.low}</span>
+                            <span class="mws-stat-value">{$weather.type}</span>
+                        </span>
+                    </a>
+                    
+                    <a class="mws-stat" href="#">
+                        <!-- Statistic Icon (edit to change icon) -->
+                        <span class="mws-stat-icon icol32-location-pin"></span>
+                        
+                        <!-- Statistic Content -->
+                        <span class="mws-stat-content">
+                            <span class="mws-stat-title">当前所在地：{$province}省</span>
+                            <span class="mws-stat-value">{$city}市</span>
+                        </span>
+                    </a>
+        </div>
+        <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icol-connect"></i> 欢迎：{$_SESSION['username']}</span>
+                    </div>
+                    <div class="mws-panel-body" style="background:url('__ROOT__/Public/3.jpg');width='100%'" id="bg-ms">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+    </div>
+</div>
+<script type="text/javascript">
+     window.onload = function(){
+            var show = document.getElementById("show2");
+            var show1 = document.getElementById("show1");
+            setInterval(function(){
+                var time = new Date();
+                var aaa = time.getDay();
+                // 程序计时的月从0开始取值后+1
+                var m = time.getMonth() + 1;
+                var i = time.getMinutes();
+                if(i<10){
+                    i = '0'+i;
+                }
+                var s = time.getSeconds();
+                if(s<10){
+                    s = '0'+s;
+                }
+                var t = time.getHours() + ":" + i + ":" + s;
+            show.innerHTML = t;
+            switch(aaa){
+                case 1:
+                    aaa = "一";
+                    break;
+                case 2:
+                    aaa = "二";
+                    break;
+                case 3:
+                    aaa = "三";
+                    break;
+                case 4:
+                    aaa = "四";
+                    break;
+                case 5:
+                    aaa = "五";
+                    break;
+                case 6:
+                    aaa = "六";
+                    break;
+                default:
+                    aaa = "日";
+                    break;
+            }
+            show1.innerHTML = "星期"+aaa;
+            }, 1000);
+        };
+</script>
+</block>

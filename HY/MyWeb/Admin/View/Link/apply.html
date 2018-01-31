@@ -1,0 +1,52 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div id="mws-container" class="clearfix" style="margin-left: 0px;">
+        <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-table"></i>申请列表</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+                        <form>
+                            <div class="dataTables_filter" id="DataTables_Table_1_filter"><label>按名称搜索: <input type="text" aria-controls="DataTables_Table_1"></label><input type="submit" value="搜索" class="btn">
+                            </div>
+                        </form>
+                        <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+                            <thead>
+                                <tr role="row">
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 147px;">id</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 183.2px;">链接名称</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 169.2px;">路径</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 169.2px;">邮箱</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 169.2px;">网站介绍</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">操作</th>
+                                </tr>
+                            </thead> 
+                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                            <if condition="$count gt 0">
+                                <foreach name="data" item="row">
+                                <tr class="odd" align="center">
+                                    <td class="">{$row.id}</td>
+                                    <td class="">{$row.name}</td>
+                                    <td class=""><a href="{$row.url}" style="color: blue;" target="_blank">{$row.url}</a></td>
+                                    <td class="">{$row.email}</td>
+                                    <td class="">{$row.introduce}</td>
+                                    <td class="">
+                                        <a href="__MODULE__/Link/appok/id/{$row.id}" class="btn btn-success" alt="通过申请"><i class="icon-ok"></i></a>
+                                        <a href="__MODULE__/Link/delete/id/{$row.id}" onclick="if (confirm('是否拒绝这个申请？')) return true; else return false;" class="btn btn-danger" alt="拒绝申请"><i class="icon-remove"></i></a>
+                                    </td>
+                                </tr>
+                                </foreach>
+                            <else /><tr><td colspan="6"><span><i class="icol-exclamation"></i>暂无数据</span></td></tr>
+                            </if>
+                        </tbody>
+                        </table>
+                        
+                        <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+                        {$pageinfo}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</block>

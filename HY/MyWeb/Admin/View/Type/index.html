@@ -1,0 +1,80 @@
+<extend name="Public:public"/>
+<block name="admin">
+	<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icol-application-view-tile"></i> 分类列表</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+     
+     
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info" > 
+      <thead> 
+       <tr role="row">
+        <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 50px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">ID</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 200px;" aria-label="Browser: activate to sort column ascending">类别名</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 120px;" aria-label="Browser: activate to sort column ascending">是否在前台显示</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 120px;" aria-label="Platform(s): activate to sort column ascending">父类ID</th>
+        
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 120px;" aria-label="Engine version: activate to sort column ascending">path</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 266px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+       </tr> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <if condition="!empty($type)">
+          	<foreach name="type" item="row">
+    	       <tr class="odd" align="center"> 
+    	        <td class=" ">{$row['id']}</td> 
+              <td class=" ">{$row['name']}</td> 
+    	        <td class=" ">
+
+                  <if condition="$row['display'] eq 0">
+                   显示
+                   <else />
+                   隐藏
+                  </if>
+               </td> 
+    	        <td class=" ">{$row['pid']}</td> 
+    	        <td class=" ">{$row['path']}</td> 
+    	        <td class=" ">
+                <a href="__URL__/delete/id/{$row['id']}" class="btn btn-danger " onclick="if (confirm('确定删除此分类？')) return true; else return false;"><i class="icon-trash"></i></a> 
+                <a href="__MODULE__/Type/edit/id/{$row['id']}" class="btn btn-success" ><i class="icon-wrench"></i></a>
+                <php>
+                    
+
+
+                </php>
+                <a href="__MODULE__/Type/index2/path/{$row['path']}" class="btn" ><i class="icon-indent-right"></i>查看上级分类</a>
+                <a href="__MODULE__/Type/index3/pid/{$row['id']}" class="btn btn-info" ><i class="icon-indent-left"></i>查看子分类</a>
+                </td>
+
+                
+              </td>
+              
+    	       </tr>
+           </foreach>
+        <else />
+          <td colspan="6">暂无更多分类</td>
+       </if>
+
+      </tbody>
+     </table>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+      Showing 1 to 10 of 57 entries
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+     	<!-- {$pageinfo} -->
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>
+
+</block>
+<block name="title">
+	分类列表页
+</block>

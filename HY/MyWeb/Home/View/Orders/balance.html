@@ -1,0 +1,1208 @@
+<extend name="Orders:public"/>
+<block name="title">寰宇订单</block>
+<block name="admin">
+  <!--结算页面样式--> 
+  <link rel="stylesheet" href="__ROOT__/Public/Home/Orders/bankList.css" charset="utf-8" /> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Orders/saved_resource" source="widget" /> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Orders/saved_resource(1)" /> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/User/css/style_002.css" /> 
+  <script type="text/javascript" async="" src="__ROOT__/Public/Home/Orders/wl.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/jquery-1.6.4.js"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/saved_resource(2)"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/cookieTrack_v4.js"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/order.common.js"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/order.js"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Orders/jquery.checkout.js"></script> 
+  <link charset="utf-8" rel="stylesheet" href="__ROOT__/Public/Home/Orders/tips.css" />
+  <link charset="utf-8" rel="stylesheet" href="__ROOT__/Public/Home/Orders/dialog.css" />
+  <script type="text/javascript" src="__ROOT__/Public/Home/User/js/jquery.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/Home/Address/js/shengshi.js"></script>
+  <style>
+      body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin:0;
+    background-color:#fff;
+    }
+    #main {
+    height:1800px;
+    padding-top:90px;
+    text-align:center;
+    }
+    #fullbg {
+    background-color:gray;
+    left:0;
+    opacity:0.5;
+    position:absolute;
+    top:0;
+    z-index:3;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    }
+    #dialog {
+    background-color:#fff;
+    border:5px solid rgba(0,0,0, 0.4);
+    height:400px;
+    left:50%;
+    margin:-200px 0 0 -316px;
+    padding:1px;
+    position:fixed !important; /* 浮动对话框 */
+    position:absolute;
+    top:50%;
+    width:650px;
+    z-index:5;
+    border-radius:5px;
+    display:none;
+    }
+    #dialog p {
+    margin:0 0 12px;
+    height:24px;
+    line-height:24px;
+    background:#CCCCCC;
+    }
+    #dialog p.close {
+    text-align:right;
+    padding-right:10px;
+    }
+    #dialog p.close a {
+    color:#fff;
+    text-decoration:none;
+    } 
+  </style>
+ </head> 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="o-header-2013">
+   <div id="header-2013" style="display:none;"></div>
+  </div> 
+  <!--shortcut end--> 
+  <div class="w w1 header clearfix"> 
+   <div id="logo"> 
+   <div id="logo-2014" style="background: url('__PUBLIC__/tlogo.png') no-repeat;"></div> 
+  
+   </div> 
+   <div class="stepflex" id="#sflex03"> 
+    <dl class="first done"> 
+     <dt class="s-num">
+      1
+     </dt> 
+     <dd class="s-text">
+      1.我的购物车
+      <s></s>
+      <b></b>
+     </dd> 
+    </dl> 
+    <dl class="normal doing"> 
+     <dt class="s-num">
+      2
+     </dt> 
+     <dd class="s-text">
+      2.填写核对订单信息
+      <s></s>
+      <b></b>
+     </dd> 
+    </dl> 
+    <dl class="normal last"> 
+     <dt class="s-num">
+      3
+     </dt> 
+     <dd class="s-text">
+      3.成功提交订单
+      <s></s>
+      <b></b>
+     </dd> 
+    </dl> 
+   </div> 
+  </div> 
+  <!-- /header --> 
+  <!--/ /widget/header/header.tpl --> 
+   
+   
+  <input type="hidden" id="plusStatus" value="1" /> 
+  <input type="hidden" id="totalPrice" value="0" /> 
+  <div class="plusInfoConfig hide">
+   {&quot;plusInfos&quot;:[{&quot;content&quot;:&quot;开通PLUS会员，享受商品会员价&quot;,&quot;url&quot;:&quot;http://plus.jd.com/order/page&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|50&quot;,&quot;typeContent&quot;:&quot;立即开通&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0},{&quot;content&quot;:&quot;开通PLUS会员，享受商品会员价&quot;,&quot;url&quot;:&quot;http://plus.jd.com/order/page&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|49&quot;,&quot;typeContent&quot;:&quot;立即开通&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0},{&quot;content&quot;:&quot;开通PLUS会员，享受商品会员价&quot;,&quot;url&quot;:&quot;http://plus.jd.com/order/page&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|48&quot;,&quot;typeContent&quot;:&quot;立即开通&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0},{&quot;content&quot;:&quot;开通PLUS会员，每月送5张自营运费券&quot;,&quot;url&quot;:&quot;http://plus.jd.com/index&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|47&quot;,&quot;typeContent&quot;:&quot;立省运费&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0},{&quot;content&quot;:&quot;还在花运费？每月领5张自营运费券&quot;,&quot;url&quot;:&quot;http://plus.jd.com/order/page&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|50&quot;,&quot;typeContent&quot;:&quot;立即开通&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0},{&quot;content&quot;:&quot;免费试用PLUS会员，享受商品会员价&quot;,&quot;url&quot;:&quot;http://plus.jd.com/index&quot;,&quot;clstag&quot;:&quot;pageclick|keycount|201601152|50&quot;,&quot;typeContent&quot;:&quot;立省运费&quot;,&quot;classInfo&quot;:null,&quot;configId&quot;:0}],&quot;classInfo&quot;:&quot;com.jd.trade.app.common.config.PlusConfig&quot;,&quot;configId&quot;:26283}
+  </div> 
+  <input type="hidden" id="totalFreight" value="6" /> 
+  <div class="plusProductList hide">
+   []
+  </div> 
+  <input type="hidden" id="closeRefreshSelfpick" value="0" /> 
+  <!-- main --> 
+  <div id="container"> 
+   <div id="content" class="w"> 
+    <!-- <div class="m"> --> 
+    <div class="orderInfo-tip hide" style="display: none;"> 
+     <span class="wicon"></span> 
+     <span class="ftx-03"> 温馨提示：订单中存在不支持7天无理由退换商品，请确认相关商品信息后提交订单。</span> 
+     <span class="cls-btn" onclick="closeorderInfotip()">x</span> 
+    </div> 
+    <div class="checkout-tit"> 
+     <span class="tit-txt">填写并核对订单信息</span> 
+    </div> 
+    <!--<div class="mc">--> 
+    <div class="checkout-steps"> 
+     <!--  /widget/consignee-step/consignee-step.tpl --> 
+     <div class="step-tit"> 
+      <h3>收货人信息</h3> 
+      <div class="extra-r"> 
+       <a href="javascript:showBg();" class="ftx-05 J_consignee_global" >新增收货地址</a> 
+       <!-- <div id="main"> -->
+        <div id="fullbg"></div>
+        <div id="dialog">
+        <p class="close"><a href="#" onclick="closeBg();">关闭</a></p>
+          <div class="hy_table">
+    <form method="post" id="form" action="__MODULE__/Address/insert" onsubmit="return checkForm()">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td style="text-align:right;" width="100">收&nbsp;&nbsp;货 人：</td>
+      <td>
+        <input name="name" class="inputall input200" type="text" content="请输入正确的姓名!" required>
+        <span id="user_tname_show"></span>      
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">手机号码：</td>
+      <td>
+        <input name="phone" class="inputall input200" type="text" content="请输入收货号码!" required>
+        <span id="user_phone_show"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">所在城市：</td>
+      <td id="cityselect">
+        <select name="address_province" class="js_prov inputselect" required><option value="" selected="selected">请选择省</option><option value="北京">北京</option><option value="天津">天津</option><option value="河北">河北</option><option value="山西">山西</option><option value="内蒙古">内蒙古</option><option value="辽宁">辽宁</option><option value="吉林">吉林</option><option value="黑龙江">黑龙江</option><option value="上海">上海</option><option value="江苏">江苏</option><option value="浙江">浙江</option><option value="安徽">安徽</option><option value="福建">福建</option><option value="江西">江西</option><option value="山东">山东</option><option value="河南">河南</option><option value="湖北">湖北</option><option value="湖南">湖南</option><option value="广东">广东</option><option value="广西">广西</option><option value="海南">海南</option><option value="重庆">重庆</option><option value="四川">四川</option><option value="贵州">贵州</option><option value="云南">云南</option><option value="西藏">西藏</option><option value="陕西">陕西</option><option value="甘肃">甘肃</option><option value="青海">青海</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option></select>
+        <select name="address_city" class="js_city inputselect" required><option value="" selected="selected">请选择市</option></select>
+        <select name="address_area" class="js_area inputselect" required><option value="" selected="selected">请选择区县</option></select>
+        <span id="address_province_show"></span>
+        <span id="address_city_show"></span>
+        <span id="address_area_show"></span>      
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">详细地址：</td>
+      <td>
+        <input name="address_text" class="inputall input300" type="text" content="请输入详细地址!" required>
+        <span id="address_text_show"></span>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:right;"></td>
+      <td>
+        <label for="default">
+          <input name="status" value="1" class="inputfix mar5" id="default" type="checkbox">
+          <span>设为默认收货地址</span>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="hidden" name="uid" value="{$_SESSION['uid']}">
+        <input value="提 交" class="tjbtn" type="submit">
+      </td>
+    </tr>
+    </tbody></table>
+    </form>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+  $("#cityselect").shengshi({
+      prov:"",
+      city:"",
+      area:""
+  });
+})
+    //检测input 提交状态
+      var CNAME=false;
+      var CPHONE=false;
+      var CADDRESS=false;
+      /******************姓名***************************/
+      //1.获取焦点
+      $("input[name='name']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='name']+span").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='name']").blur(function(){
+        //获取用户名
+        var name=$(this).val();
+        if(name==''){
+          $("input[name='name']+span").empty();
+           $("input[name='name']+span").css('color','red').html('<b>✘</b> 姓名不为空!');
+
+        }else if(name.match(/^[\u4E00-\u9FA5A-Za-z0-9]+$/)==null){
+          $("input[name='name']+span").css('color','red').html('<b>✘</b> 不能含有非法字符!')
+        }else{
+           // $("input[name='name']+div").empty();
+           $("input[name='name']+span").css('color','green').html('<b>✔</b>');
+           CNAME=true;
+        }
+      });
+
+   /******************地址***************************/
+      //1.获取焦点
+      $("input[name='address_text']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='address_text']+span").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='address_text']").blur(function(){
+        //获取用户名
+        var address=$(this).val();
+        if(address==''){
+          $("input[name='address_text']+span").empty();
+           $("input[name='address_text']+span").css('color','red').html('<b>✘</b> 地址不为空!');
+
+        }else if(address.match(/^[\u4E00-\u9FA5A-Za-z0-9]+$/)==null){
+          $("input[name='address_text']+span").css('color','red').html('<b>✘</b> 不能含有非法字符!')
+        }else{
+           // $("input[name='name']+div").empty();
+           $("input[name='address_text']+span").css('color','green').html('<b>✔</b>');
+           CADDRESS=true;
+        }
+      });
+
+
+      /*****************手机验证*************************/
+       //1.获取焦点
+      $("input[name='phone']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='phone']+span").css('color','red').html(s);
+      });
+      
+      $("input[name='phone']").blur(function(){
+        //获取手机号
+        var phone=$(this).val();
+
+        if(phone==''){
+           $("input[name='phone']+span").css('color','red').html('<b>✘</b> 手机号不为空!');
+            //正则的匹配  
+        }else if(phone.match(/^1((3[0-9])|(47)|(5[0-35-9])|(7[017])|(8[0-9]))\d{8}$/)==null){
+              // alert('sss');
+              $("input[name='phone']+span").css('color','red').html('<b>✘</b> 手机号不合法');
+
+        }else{
+          $("input[name='phone']+span").css('color','green').html('<b>✔</b>');
+          CPHONE=true;
+        }    
+        
+
+      });
+    
+
+ /*************************提交*****************************/
+      function checkForm(){
+        
+      if(CNAME&&CPHONE&&CADDRESS){
+          return true;
+      }else{
+        return false;
+      }
+
+
+    }
+    </script>
+        <!-- </div> -->
+      </div> 
+       <!--<a href="#none" class="ftx-05" onclick="use_NewConsignee()" clstag="pageclick|keycount|trade_201602181|3">新增收货地址</a>--> 
+       <input type="hidden" id="del_consignee_type" value="0" /> 
+      </div> 
+     </div> 
+     <div class="step-cont"> 
+
+      <div id="consignee-addr" class="consignee-content"> 
+       <div class="consignee-scrollbar"> 
+        <div class="ui-scrollbar-main"> 
+         <div class="consignee-scroll"> 
+          <div class="consignee-cont" id="consignee1" style="height: 42px;"> 
+           <ul id="consignee-list"> 
+
+            <li class="ui-switchable-panel ui-switchable-panel-selected" style="display: list-item;" id="consignee_index_138637621" selected="selected" c_li_custom_label="consignee_li"> 
+              <php>
+                if(empty($address_default['name'])){
+                     echo '<b>暂无默认收货地址，也无被选中收货地址</b>';
+                     echo "<span id='checkOrder'>1</span>";
+                }else{                
+                 echo '<div class="consignee-item item-selected" consigneeid="138637621" provinceid="16" cityid="1362" id="consignee_index_div_138637621" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1" c_div_custom_label="consignee_div"> 
+                  <span limit="8" title="">{$address_default["name"]}</span>
+                  <b></b> 
+                 </div>'; 
+
+              }
+
+             </php>
+             <div class="addr-detail"> 
+              <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ --> 
+              <span class="addr-name" limit="6" title="">{$address_default['name']}</span> 
+              <span class="addr-info" limit="45" title="">{$address_default['adress_province']} {$address_default['address_city']} {$address_default['address_area']} {$address_default['address_text']}</span> 
+              <span class="addr-tel">{$address_default['phone']}</span> 
+              <!-- <span class="addr-default">默认地址</span>  -->
+             </div> 
+             <div class="op-btns" consigneeid="138637621" isoldaddress="false"> 
+              <span></span> 
+              <a href="shopping/order/getOrderInfo.action?rid=1499668051155#none" class="ftx-05 edit-consignee" fid="138637621" clstag="pageclick|keycount|trade_201602181|6">编辑</a> 
+              <a href="shopping/order/getOrderInfo.action?rid=1499668051155#none" class="ftx-05 del-consignee hide" fid="138637621" clstag="pageclick|keycount|trade_201602181|5">删除</a> 
+             </div> 
+
+             </li> 
+
+
+            <!-- 地址升级提示:两种情况 --> 
+            <!-- 地址升级隐藏域信息 --> 
+         
+          
+            <!-- 地址升级提示:两种情况 --> 
+            <!-- 地址升级隐藏域信息 --> 
+           
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="addr-switch switch-on" id="consigneeItemAllClick" clstag="pageclick|keycount|trade_201602181|2" style="display:block"> 
+       <span>更多地址</span>
+       <b></b> 
+      </div> 
+      <div class="addr-switch switch-on" id="consigneeItemHideClick" clstag="pageclick|keycount|trade_201602181|2" style="display:none"> 
+       <span>收起地址</span>
+       <b></b> 
+      </div> 
+      <script type="text/javascript">
+            $("#consigneeItemAllClick").click(function(){
+              // alert('s');
+              $(".picksite-scroll").css('display','block');
+              $(this).css('display','none');
+              $("#consigneeItemHideClick").css('display','block');
+
+            })
+             $("#consigneeItemHideClick").click(function(){
+              $(".picksite-scroll").css('display','none');
+              $(this).css('display','none');
+              $("#consigneeItemAllClick").css('display','block');
+             })
+      </script>
+
+
+      <!-- 显示更多地址 -->
+      <div class="picksite-scroll mt10" style="display: none"> 
+       <div class="picksite-cont"> 
+        <div class="hr" id="zitihr"></div> 
+        <foreach name="address_nodefault" item="row">
+        <ul id="selfPickOptimizeUl"> 
+         <li id="nearestLi"> 
+         <!--  <div class="picksite-item optimize" id="nearestDiv" pickid="1452" iscod="1" clstag="pageclick|keycount|trade_201602181|56" onclick="doSelectSelfPickSiteOptimize(1452,2,1)"> 
+           <span>龙岩站</span> 
+           <b></b> 
+          </div> -->
+         
+          <div class="addr-detail"> 
+           <span class="addr-name">{$row['name']}</span>
+           <span class="addr-info" id="nearestInfo">{$row['address_province']} {$row['address_city']} {$row['address_area']} {$row['address_text']}</span>
+           <span class="addr-tel" id="nearestMobile">{$row['phone']}</span>
+           
+           <span>
+           <a href="__MODULE__/cart/address/id/{$row['id']}" clstag="pageclick|keycount|trade_201602181|57" class="ftx-05 ml10 selfpick-edit">使用该地址收货</a>
+          <input type="hidden" id="asid" value="{$row['id']}">
+           </span>
+          </div>
+          </li>
+        </ul> 
+        </foreach>
+       </div> 
+      </div> 
+
+   <!--    <script type="text/javascript">
+          // alert($(".default").html());
+          // var asid='{$row['id']}';
+          $(".default").click(function(){
+
+              asid = $(this).next("#asid").val();
+              $.post('__MODULE__/Cart/address',{asid:asid},function(data){
+                if(data){
+                  //修改成功
+
+                 // alert($("addr_detail").html());consignee-item
+                }else{
+                  //修改失败
+                }
+              },'json');
+          });
+      </script> -->
+
+      <div id="zititype4" class="picksite-nosuport-cont hide"> 
+       <span class="tips-cont ml10"><b></b>订单中部分商品不支持自提，暂无法使用寰宇自提</span> 
+       <a href="shopping/order/getOrderInfo.action?rid=1499668051155#none" class="ftx05 J_picksite_disable_info ml30">详情&nbsp;&gt;</a> 
+       <div class="picksite-nosuport-box"> 
+        <i class="arrow-up"></i> 
+        <strong>以下商品不支持自提</strong> 
+        <ul id="unSupportSelfPickSkuList"> 
+        </ul> 
+       </div> 
+      </div> 
+      <input type="hidden" id="consigneeList_giftSenderConsigneeMobile" value="" /> 
+      <input type="hidden" id="consigneeList_giftSenderConsigneeName" value="" /> 
+     </div> 
+     <!--/ /widget/consignee-step/consignee-step.tpl --> 
+     <div class="hr"></div> 
+     <!--/ /widget/shopping-list/shopping-list.tpl --> 
+     <div id="shipAndSkuInfo"> 
+      <div id="payShipAndSkuInfo"> 
+       <div class="step-tit"> 
+        <h3>支付方式</h3> 
+       </div> 
+       <div type="hide"></div> 
+       <input type="hidden" id="totalPriceVender" value="0" /> 
+       <input type="hidden" id="totalNumVender" value="0" /> 
+       <div class="plusProductListVender hide">
+        []
+       </div> 
+       <div class="step-cont"> 
+        <div class="payment-list" id=""> 
+         <div class="list-cont"> 
+          <ul id="payment-list"> 
+          <!--  <li style="cursor: pointer;" onclick="
+									 save_Pay(1,0,1); 				" clstag="pageclick|keycount|trade_201602181|8"> 
+            <div class=" payment-item  online-payment " for="pay-method-1" payname="货到付款" payid="1" onlinepaytype="0">
+             货到付款
+             
+            </div> </li> --> 
+           <li style="cursor: pointer;" onclick="
+				save_Pay(4,0,1);" clstag="pageclick|keycount|trade_201602181|7"> 
+            <div class="payment-item item-selected online-payment" for="pay-method-4" payname="在线支付" payid="4" onlinepaytype="0">
+            
+             <em class="payment-promo"></em> 在线支付 
+             
+            </div> </li>
+           
+         
+          
+          
+ <script>
+/************************实现新增地址**************************************/
+
+//显示灰色 jQuery 遮罩层
+    function showBg() {
+        var bh = $("body").height();
+        var bw = $("body").width();
+    $("#fullbg").css({
+        height:bh,
+        width:bw,
+        display:"block"
+    });
+    $("#dialog").show();
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+
+
+$('.online-payment')
+.hover(function(){
+	$(this).addClass('payment-item-hover');
+},function(){
+	$(this).removeClass('payment-item-hover');
+}); 
+if($("#payment-list li").length<=4){
+	$('#payment-less').hide();
+	$('#payment-more').hide();
+	var payid=[5,2,8];
+	for(var i in payid){
+		$("#payment-list div[payid="+payid[i]+"]").show();
+	}
+}
+$('.payment-item-on').click(function(){
+	$('#payment-less').hide();
+	$('#payment-more').show();
+	var payid=[5,2,8];
+	for(var i in payid){
+		var payment = $("#payment-list div[payid="+payid[i]+"]");
+		if(!payment.hasClass("item-selected")){
+			payment.hide(100);
+		}
+	}
+});
+$('.payment-item-off').click(function(){
+	$('#payment-less').show();
+	$('#payment-more').hide();
+	var payid=[5,2,8];
+	for(var i in payid){
+		var payment = $("#payment-list div[payid="+payid[i]+"]");
+		if(!payment.hasClass("item-selected")){
+			payment.show(100);
+		}
+	}
+});
+</script> 
+          </ul> 
+
+         </div> 
+        </div> 
+       </div> 
+       <div class="hr"></div> 
+       <!--/ /widget/payment-step/payment-step.tpl --> 
+       <div class="step-tit"> 
+        <h3>送货清单</h3> 
+        <div class="extra-r"> 
+         <a class="price-desc" id="price-desc"  data-tips="因可能存在系统缓存、页面更新导致价格变动异常等不确定性情况出现，商品售价以本结算页商品价格为准；如有疑问，请您立即联系销售商咨询。"> <i></i>&nbsp;价格说明 </a> 
+         <a href="__MODULE__/Cart/cart" id="cartRetureUrl" class="return-edit ftx-05" clstag="pageclick|keycount|trade_201602181|15">返回修改购物车</a> 
+        </div> 
+       </div> 
+      <form action="__MODULE__/Orders/add" method="post" onsubmit="return checkOrder()">
+       <div class="step-cont" id="skuPayAndShipment-cont"> 
+        <!--添加商品清单  zhuqingjie --> 
+        <div class="shopping-lists" id="shopping-lists"> 
+         <!--定义大商品清单LIST--> 
+         <div class="shopping-list ABTest"> 
+          <div class="goods-list" style="width:1168px"> 
+           <!--购物车单品商品--> 
+           <!--一般套装商品--> 
+           <!--满返套装商品--> 
+           <!--满赠套装商品--> 
+           <!--配送方式--> 
+           <div class="goods-tit"> 
+            <h4 class="vendor_name_h" id="0">商家：寰宇自营</h4> 
+           </div> 
+           <!--单品开始--> 
+           <div class="goods-items"> 
+           </div>  
+           <div class="goods-items 201512300"> 
+            <div class="goods-suit goods-last"> 
+           
+
+             <!-- 结算商品遍历 -->
+             <foreach name="list" item="cart">
+             <div class="goods-item goods-item-extra" goods-id="3440986" sx-type="0"> 
+              <div class="p-img"> 
+               <a><img src="__ROOT__/Public/Uploads/goods_spic/{$cart['spic']}"  /></a> 
+              </div> 
+
+              <div class="goods-msg"> 
+               <div class="goods-msg-gel" style="height:80px;width:800px"> 
+                <div class="p-name" style="width:400px;height:80px;" > 
+               <!--   <a href="http://item.jd.com/3440986.html?dist=" target="_blank"> 洁丽雅（Grace）毛巾家纺 纯棉提花面巾加厚加大吸水毛巾二条装 红/棕 125g/条 76*34cm </a>  -->
+                  <div style="width:250px;height:80px;float:left">
+                       <div target="_blank" style="height:42px"><b>商品名称:&nbsp;&nbsp;</b>{$cart['gname']} </div>
+                       <div target="_blank" style="height:40px;"><b>商品描述:&nbsp; &nbsp;</b> {$cart['sale']}</div>
+                  </div>
+                  <input type="hidden" name="id[]" value="{$cart['id']}">
+                  <div style="width:130px;height:80px;float:right">
+                      <div target="_blank" style="height:40px"><b>颜色: &nbsp; &nbsp;  </b>{$cart['cname']} </div>
+                      <div target="_blank" style="height:40px"><b>版本: &nbsp; &nbsp;  </b>{$cart['vname']}</div>
+                  </div>
+                </div> 
+                <div class="p-price item{$cart['id']}" style="width:390px;height:80px;line-height:80px" > 
+                      <div style="float:left;width:250px"><font color="#E4393C">￥ {$cart['price']}&nbsp;&nbsp;</font>x&nbsp;&nbsp;{$cart['gnum']}</div>
+                      <div style="float:left"><font color="#E4393C" size="4px">￥ <span>{$cart['price']*$cart['gnum']}</span></font></div>
+                </div>
+               </div> 
+              </div> 
+              
+              <div class="clr"></div> 
+             </div> 
+             </foreach>
+
+
+            </div> 
+           </div> 
+           <div class="hide service-items ml20 mr20" style="display: block;"> 
+            <div class="hide service-item" id="vender_freight_insurance_0" style="display: block;"> 
+             <div class="hr"></div> 
+             <!-- <span class="service-desc">退换无忧</span>  -->
+             <!-- <strong class="service-price">￥0.00</strong>  -->
+            </div> 
+           </div> 
+          </div>
+          <!--goods-list 结束--> 
+          
+          <!--dis-modes 结束--> 
+          <div class="clr"></div> 
+          <!--
+			<div class="freight-cont">			   
+				   				              运费：<strong class="ftx-01"  freightByVenderId="0"  popJdShipment="false">￥6.00 </strong>
+				   			  </div>
+	      --> 
+         
+         </div>
+         
+         <!--隐藏的sop配送日历开始--> 
+         <script id="sop_shipment_hidediv" type="text/temp">
+		  <div class="date-thickbox" >
+				<div class="tab-nav">
+					<ul>
+						<li class="tab-nav-item tab-item-selected" >标准达 <b> </b> </li> 
+					</ul>
+				</div>
+				<div class="tab-con" id="tab_sop_div">
+					<div class="date-delivery" id="date-delivery-sop"></div>
+					<div class="ftx-03 mt20">
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+					<div class="op-btns mt10 ac"> <a id="timeSaveSop" clstag="pageclick|keycount|trade_201602181|52" href="javascript:void(0);"  class="btn-1">确定 </a> <a href="javascript:jQuery.closeDialog();"  class="btn-9 ml10"> 取消 </a> </div>
+				</div>
+		</div>
+	</script> 
+         <!--隐藏的sop配送日历结束--> 
+         <!--隐藏的311配送日历开始--> 
+         <script id="shipment_hidediv" type="text/temp">
+		  <div class="date-thickbox" >
+				<div class="tab-nav">
+					<ul>
+						<li class="tab-nav-item" id="li_zxj_id" onclick="doSwith311Tab('zxj')"><span id="jzdAmount"></span> <b> </b> </li>
+						<li class="tab-nav-item" id="li_311_id" onclick="doSwith311Tab('311')">标准达 <b> </b> </li> 
+						<li class="tab-nav-item" id="li_411_id" onclick="doSwith311Tab('411')"><span id="jsdAmount"></span><b> </b> </li>
+					</ul>
+				</div>
+				<div class="tab-con" id="tab_zxj_div">
+					<div class="date-delivery date-delivery-freight" id="date-delivery0"></div>
+					<div class="ftx-03 mt20">
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+		           	 <div class="tips-618 mt20 hide tips-618-for-calendar">
+		              <div class="tips-con">
+		                <p class="tips-m">双11大促恰逢周末，请确认好收货地址和时间以保证货物及时送达。</p>
+		          	  </div>
+		         	 </div>
+					<div class="op-btns mt10 ac"> <a id="timeSaveZxj" clstag="pageclick|keycount|trade_201602181|52" href="javascript:void(0);"  class="btn-1">确定 </a> <a href="javascript:jQuery.closeDialog();"  class="btn-9 ml10"> 取消 </a> </div>
+				</div>
+				<div class="tab-con hide" id="tab_311_div">
+					<div class="date-delivery date-delivery-new" id="date-delivery1"></div>
+					<div class="ftx-03 mt20">
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+		           	 <div class="tips-618 mt20 hide tips-618-for-calendar">
+		              <div class="tips-con">
+		                <p class="tips-m">双11大促恰逢周末，请确认好收货地址和时间以保证货物及时送达。</p>
+		          	  </div>
+		         	 </div>
+					<div class="op-btns mt10 ac"> <a id="timeSave311" clstag="pageclick|keycount|trade_201602181|51" href="javascript:void(0);"  class="btn-1"> 确定 </a> <a href="javascript:jQuery.closeDialog();"  class="btn-9 ml10"> 取消 </a> </div>
+				</div>
+				<div class="tab-con hide" id="tab_411_div">
+					<div> 下单后或支付成功后2小时送达</div>
+					<div class="ftx-03 mt20" id="message_show_411">
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+					<div class="op-btns mt10 ac"> <a id="timeSave411" clstag="pageclick|keycount|trade_201602181|53" class="btn-1"> 确定 </a> <a href="javascript:jQuery.closeDialog();" class="btn-9 ml10"> 取消 </a> </div>
+				</div>
+		</div>
+	</script> 
+         <!--隐藏的311配送日历结束--> 
+         <!--隐藏的大家电配送日历开始--> 
+         <script id="bigShipment_hidediv" type="text/temp">
+		  <div class="date-thickbox">
+				<div class="tab-nav">
+					<ul>
+						<li class="tab-nav-item tab-item-selected" id="li_djd_id" onclick="doSwithBigTab('djd')"><span id="djzdAmount"></span> <b> </b> </li>
+						<li class="tab-nav-item" id="li_bzd_id" onclick="doSwithBigTab('bzd')">标准达 <b> </b> </li> 
+					</ul>
+				</div>
+				<div class="tab-con" id="tab_djd_div">
+					<div class="date-delivery date-delivery-freight" id="big-date-delivery0"></div>
+					<div class="ftx-03 mt20">
+					<i class="date-delivery-icon"></i>
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+                    <div class="tips-618 mt20 hide tips-618-for-calendar">
+                        <div class="tips-con">
+                            <p class="tips-m">双11大促恰逢周末，请确认好收货地址和时间以保证货物及时送达。</p>
+                        </div>
+                    </div>
+					<div class="op-btns mt10 ac"> <a id="timeSaveDjdJzd" clstag="pageclick|keycount|trade_201602181|55" href="javascript:void(0);"  class="btn-1"> 确定  </a> <a href="javascript:jQuery.closeDialog();"  class="btn-9 ml10"> 取消 </a> </div>
+		         </div>
+				 <div class="tab-con hide" id="tab_bzd_div">
+					<div class="date-delivery date-delivery-new" id="big-date-delivery1"></div>
+					<div class="ftx-03 mt20">
+					<i class="date-delivery-icon"></i>
+						温馨提示：我们会努力按照您指定的时间配送，但因天气、交通等各类因素影响，您的订单有可能会有延误现象！
+					</div>
+                     <div class="tips-618 mt20 hide tips-618-for-calendar">
+                         <div class="tips-con">
+                             <p class="tips-m">双11大促恰逢周末，请确认好收货地址和时间以保证货物及时送达。</p>
+                         </div>
+                     </div>
+					<div class="op-btns mt10 ac"> <a id="timeSaveBzd" clstag="pageclick|keycount|trade_201602181|54" href="javascript:void(0);"  class="btn-1"> 确定  </a> <a href="javascript:jQuery.closeDialog();"  class="btn-9 ml10"> 取消 </a> </div>
+				 </div>
+		  </div>
+	</script> 
+         <!--隐藏的大家电配送日历结束--> 
+         <script id="nostock-box01" type="text/temp">
+    <div class="limited-thickbox">
+    	<div class="tip-box icon-box">
+    		<span class="warn-icon m-icon"></span>
+    		<div class="item-fore">
+    			<h3>下手慢了~部分商品被抢空，继续结算其它商品？</h3>
+    		</div>
+    	</div>
+    	<div class="goods-items" id="out-skus">
+    	</div>
+    	<div class="op-btns ac">
+    			<a href="javascript:continueBuy()" class="btn-1" clstag="trade|keycount|sop|bfwhjxjs">继续</a>
+    			<a href="javascript:goCart()" class="btn-9 ml10" clstag="trade|keycount|sop|bfwhfhgwc">返回购物车</a>
+    	</div>
+    </div>
+    </script> 
+         <br />
+         <br /> 
+         <div id="trade-nostock-recommendation-render" style="display:none"></div> 
+         <script id="nostock-box02" type="text/temp">
+    <div class="limited-thickbox">
+    	<div class="tip-box icon-box">
+    		<span class="warn-icon m-icon"></span>
+    		<div class="item-fore">
+    			<h3>下手慢了~全部商品被抢空了
+					<span class="extra">
+                        <a href="javascript:goCart()" class="btn-9 ml10" clstag="trade|keycount|sop|qbwhfhgwc">返回购物车</a>
+                    </span>
+				</h3>
+    		</div>
+    	</div>
+    	<div class="p-lists">
+    		<div class="mt">
+    			看看其他的...
+    		</div>
+    		<div class="mc" id="trade-nostock-recommendation">
+    		</div>
+    	</div>
+    </div>
+    </script> 
+         <!--隐藏的无货代下单div--> 
+         <script id="nostock-box03" type="text/temp">
+    <div class="nostock-thickbox">
+    	<div class="tip-box icon-box-new">
+			<span class="warn-icon m-icon"></span>
+			<div class="item-fore">
+				<h3>下手慢了，部分商品被抢空，是否继续购买？</h3>
+				<span>商品可能不满足某些优惠条件</span>
+			</div>
+		</div>
+    	<div class="goods-items" id="out-skus">
+    	</div>
+    <div class="subs-info" id="detailAddr" style="display:none">
+		<span class="sub-tit">到货代下单信息：</span>
+		<br>
+		<span class="fl">下一个月到货自动为您下单</span>
+		<em class="fl ml10 mr10">|</em>
+		<span class="fl">在线支付</span>
+		<em class="fl ml10 mr10">|</em>
+		<span class="fl ml5 mr5" id="name"></span>
+		<span class="fl ml5 mr5" id="addrTel"></span>
+		<span class="fl addr ml5" id="addrInfo"></span>
+		<br>
+		<span>可以去<em class="ml5 mr5">我的寰宇-寰宇代下单</em><a href="//skunotify.jd.com/storeOrderSubMvc/queryStoreSub.action" target="_blank" class="ftx-05">查看详情</a></span>
+	</div>
+	<div class="op-btns ar">
+		<a href="javascript:continueBuy()" class="btn-1">确定</a>
+		<a href="javascript:goCart()" class="btn-9 ml10">取消</a>
+	</div>
+    </div>
+</script> 
+         <!--无货代下单失败提示div--> 
+         <script id="nostock-failed" type="text/temp">
+		<div class="nostock-tipsbox" >
+			<div class="tip-box icon-box-new">
+				<span class="error-icon m-icon"></span>
+				<div class="item-fore">
+					<h3>提交失败</h3>
+					<span>可能是由于网络问题，导致提交失败，尝试返回填写</span>
+				</div>
+			</div>
+			<div class="op-btns ac mt20 ml30">
+				<a href="javascript:goCart()" class="btn-1">返回</a>
+				<a href="#nogo" id="nostock-failedClose" class="btn-9 ml10">关闭</a>
+			</div>
+		</div>
+</script> 
+         <!--无货代下单成功提示div--> 
+         <script id="nostock-success" type="text/temp">
+<div class="nostock-tipsbox">
+	<div class="tip-box tip-box-succ icon-box-new">
+		<span class="succ-icon m-icon"></span>
+		<div class="item-fore">
+			<h3>订阅消息成功！</h3>
+		</div>
+	</div>
+	<div class="op-btns ac mt20 ml80">
+		<a href='__MODULE__/Cart/cart' class="btn-1">返回购物车</a>
+		<a href='//skunotify.jd.com/storeOrderSubMvc/queryStoreSub.action' target='_blank' class="btn-9 ml10">查看代下单详情</a>
+	</div>
+</div>
+</script> 
+         <script>
+/**
+ * 退换无忧浮层
+ */
+$(".J-mode-infor-tips").hover(
+    function() {
+        $(this).find(".mode-infor-tips").show();
+    },
+    function() {
+        $(this).find(".mode-infor-tips").hide();
+    }
+);
+</script> 
+         <div class="clr"></div> 
+        </div> 
+        <!--shopping-lists 结束--> 
+       </div> 
+      </div> 
+     </div> 
+     <!--添加商品清单结束--> 
+     <!--添加备注信息--> 
+     <div class="order-remarks hide" id="orderRemarkItem"> 
+     </div> 
+     <!--  /widget/invoice-step/invoice-step.tpl --> 
+     <div class="hr"></div> 
+     <!-- 发票信息 --> 
+     <div class="step-tit" id="invoice-step"> 
+      <h3>发票信息</h3> 
+      <div class="tips-new-white"> 
+       <b></b>
+       <span><i></i>开企业抬头发票须填写纳税人识别号，以免影响报销</span> 
+      </div> 
+     </div> 
+     <div class="step-content"> 
+      <div id="part-inv" class="invoice-cont"> 
+       <span class="mr10"> 普通发票（电子） &nbsp; </span> 
+       <span class="mr10"> 个人&nbsp; </span> 
+       <span class="mr10"> 明细&nbsp; </span> 
+       <a id="invoiceEdit" class="ftx-05 invoice-edit" clstag="pageclick|keycount|trade_201602181|16">修改</a> 
+      </div> 
+     </div> 
+     <div class="clr"></div> 
+     <!--/ /widget/invoice-step/invoice-step.tpl --> 
+     <div class="hr"></div> 
+     <!--  /widget/order-coupon/order-coupon.tpl --> 
+     <div class="step-tit step-toggle-off" id="virtualdiv" onclick="vertualHidOrShow()" clstag="pageclick|keycount|xunizichan__2016031015|1"> 
+      <h3>使用优惠/寰宇卡/抵用</h3> 
+      <i></i> 
+     </div> 
+     <div class="step-cont order-virtual" style="display: none;"> 
+      <div class="order-virtual-tabs"> 
+       <ul> 
+        <li class="ui-switchable-item curr" id="couponitem" onclick="query_coupons_vertual()" clstag="pageclick|keycount|xunizichan__2016031015|2"><span>优惠券</span><i style="display: none"></i></li> 
+        <li class="ui-switchable-item" id="giftitem" onclick="query_giftCards_vertual()" clstag="pageclick|keycount|xunizichan__2016031015|3"><span>寰宇卡&nbsp;/&nbsp;E卡</span><i style="display: none"></i></li> 
+        <li class="ui-switchable-item" id="jdbeanitem" onclick="showOrHideJdBean()" clstag="pageclick|keycount|xunizichan__2016031015|4"><span>京豆</span><i style="display: none"></i></li> 
+        <li class="ui-switchable-item" id="balanceitem" clstag="pageclick|keycount|xunizichan__2016031015|5"><span>余额</span><i style="display: none"></i></li> 
+       </ul> 
+      </div> 
+      <div class="ui-switchable-panel-main" id=""> 
+       <div class="ftx01 virtual-warning ml20 hide" id="safeBalancePart"> 
+        <span> 为保障您的账户资金安全，请先 <a target="_blank" href="http://safe.jd.com/user/paymentpassword/safetyCenter.action" class="ftx-05"> [开启支付密码] </a> </span> 
+       </div> 
+       <div class="hr hide"></div> 
+       <!-- input --> 
+       <div class="coupon-main ui-switchable-panel ui-switchable-panel-selected" style="display: block;"> 
+        
+        <div class="hr" id="couponsplit" style="display: none;"></div> 
+        <div class="coupon-cont"> 
+         <div class="coupon-tab ml20"> 
+          <ul> 
+           <li class="coupon-tab-item curr" id="skucoupontit" clstag="pageclick|keycount|xunizichan__2016031015|6">商品优惠券</li> 
+           <li class="coupon-tab-item" id="freightcoupontit" clstag="pageclick|keycount|xunizichan__2016031015|7">运费券</li> 
+           <li class="coupon-tab-item" id="changecoupontit" clstag="pageclick|keycount|xunizichan__2016031015|8">优惠码兑换</li> 
+          </ul> 
+         </div> 
+         <div class="coupon-tab-panel-main ml20" id="coupons"> 
+     
+          <div class="coupon-tab-panel ui-switchable-panel-selected" style="display: block;"> 
+           <div class="coupon-scrollbar"> 
+            <div class="ui-scrollbar-main"> 
+             <div class="coupon-scroll"> 
+              <!--可用优惠券 --> 
+              <div class="coupon-enable" style="height: 0px;"> 
+               <ul> 
+                <!-- 东券 --> 
+               </ul> 
+              </div> 
+              <div class="hr"></div> 
+              <!--不可用优惠券 --> 
+              <div class="coupon-disable"> 
+               <ul> 
+                <li> 
+                 <div class="coupon-item"> 
+                  <div class="c-detail-disable"> 
+                   <div class="c-msg"> 
+                    <div class="c-top"></div> 
+                    <div class="c-price"> 
+                     <em>￥10</em> 
+                    </div> 
+                    <div class="c-limit"> 
+                     <span> 满999 </span> 
+                    </div> 
+                    <div class="c-time"> 
+                     <span>有效期至2017-07-13</span> 
+                    </div> 
+                   </div> 
+                   <div class="c-type"> 
+                    <span class="c-type-l">[东券]</span> 
+                    <span id="10040739110">[限店铺限商品]</span> 
+                   </div> 
+                  </div> 
+                  <div class="c-info"> 
+                   <i class="c-info-qmark"></i> 
+                   <span> 
+                    <div class="virtual-desc" title="所结算商品中没有该店铺的商品">
+                      所结算商品中没有该店铺的商品 
+                    </div> </span> 
+                  </div> 
+                 </div> </li> 
+                <ul> 
+                </ul>
+               </ul>
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+      
+       
+          <script id="tooltip-box04" type="text/temp">
+  <div class="tooltip-goods">
+    <div class="coupon-goods">
+      <div class="coupon-tit">
+        
+      </div>
+      <div class="coupon-con" id="v-goods">
+         <div class="loading">
+            <i></i>加载中...
+        </div>
+      </div>
+    </div>
+  </div>    
+</script>
+         </div> 
+        </div> 
+       </div>  
+      </div> 
+     </div> 
+     <!--/  /widget/order-coupon/order-coupon.tpl --> 
+    </div> 
+    <!-- </div> --> 
+    <!-- </div> --> 
+    <!--  /widget/order-summary/order-summary.tpl --> 
+    <div class="order-summary"> 
+     <!--  预售 计算支付展现方式 begin --> 
+     <div class="statistic fr"> 
+      <div class="list"> 
+       <span><em class="ftx-01">{$list|count}</em> 件商品，总商品金额：</span> 
+       <em class="price" id="warePriceId" v="110.7">￥{}</em> 
+      </div> 
+      <div class="list"> 
+       <span>返现：</span> 
+       <em class="price" id="cachBackId" v="15"> -￥0.00</em> 
+      </div> 
+      <div class="list"> 
+       <span>运费：</span> 
+       <em class="price" id="freightPriceId"><i class="freight-icon"></i><font color="#FF6600"> ￥0.00</font></em> 
+      </div> 
+      <div class="list" style="display:block;"> 
+       <span>服务费：</span> 
+       <em class="price" id="serviceFeeId"><font color="#000000"> ￥0.00</font></em> 
+      </div> 
+      <div class="list" style="display:block;"> 
+       <span>退换无忧：</span> 
+       <em class="price" id="buyerFreightInsuranceId"><font color="#000000"> ￥0.00</font></em> 
+      </div> 
+      
+     </div> 
+     <div class="clr"></div> 
+    </div> 
+
+
+    <!--/ /widget/order-summary/order-summary.tpl --> 
+    <!-- 运费弹窗显示 --> 
+    <div id="tooltip-box06" class="hide"> 
+     <div class="summary-freight-box-new"> 
+      <div class="sfb-tit"> 
+       <span>店铺运费明细</span> 
+       <span class="ml5 ftx-03" id="frightDetail">总计<em class="ml5 ftx-01">￥6.00</em></span> 
+      </div> 
+      <div class="sfb-con"> 
+       <!-- 只包含延保商品的商家不显示 --> 
+       <div class="sfb-item"> 
+        <div class="sfb-item-tit"> 
+         <span class="vendor_name_freight" id="0"> 寰宇自营 </span> 
+         <em class="ftx-03 hide" id="xzweight-detail-bak" style="display: none;">（总重0.750kg）</em> 
+         <em class="ftx-03 hide" id="sxweight-detail-bak" style="display: none;"></em> 
+         <em class="ftx-03 hide" id="wmweight-detail-bak" style="display: none;"></em> 
+        </div> 
+        <!-- begin 运费明细块 --> 
+        <div class="sfb-item-info" id="normal-freight-container"> 
+         <span class="sfb-item-info-tit normal-freight-title">非生鲜商品 <em class="ftx-03 hide" id="xzweight-detail" style="display: none;">（总重0.750kg）</em> </span> 
+         <span style="display: block;">基础运费：<b class="ftx-01 base-freight">￥6.00</b><a href="http://help.jd.com/user/issue/109-188.html" target="_blank" class="ml5 ftx-05 hide" id="freighttips">查看港澳台地区收费标准</a></span> 
+         <span class="hide" style="display: none;">续重运费：<b class="ftx-01 xz-freight"></b><a href="http://help.jd.com/user/issue/109-188.html" target="_blank" class="ml5 ftx-05">查看续重标准&gt;</a></span> 
+         <span class="hide" style="display: none;">续重运费：<b class="ftx-01 overseaxz-freight"></b><a href="http://help.jd.com/user/issue/109-3492.html" target="_blank" class="ml5 ftx-05">查看续重标准&gt;</a></span> 
+         <span class="hide" style="display: none;">海外地区附加燃油费：<b class="ftx-01 fuel-freight"></b></span> 
+         <span class="hide" style="display: none;">免运费<b class="ftx-01 free-freight" freightbyvenderid="0" popjdshipment="false"></b></span> 
+        </div> 
+        <div class="hr" id="sx-freight-split-line" style="display: none;"></div> 
+        <div class="sfb-item-info hide" id="sx-freight-container" style="display: none;"> 
+         <span class="sfb-item-info-tit sx-freight-title" style="display: none;">生鲜商品 <em class="ftx-03 hide" id="sxweight-detail" style="display: none;"></em> </span> 
+         <span style="display: none;">基础运费：<b class="ftx-01 base-freight"></b></span> 
+         <span class="hide" style="display: none;">续重运费：<b class="ftx-01 xz-freight">￥20.00</b><a href="http://help.jd.com/user/issue/109-188.html" target="_blank" class="ml5 ftx-05">查看续重标准&gt;</a></span> 
+         <span class="hide">免运费<b class="ftx-01 free-freight" freightbyvenderid="0" popjdshipment="false"></b></span> 
+        </div> 
+        <div class="hr" id="ext-freight-split-line" style="display: none;"></div> 
+        <div class="sfb-item-info hide" id="ext-freight-container" style="display: none;"> 
+         <span class="hide" style="display: none;">非生鲜京准达运费：<b class="ftx-01 jzd-freight"></b></span> 
+         <span class="hide" style="display: none;">非生鲜极速达运费：<b class="ftx-01 jsd-freight"></b></span> 
+         <span class="hide" style="display: none;">大件京准达运费：<b class="ftx-01 djzd-freight"></b></span> 
+         <span class="hide" style="display: none;">生鲜京准达运费：<b class="ftx-01 jzdsx-freight"></b></span> 
+         <span class="hide" style="display: none;">生鲜大件极速达运费：<b class="ftx-01 jzdsxdj-freight"></b></span> 
+         <span class="hide" style="display: none;">生鲜极速达运费：<b class="ftx-01 jsdsx-freight"></b></span> 
+        </div> 
+        <div class="sfb-item-goods"> 
+         <div class="ui-switchable-body"> 
+          <div class="ui-switchable-panel-main"> 
+           <div class="ui-switchable-panel"> 
+            <ul class="sfb-goods-list"> 
+             <li id="3440986" class="sfb-goods-item"> <a href="shopping/order/getOrderInfo.action?rid=1499668051155#none" title="洁丽雅（Grace）毛巾家纺 纯棉提花面巾加厚加大吸水毛巾二条装 红/棕 125g/条 76*34cm"><img height="50" width="50" src="__ROOT__/Public/Home/Orders/57aed695N5bb2b89a(1).jpg" alt="" /></a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="sfb-ui-switchable-page"> 
+          <a href="javascript:void(0)" class="sfb-prev">&lt;</a> 
+          <a href="javascript:void(0)" class="sfb-next">&gt;</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- 运费弹窗结束--> 
+    <div id="tooltip-box09" class="hide"> 
+     <div class="plus-box-cont"> 
+      <div class="pbox-tit"> 
+       <strong class="fl"><em class="ftx-01" id="totalNum">0</em>件商品有PLUS专享价</strong> 
+       <span class="ml5 ftx-03 fr">可省<em class="ml5 ftx-01" id="totalPricetip">￥0</em></span> 
+      </div> 
+      <div class="pbox-con" id="plusProducts"> 
+       <ul> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <!--  /widget/checkout-floatbar/checkout-floatbar.tpl --> 
+    <div class="trade-foot"> 
+     <div id="plusInfoByFreight" class="">
+   
+     </div> 
+     <div id="plusInfo" class="hide"></div> 
+     <div class="trade-foot-detail-com" style="width:1168px"> 
+      <div class="fc-price-info"> 
+       <span class="price-tit">应付总额：</span> 
+       <span class="price-num" id="sumPayPriceId">￥0.00</span> 
+      </div> 
+      <div class="fc-baitiao-info" style="display: none;"> 
+       <span>白条支付：<em>不分期</em>（不使用优惠）<i class="bt-edit-icon" onclick="javascript:btDetail();" clstag="pageclick|keycount|PaymentLead__2016030411|5"></i></span> 
+      </div> 
+     
+      <div class="fc-consignee-info"> 
+       <span class="mr20" id="sendAddr">寄送至： {$address_default['address_province']}{$address_default['address_city']}{$row['address_area']}{$address_default['address_text']}</span> 
+       <span id="sendMobile">收货人：{$address_default['name']} &nbsp; {$address_default['phone']}</span> 
+      </div> 
+     </div>
+     <script type="text/javascript">
+      var all=0;
+      // var priceAll=$(".p-price[name='priceAll'] div:nth-child(2)>font>span").html();
+      $(".goods-suit>.goods-item>.goods-msg>.goods-msg-gel>.p-price div:nth-child(2)>font>span").each(function(){
+        all= all+parseInt($(this).html());
+      }); 
+      $(".trade-foot-detail-com #sumPayPriceId").html('￥'+all);
+      // $("#sumPayPriceId").html(all);
+      $("#warePriceId").html('￥'+all);
+
+        function checkOrder(){
+          mm = $("#checkOrder").html();
+          if(mm=='1'){
+            return false;
+          }
+          return true;
+        }
+
+    </script>
+ 
+     <!-- 预售 --> 
+     <!--input--> 
+     <div class="pay-pwd" id="paypasswordPanel" style="display: none"> 
+      <div class="pay-pwd-cont"> 
+       <span class="label"> 支付密码 </span> 
+      
+       <span class="forgot-password"> <a> 忘记支付密码？ </a> </span> 
+      </div> 
+     </div> 
+     <!-- 支付密码 --> 
+     <!--港澳售项目 --> 
+     <div class="hkmtbuy-con hide" id="hkmtbuy-area"> 
+      <div class="hkmtbuy-chk"> 
+     
+       <a href="http://help.jd.com/user/issue/266-1691.html" class="ftx05" target="_blank">《售全球服务协议》</a> 
+      </div> 
+     </div> 
+     <!-- 全球售、台湾售 --> 
+     <div class="hkmtbuy-con hide" id="overseamtbuy-area"> 
+      <div class="hkmtbuy-chk"> 
+       
+       <a href="shopping/order/getOrderInfo.action?rid=1499668051155" class="ftx05" onclick="javascript:return openOverseaAgree();">《售全球服务协议》</a> 
+      </div> 
+     </div> 
+     <div id="checkout-floatbar" class="group"> 
+      <div class="ui-ceilinglamp checkout-buttons" style="width:1168px"> 
+       <div class="sticky-placeholder hide" style="display: none;"> 
+       </div> 
+       <div class="sticky-wrap"> 
+        <div class="inner"> 
+         <!-- <button type="submit" class="checkout-submit" id="order-submit" clstag="pageclick|keycount|trade_201602181|25"> 提交订单<b></b> </button>  -->
+         <input type="submit" value="提交订单" class="checkout-submit"/>
+         </form>
+         <span id="checkCodeDiv"></span> 
+         <div class="checkout-submit-tip" id="changeAreaAndPrice" style="display: none;">
+           由于价格可能发生变化，请核对后再提交订单 
+         </div> 
+         <!--div style="display:none" id="factoryShipCodShowDivBottom" class="dispatching">
+                              部分商品货到付款方式：先由寰宇配送“提货单”并收款，然后厂商发货。
+                            </div--> 
+        </div> 
+        <span id="submit_message" style="display:none" class="submit-error"></span> 
+        <div class="submit-check-info" id="submit_check_info_message" style="display:none"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!--/ /widget/checkout-floatbar/checkout-floatbar.tpl --> 
+    <!--  /widget/backpanel/backpanel.tpl --> 
+    <div id="backpanel"> 
+     <div id="backpanel-inner" class="hide" style="right: 224.5px;"> 
+  
+
+     </div> 
+    </div> 
+    <!--/ /widget/backpanel/backpanel.tpl --> 
+   </div> 
+  </div> 
+  <!-- /main --> 
+  <!--  /widget/footer/footer.tpl --> 
+  <!-- footer --> 
+  </block>

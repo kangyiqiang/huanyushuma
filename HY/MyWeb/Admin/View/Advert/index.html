@@ -1,0 +1,24 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-pictures"></i>广告　　　</span> 
+                    </div>
+                    <div class="mws-panel-body">
+                        <ul class="thumbnails mws-gallery">
+                        <if condition="$number gt 0">
+                            
+                                <li style="width: 1000px">
+                                    <span class="thumbnail"><img src="__ROOT__{$res[0]['pic']}" alt=""></span>
+                                    <span class="mws-gallery-overlay">
+                                        <a href="__MODULE__/Advert/edit/id/{$res[0]['id']}" class="mws-gallery-btn"><i class="icon-pencil"></i></a>
+                                        <a href="__MODULE__/Advert/delete/id/{$res[0]['id']}" onclick="if (confirm('确定删除？')) return true; else return false;" class="mws-gallery-btn"><i class="icon-trash"></i></a>
+                                    </span>
+                                </li>
+                         
+                        <else /><span><i class="icol-exclamation"></i>当前还未添加任何广告，先去<a href="__MODULE__/Advert/add">添加</a>吧</span>
+                        </if>
+                        </ul>
+                    </div>
+                </div>
+</block>

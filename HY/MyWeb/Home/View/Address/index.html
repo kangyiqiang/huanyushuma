@@ -1,0 +1,41 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+		<div class="hy_tt">
+			<a href="javascript:;" class="sel">收货地址<span>{$total}</span></a>
+			<a href="__MODULE__/Address/add" class="fabu_btn">+ 新增地址</a>
+			<div class="clear"></div>
+		</div>
+		<div class="hy_tablelist">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th width="80">收货人</th>
+				<th width="120">联系电话</th>
+				<th>收货地址</th>
+				<th width="100">操作</th>
+			</tr>
+			<foreach name="list" item="row">
+			<tr>
+				<td>{$row['name']}</td>
+				<td>{$row['phone']}</td>
+				<td class="">
+					<if condition="$row['status'] eq 1"><span class="cred">[默认]</span>
+					</if>
+					{$row['address_province']} {$row['address_city']}市 {$row['address_area']} {$row['address_text']}
+				</td>
+				<td>
+					<a href="__MODULE__/Address/edit/id/{$row['id']}" class="tag_gray mar10">修改</a>
+					<a href="__MODULE__/Address/delete/id/{$row['id']}" class="tag_gray" onclick="if (confirm('您确定删除此地址？')) return true; else return false;">删除</a>				
+				</td>
+			</tr>
+			</foreach>
+			</table>
+		</div>
+		<div class="fenye mat10">{$db->page->html}</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</block>
+<!--{include(pe_tpl('footer.html'));}-->

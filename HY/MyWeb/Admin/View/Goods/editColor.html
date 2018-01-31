@@ -1,0 +1,83 @@
+<extend name="Public:public"/>
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+          <div class="mws-panel-header">
+              <span><i class="icol-add"></i> 添加基本信息&nbsp;>&nbsp;添加商品颜色&nbsp;</span>
+          </div>
+          <div class="mws-panel-body no-padding">
+              <form class="mws-form" action="__MODULE__/Goods/updateColor" method="post" enctype="multipart/form-data" />
+              <input type="hidden" name="goods_id" value="{$goods_id}">
+                  <div class="mws-form-inline">
+                   <button type="button" class="btn lable btn-danger"><i class="icon-pacman"></i>继续添加颜色</button>
+                            <div class="mws-form-row">
+                               <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" >  
+                                  <if condition="!empty($color)">
+                                    <foreach name="color" item="row">
+                                     <tr  align="center"> 
+                                      <td width="150px">{$row['color_name']}</td>
+                                      <td align="left">
+                                      <foreach name="row['pic']" item="rows">
+                                        <img src="__PUBLIC__/Uploads/goods_spic/{$rows}" style="width:50px;height:58px;border:2px solid red">&nbsp;&nbsp;&nbsp;
+                                      </foreach>
+                                      </td>
+                                      <td><a href="__MODULE__/Goods/delSpic/cid/{$row['id']}">删除</a></td>
+                                     </tr>
+                                   </foreach>
+                                  <else />
+                                      <td colspan="7">暂无图片可供展示,请添加</td> 
+                                  </if>
+                               </table> 
+                                </div>  
+                            </div>
+                         <div class="repeat">
+                              <div class="mws-form-row">
+                                <div class="mws-form-cols">
+                                    <div class="mws-form-col-3-8">
+                                        <label class="mws-form-label">请输入商品颜色</label>
+                                        <div class="mws-form-item">
+                                             <input class="small" type="text" name="color_name[]" required>
+                                        </div>
+                                    </div>
+                                    <div class="mws-form-col-5-8">
+                                        <label class="mws-form-label">Uploads picture</label>
+                                        <div class="mws-form-item">
+                                            <input name="spic[]" type="file" value="" multiple='multiple' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    <div class="mws-button-row">
+                    	<a href="__MODULE__/Goods/edit/id/{$goods_id}" class="btn">查看详情</a>
+                        <!-- input value="查看详情" class="btn" type="reset"> -->
+                        <input value="确认修改" class="btn btn-success" type="submit">
+                    </div>
+              </form>
+          </div>      
+      </div>
+
+<script type="text/javascript">
+
+
+$("input[name='spic[]']").click(function(){
+      alert('请选择5张缩略图!!!');
+
+ });
+
+$(".lable").click(function(){
+  var repeat=$('.repeat').html();
+  // alert(repeat);
+  $(".repeat").after(repeat);
+
+  $("input[name='spic[]']").click(function(){
+      alert('请选择5张缩略图!!!');
+
+  });
+});
+</script>
+
+</block>
+<block name="title">
+        后台类别添加操作
+</block>

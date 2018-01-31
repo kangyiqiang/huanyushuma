@@ -1,0 +1,60 @@
+<extend name="Public:public"/>
+<block name="admin">
+<div id="mws-container" class="clearfix" style="margin-left: 0px;">
+  <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-table"></i>浏览文章</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+                        <form action="__MODULE__/Article/index" method="get">
+                            <div class="dataTables_filter" id="DataTables_Table_1_filter"><label>按标题搜索: <input type="text" aria-controls="DataTables_Table_1" name="title" value="{$title}"></label><input type="submit" value="搜索" class="btn">
+                            </div>
+                        </form>
+                        <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+                            <thead>
+                                <tr role="row">
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 147px;">id</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 183.2px;">标题</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 169.2px;">正文</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">封面</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">添加时间</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">分类</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">点赞数</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">操作</th>
+                                </tr>
+                            </thead> 
+                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                            <if condition="$count gt 0">
+                                <foreach name="data" item="row">
+                                <tr class="odd" align="center" style="text-overflow:ellipsis;overflow: hidden; height: 70px;">
+                                    <td class="">{$row.id}</td>
+                                    <td class="">{$row.title}</td>
+                                    <td class="" ><div style="width: 100%;height: 80px;text-overflow: ellipsis;overflow: hidden;">{$row.descr}</div></td>
+                                    <td class=""><img src="__ROOT__{$row.pic}"></td>
+                                    <td class="">{$row.addtime|date="y-m-d H:i:s",###}</td>
+                                    <td class="">
+                                    <if condition="$row.type eq 1">摄影社区
+                                    <elseif condition="$row.type eq 2"/>智能社区
+                                    <else />造乐社区
+                                    </if>
+                                    </td>
+                                    <td class="">{$row.zan}</td>
+                                    <td class="">
+                                        <a href="__MODULE__/Article/delete?id={$row.id}" onclick="if (confirm('确定删除？')) return true; else return false;" class="btn btn-success"><i class="icon-trash"></i></a>
+                                        <a href="__MODULE__/Article/edit?id={$row.id}" class="btn btn-success"><i class="icon-wrench"></i></a>
+                                    </td>
+                                </tr>
+                                </foreach>
+                            <else /><tr><td colspan="8"><span><i class="icol-exclamation"></i>暂无数据</span></td></tr>
+                            </if>
+                        </tbody>
+                        </table>
+                        <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+                        {$pageinfo}
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+</block>

@@ -1,0 +1,1476 @@
+<extend name="Public:public" /> 
+  <block name="title">
+    商品详情
+  </block> 
+  <block name="admin"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=9" /> 
+  <meta name="description" content="" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no" /> 
+  <link combofile="common/global.html" rel="stylesheet" href="__ROOT__/Public/Home/product/a_002.css" /> 
+  <link combofile="detail/compare_list_2.html" rel="stylesheet" href="__ROOT__/Public/Home/product/a.css" /> 
+  <link combofile="detail/detail_v3_1.html" rel="stylesheet" href="__ROOT__/Public/Home/product/a_003.css" /> 
+ </head> 
+ <body style="*overflow-x: hidden;"> 
+  <!-- 公共模块入口 --> 
+  <!-- 全站公告 --> 
+  <!-- 全站 banner --> 
+  <!-- E 头部 --> 
+  <!-- E 头部 --> 
+  <!--S 商品详情页面--> 
+  <div class="detial_wrap"> 
+   <!-- S 面包屑 --> 
+   <div class="crumb_wrap"> 
+    <div class="crumb"> 
+     <a href="__MODULE__/Goods" class="home_page">商品列表页</a> 
+     <label></label>
+     <a href="">商品详情页</a> 
+
+    </div> 
+   </div> 
+   <!-- E 面包屑 --> 
+   <!--S 产品展示--> 
+   <div class="product_wrap"> 
+    <div class="product_left">
+<style type="text/css">
+  </style>
+     <div  class="zoom_pic" id="big" style="display:none">  
+      <img id="bigimg"  alt="家用空调 变频大1P 智能冷暖 二级能效  KFR-26GW/WXAA2@" style="left: -698.4px; top: -287.6px;" src="__ROOT__/Public/Uploads/goods_spic/{$spic[0]}" width="1200" height="1200" /> 
+     </div> 
+     <div class="showcase" id="small"> 
+        <div class="detail_pic"  id="move" style="width: 209px; height: 209px; left: 291px; top: 119.833px;display:none;"></div> 
+        <img id="simg" class="showcase_inner" src="__ROOT__/Public/Uploads/goods_spic/{$spic[0]}" alt="家用空调 变频大1P 智能冷暖 二级能效  KFR-26GW/WXAA2@" /> 
+     </div> 
+     <ul id="thumbnails" class="thumbnails"> 
+      <li class="cur"> <img name="list1" id="1" src="__ROOT__/Public/Uploads/goods_spic/{$spic[0]}"/> </li> 
+      <li class=""> <img name="list1"  id="2" src="__ROOT__/Public/Uploads/goods_spic/{$spic[1]}" /> </li> 
+      <li class=""> <img name="list1" id="3" src="__ROOT__/Public/Uploads/goods_spic/{$spic[2]}" /></li> 
+      <li class=""> <img name="list1"  id="4" src="__ROOT__/Public/Uploads/goods_spic/{$spic[3]}" /> </li> 
+      <li class=""> <img name="list1"  id="5" src="__ROOT__/Public/Uploads/goods_spic/{$spic[4]}" /> </li> 
+     </ul> 
+<script type="text/javascript">
+  //获取small元素对象
+  small=document.getElementById("small");
+  move=document.getElementById("move");
+  bigimg=document.getElementById("bigimg");
+  big=document.getElementById("big");
+  simg=document.getElementById("simg");
+
+  //获取img元素对象集合
+  list1=document.getElementsByName("list1");
+
+
+  //给small绑定鼠标移动事件
+  small.onmousemove=function(e){
+    //显示move和big
+    move.style.display="block";
+    big.style.display="block";
+
+    //兼容
+    ee=e||window.event;
+    //获取横坐标和纵坐标
+    x=ee.clientX;
+    y=ee.clientY;
+    //获取small元素距离父元素document的left和top
+    // offsetLeft offsetTop
+    // xx=small.left;
+    // yy=small.top;
+    xx=small.offsetLeft;
+    yy=small.offsetTop-document.body.scrollTop-document.documentElement.scrollTop;
+    // alert(xx+":"+yy);
+    //获取元素对象的高度和宽度
+    // offsetWidth offsetHeight
+    l=x-xx-move.offsetWidth;
+    t=y-yy-move.offsetHeight*1.5;
+
+    //左
+    if(l<0){
+      l=0;
+    }
+    //右
+    if(l>small.offsetWidth-move.offsetWidth){
+      l=small.offsetWidth-move.offsetWidth;
+    }
+    //顶部
+    if(t<0){
+      t=0;
+    }
+
+    //底部
+    if(t>small.offsetHeight-move.offsetHeight){
+      t=small.offsetHeight-move.offsetHeight;
+    }
+    //把获取到的l和t赋值给move div left和top
+    move.style.left=l+"px";
+    move.style.top=t+"px";
+
+    x1 = l/small.offsetWidth;
+    y1 = t/small.offsetHeight;
+
+    b_l=x1*bigimg.offsetWidth;
+    b_t=y1*bigimg.offsetHeight;
+
+
+
+    //改变右边图片的left和top值
+    bigimg.style.left=-b_l+"px";
+    bigimg.style.top=-b_t+"px";
+
+    x2=big.offsetWidth/bigimg.offsetWidth;
+    y2=big.offsetHeight/bigimg.offsetHeight;
+
+    m_w = small.offsetWidth*x2;
+    m_h = small.offsetHeight*y2;
+
+    move.style.width = m_w+"px";
+    move.style.height = m_h+"px";
+  }
+
+  //small元素绑定鼠标移出 onmouseout
+  small.onmouseout=function(){
+    move.style.display="none";
+    big.style.display="none";
+  }
+
+  //遍历
+  for(var i=0;i<list1.length;i++){
+    list1[i].onmouseover=function(){
+     
+      $(this).parent().addClass('cur');
+      $(this).parent().siblings().removeClass('cur');
+     
+      //获取当前单击的src
+      src=this.getAttribute("src");
+      //把当前src赋值给左图和右图的src
+      simg.src=src;
+      bigimg.src=src;
+    }
+
+  }
+</script>
+
+
+    </div> 
+    <div class="product_right"> 
+     <!--   S 主标题--> 
+     <h1 title="家用空调 变频大1P 智能冷暖 二级能效  KFR-26GW/WXAA2@">{$list['goods_name']}</h1> 
+     <!--   E 主标题--> 
+     <!--   S 副标题--> 
+     <a target="_blank" href="javascript:void(0);"> <h5 title="{$list['descr']}">{$list['descr']} <span class="promo_detail"></span> </h5> </a> 
+     <!--   E 副标题--> 
+     <!--   S 价格 活动等展示--> 
+     <div class="floor_price_act"> 
+      <div class="price_act_inner"> 
+       <div class="price_wrap"> 
+       <span class="new_price"> 
+             <span class="currency_symbol">&yen;</span> 
+             <b class="price">{$res.price}.00</b>
+       </span> 
+       </div> 
+       <!--        设置了并且不是以旧换新--> 
+      </div> 
+     </div> 
+     <!--   E 价格 活动等展示--> 
+     <!--   S 优惠券评论展示-->
+     <div class="floor_coupon_comment"> 
+      <div class="inner_floor floor_onsale"> 
+       <h3>促销</h3> 
+       <div class="floor_list"> 
+        <div class="option option_act "> 
+         <!-- <span class="icon_act"></span>  -->
+         <span class="text_act"><font color="red">{$list['sale']}</font></span> 
+        </div> 
+       </div> 
+      </div>
+      <div class="inner_floor floor_onsale"> 
+       <h3>增值业务</h3> 
+       <div class="floor_list"> 
+        <div class="option option_act "> 
+         <!-- <span class="icon_act"></span>  -->
+         <span class="text_act">{$list.add_server}</span> 
+        </div> 
+       </div> 
+      </div>
+      <div class="inner_floor floor_comment J_floor_comment"> 
+       <h3>重量</h3> 
+       <div class="floor_list"> 
+        <span class="option">{$list['weight']}kg</span> 
+       </div> 
+      </div> 
+     </div> 
+     <!--   E 优惠券评论展示--> 
+     <!--   S SKU相关信息展示--> 
+     <div id="skuWrap" class="sku_wrap"> 
+      <div class="sku sku_color" id="skuColor"> 
+       <h3>颜色</h3> 
+
+       <div class="sku_list color"> 
+       <!-- 颜色 -->
+       <volist name="color" id="co" empty="没颜色可供选择">
+
+           <i class="option" id="color" name="白色" mtag="30007.5.1" cid="{$co.id}">
+           <!--  <img class="color_img" title="白色" src="__ROOT__/Public/Home/product/41781e0ebb62de62A19655_120120.jpg" alt="白色" />  -->
+            <span class="color_name" id="{$co.id}">{$co.color_name}</span> 
+
+            </i>
+      </volist>
+       </div> 
+
+      </div> 
+      <div class="sku  sku_spec" id="skuSpec"> 
+       <h3>规格</h3> 
+       <div class="sku_list version"> 
+       <!--  <span class="option option_selected" data-type="spec" mtag="30007.5.2">大1P</span> 
+        <span class="option" data-type="spec" mtag="30007.5.2">大1.5P</span> 
+ --> 
+      <volist name="version" id='ve'>
+         <span id="ver" class="option version_name" data-type="spec" mtag="30007.5.2" vid={$ve.id}>{$ve.version}</span> 
+      </volist>
+       </div> 
+      </div> 
+      <script type="text/javascript">
+            //颜色
+            $('#color').addClass('option_selected');
+             $('.color').find('#color').click(function(){
+              //获取颜色id
+               var cid=$(this).attr('cid');
+               $('.info').attr('cid',cid);
+               //加框
+              $(this).addClass('option_selected');
+              $(this).siblings().removeClass('option_selected');
+
+               // AJAX请求数据返回该版本数据
+               $.get('__MODULE__/Goods/product',{cid:cid},function(data){
+                   // alert(data.spic);
+                   var obj2 = data.spic.split(",");
+                    //把遍历出来的数据添加到对应的框中
+                    //设置属性
+                    $('#simg').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[0]);
+                    $('#bigimg').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[0]);
+                    $('#1').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[0]);
+                    $('#2').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[1]);
+                    $('#3').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[2]);
+                    $('#4').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[3]);
+                    $('#5').attr('src',"__ROOT__/Public/Uploads/goods_spic/"+obj2[4]);   
+
+               },'json');
+            })  
+
+
+            //版本
+            //默认第一个选中
+            $('#ver').addClass('option_selected');
+            $('.version').find('*').click(function(){
+              //获取版本id
+               var vid=$(this).attr('vid');
+              
+               $('.ji').attr('name',vid);
+
+                $('.info').attr('vid',vid);
+                $(this).addClass('option_selected');
+                $(this).siblings().removeClass('option_selected');
+               //AJAX请求数据返回该版本数据
+               $.get('__MODULE__/Goods/changeVersion',{vid:vid},function(data){
+                   // alert(data.price);
+                   //赋值给商品价格
+                  $('.price').html(data.price+'.00');
+                  $('.store').html(data.store);
+         
+               },'json');
+            })  
+
+      </script>
+
+
+      <div class="sku jj sku_num" > 
+       <h3>数量</h3> 
+       <div class="num_wrap" mtag="30007.6.1" id="divEditNum_156886" > 
+        <span id="minus" class="minus ji" name=""> <span class="inner"></span></span> 
+        <input id="num" class="num" name="{$res['id']}" value="1" pattern="[0-9]" type="tel" /> 
+        <span id="plus" class="plus"><span class="inner"></span></span>
+        <div class="stock_quota"> 
+         <div class="stock_status ">
+          库存 <i class="store">{$res['store']} </i>
+         </div> 
+         <script type="text/javascript">
+          //减
+          $(".minus").click(function(){
+            var n = $(this).next('input').attr('value');
+            //获取id
+            id=$(this).attr('name');
+            if(id==''){
+              id=$('.num').attr('name');
+            }
+            // alert(id);
+            ob=$(this);
+            //Ajax
+            $.get("__URL__/minus",{id:id,n:n},function(data){
+              // alert(data);
+              //给数量赋值
+              ob.next("input").attr('value',data['num']);
+
+            },'json')
+          })
+
+          //加
+          $(".plus").click(function(){
+            var n = $(this).prev('input').attr('value');
+            //获取id
+            id=$('.minus').attr('name');
+            // alert(id);
+             if(id==''){
+              id=$('.num').attr('name');
+            }
+            ob=$(this);
+            //Ajax
+            $.get("__URL__/plus",{id:id,n:n},function(data){
+              // alert(data);
+              //给数量赋值
+              ob.prev("input").attr('value',data['num']);
+
+            },'json')
+          })
+          </script>
+         <!-- 预售商详 ：预热期 不展示限购数 其他 取nQuotaNum --> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!--   E SKU相关信息展示--> 
+     <div class="floor_btn"> 
+      <if condition="$_SESSION['islogin'] eq 2">
+      <a  class="cart_btn cart" id="btnCart" data-click="0">加入购物车</a>
+      <else /><a  class="cart_btn" id="btnCart" href="javascript:void(0)" onclick="alert('您还没有登录')" data-click="0">加入购物车</a>
+    </if>
+    <if condition="$_SESSION['islogin'] eq 2">
+      <a class="primary_btn buuy" id="btnBuy" data-click="0">立即购买</a>
+      <else /><a  class="primary_btn" id="btnBuy" href="javascript:void(0)" onclick="alert('您还没有登录')" data-click="0">立即购买</a>
+    </if>
+
+
+      <!-- <a href="javascript:void(0)" class="primary_btn" id="btnBuy"> <i class="alarm_icon"></i> 立即购买 </a>  -->
+     </div> 
+     <div class="info" cid="" vid=""></div>
+
+     <script type="text/javascript">
+        //加入购物车
+       $('.cart_btn').click(function(){
+          var cid=$('.info').attr('cid');
+          var vid=$('.info').attr('vid');
+          if(cid==''){
+            cid = $('.color_name').attr('id'); 
+          }
+          if(vid==''){
+            vid = $('.version_name').attr('vid');
+          }
+          gnum=$('#num').val();
+          $('.cart').attr('href','__MODULE__/Cart/add?cid='+cid+'&vid='+vid+'&gnum='+gnum);
+       });
+
+       //立即购买
+        $('.primary_btn').click(function(){
+          var cid=$('.info').attr('cid');
+          var vid=$('.info').attr('vid');
+          if(cid==''){
+            cid = $('.color_name').attr('id'); 
+          }
+          if(vid==''){
+            vid = $('.version_name').attr('vid');
+          }
+          gnum=$('#num').val();
+          $('.buuy').attr('href','__MODULE__/Cart/nowBuy?cid='+cid+'&vid='+vid+'&gnum='+gnum);
+       })
+     </script>
+     <!--S 预售提示--> 
+     <!--S 预售提示--> 
+     <div class="floor_service"> 
+      <div class="service_inner"> 
+       <span class="service_icon"></span> 
+       <span class="service_option">寰宇数码官方商城</span> 
+      </div> 
+      <div class="service_inner"> 
+       <span class="service_icon"></span> 
+       <span class="service_option">全国联保</span> 
+      </div> 
+      <div class="service_inner"> 
+       <span class="service_icon"></span> 
+       <span class="service_option">全场包邮</span> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--E 产品展示--> 
+   <!-- S 预售规则 --> 
+   <!-- E 预售规则--> 
+   <!--E 优惠套装及猜你喜欢(线上一定有数据)--> 
+   <div class="recommend_package_wrap recommend_only"> 
+    <div class="recommend_nav"> 
+     <div class="nav_item nav_item_recommend js_nav" data-type="recommend">
+      猜你喜欢
+     </div> 
+    </div> 
+
+    <div class="recommend_list js_recommend_list"> 
+
+      <volist name="guess" id="gu">
+     <div class="recommend_item sku_tag_wrap"> 
+      <a class="pro_href" target="_blank" href="__MODULE__/Goods/product/version_id/{$gu.vid}"> <img class="pro_img" src="__ROOT__/Public/Uploads/goods_spic/{$gu.spic}" alt="Midea/美的冰箱 36分贝 时尚妙趣面板 低温补偿 BCD-169CM(E)" /> <span class="pro_name">{$gu.vname}</span> <span class="pro_price">&yen;{$gu.price}.00</span> 
+       <div class="sku_tag sku_tag_important">
+        限时优惠
+       </div> </a> 
+     </div> 
+    </volist>
+
+     </div> 
+    </div> 
+   </div> 
+   <!-- S 优惠套装及猜你喜欢 --> 
+   <!-- S 产品详情导航 --> 
+   <div class="tabs_nav_wrap "> 
+    <div class="tabs_nav_inner_wrap"> 
+     <div class="tabs_nav_border_wrap"> 
+      <div class="tabs_nav_left"> 
+       <img src="__ROOT__/Public/Home/product/41781e0ebb62de62A19655_120120.jpg" alt="家用空调 变频大1P 智能冷暖 二级能效  KFR-26GW/WXAA2@" /> 
+       <div class="tabs_product"> 
+        <div class="product_name">
+         家用空调 变频大1P 智能冷暖 二级能效 KFR-26GW/WXAA2@
+        </div> 
+        <!--  -->
+        <div class="product_price">
+         &yen; 2899.00
+        </div> 
+       </div> 
+      </div> 
+      <div class="tabs_nav_right"> 
+       <a href="javascript:void(0)" id="btnFixBuy">
+        <div class="primary_btn">
+         立即购买
+        </div></a> 
+       <a href="javascript:void(0)" id="btnFixAlarm">
+        <div class="primary_btn">
+         <i class="alarm_icon"></i>立即购买
+        </div></a> 
+      </div> 
+      <ul class="tabs_nav"> 
+       <li data-tab="#product_intro" mtag="30007.1.1" class="cur" id="nav_user_evaluation1">产品介绍</li> 
+       <li data-tab="#user_evaluation" mtag="30007.1.3" id="nav_user_evaluation" class="">评价<span class="evaluation_num">({$rows|count})</span></li> 
+       <li data-tab="#product_spec" mtag="30007.1.2">规格参数</li> 
+       <li data-tab="#service_support" mtag="30007.1.5">服务支持</li> 
+       <li data-tab="#related_question" mtag="30007.1.6">相关问题</li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <!-- E 产品详情导航 --> 
+   <!-- S 产品详情内容 --> 
+   <div class="tabs_content_wrap"> 
+  <!-- S 产品介绍 --> 
+    <div class="tabs_content tabs_content_product cur" id="product_intro"> 
+     <div class="style_wrap_790" style="display:block"> 
+      <p> <volist name="bpic" id="b">
+      <img src="__ROOT__/Public/Uploads/goods_bpic/{$b}" alt="产品详情介绍" />
+      </volist>
+       </p> 
+     </div> 
+
+     <div class="style_wrap_800" style="display:none;width:790px;margin:0px auto"> 
+    <foreach name="rows" item="v"> 
+    <php>
+      $id=$v['uid'];
+      $u=M('User');
+      $uf=M('User_info');
+      $user=$u->where("id=$id")->find();
+      $user_info=$uf->where("uid=$id")->find();
+      $arr=array('未激活','普通会员','VIP会员','普通管理员','超级管理员');
+    </php>
+        <div class="comment-item" data-guid="9f6d8ef9-ce8e-49f1-9ef8-bafb513b0540" data-top=""> 
+         <div class="user-column"> 
+          <div class="user-info"> 
+          <if condition="!empty($user_info)">
+           <img src="{$user_info.pic}" width="35" height="35" class="avatar" />&nbsp;&nbsp;{$user.username}
+           </if>
+           <if condition="empty($user_info)">
+           <img src="__PUBLIC__/Home/Comment/images/user.png" width="35" height="35" class="avatar" />&nbsp;&nbsp;{$user.username}&nbsp;&nbsp;
+           </if>
+            <br>
+            <span style="font-size:15px">评论星级：</span>
+           <for start="0" end="$v['comment_star']">
+            <img src="__PUBLIC__/Home/Comment/images/star-on.png">
+           </for>
+            
+            
+          </div>  
+          <div class="user-level"> 
+          <span style="font-size:15px">用户等级：</span> <span style="color:#666666"><font color="red">{$arr[$user['level']]}</font></span> 
+          </div> 
+         </div> 
+         <div class="comment-column J-comment-column"> 
+          <div class="comment-star star5"></div> 
+          <p class="comment-con" style="font-size:15px">评论内容：{$v['comment_text']}</p> 
+          <div class="J-pic-view-wrap clearfix" data-rotation="0"> 
+          </div> 
+          <div class="comment-message"> 
+           <div class="order-info"> 
+            <span style="font-size:15px">发表时间：{$v.addtime|date="Y-m-d H:i:s",###}</span> 
+           </div> 
+           <div class="comment-op"> 
+           </div> 
+          </div> 
+         </div> 
+        </div>
+        <hr style="border:1px solid #ccc" />
+      </foreach>
+     </div>
+    </div> 
+    <script type="text/javascript">
+      //产品介绍和评价
+      $("#nav_user_evaluation").click(function(){
+          $(".style_wrap_790").css('display','none');
+          $(this).attr('class','cur');
+          $("#nav_user_evaluation1").attr('class','');
+          $(".style_wrap_800").css('display','block');
+      });
+      $("#nav_user_evaluation1").click(function(){
+          $(".style_wrap_790").css('display','block');
+          $(this).attr('class','cur');
+          $("#nav_user_evaluation").attr('class','');
+          $(".style_wrap_800").css('display','none')
+      });
+    </script>
+    <!-- E 产品介绍 --> 
+    <!-- S 规格参数 --> 
+    <div class="tabs_content product_spec" id="product_spec"> 
+     <div class="spec_wrap"> 
+      <div class="spec_title">
+       基本类型
+      </div> 
+      <table class="spec_table"> 
+       <tbody> 
+        <tr>
+         <td>品牌</td>
+         <td>Midea/美的</td>
+        </tr> 
+        <tr>
+         <td>颜色</td>
+         <td>白色</td>
+        </tr> 
+        <tr>
+         <td>产品型号</td>
+         <td>KFR-26GW/WXAA2@</td>
+        </tr> 
+        <tr>
+         <td>电源电压（V）</td>
+         <td>220</td>
+        </tr> 
+        <tr>
+         <td>额定功率（W）</td>
+         <td>700</td>
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div class="spec_wrap"> 
+      <div class="spec_title">
+       详细信息
+      </div> 
+      <table class="spec_table"> 
+       <tbody>
+        <tr>
+         <td>室内机产品型号</td>
+         <td>KFR-26G/WXAA2@</td>
+        </tr>
+        <tr>
+         <td>室内机产品销售码</td>
+         <td>31022011004217</td>
+        </tr>
+        <tr>
+         <td>室外机产品型号</td>
+         <td>KFR-26W/BP3N1-A28</td>
+        </tr>
+        <tr>
+         <td>室外机产品销售码</td>
+         <td>31022016002293</td>
+        </tr>
+        <tr>
+         <td>空调类型</td>
+         <td>壁挂式/挂式 </td>
+        </tr>
+        <tr>
+         <td>冷暖类型</td>
+         <td>冷暖电辅</td>
+        </tr>
+        <tr>
+         <td>空调技术</td>
+         <td>变频</td>
+        </tr>
+        <tr>
+         <td>能效等级</td>
+         <td>二级</td>
+        </tr>
+        <tr>
+         <td>室外机外形尺寸(宽)(单位：mm)</td>
+         <td>728</td>
+        </tr>
+        <tr>
+         <td>室外机外形尺寸(宽/含阀体)(单位：mm)</td>
+         <td>785</td>
+        </tr>
+        <tr>
+         <td>室外机外形尺寸(高)(单位：mm)</td>
+         <td>555</td>
+        </tr>
+        <tr>
+         <td>室外机外形尺寸(深)(单位：mm)</td>
+         <td>300</td>
+        </tr>
+        <tr>
+         <td>室外机包装尺寸(宽)(单位：mm)</td>
+         <td>840</td>
+        </tr>
+        <tr>
+         <td>室外机包装尺寸(高)(单位：mm)</td>
+         <td>630</td>
+        </tr>
+        <tr>
+         <td>室外机包装尺寸(深)(单位：mm)</td>
+         <td>390</td>
+        </tr>
+        <tr>
+         <td>净重量(室外机)(单位：kg)</td>
+         <td>26</td>
+        </tr>
+        <tr>
+         <td>空调匹数</td>
+         <td>1匹</td>
+        </tr>
+        <tr>
+         <td>制冷适用面积（m2）</td>
+         <td>11~17</td>
+        </tr>
+        <tr>
+         <td>制热适用面积（m2）</td>
+         <td>13~17</td>
+        </tr>
+        <tr>
+         <td>额定制冷功率（W）</td>
+         <td>700</td>
+        </tr>
+        <tr>
+         <td>额定制热功率（W）</td>
+         <td>1100+1050</td>
+        </tr>
+        <tr>
+         <td>循环风量（m3/h）</td>
+         <td>600</td>
+        </tr>
+        <tr>
+         <td>室内机低风挡噪音（dB）</td>
+         <td>18</td>
+        </tr>
+        <tr>
+         <td>室内机高风挡噪音（dB）</td>
+         <td>35/40</td>
+        </tr>
+        <tr>
+         <td>室外机低风挡噪音（dB）</td>
+         <td>35</td>
+        </tr>
+        <tr>
+         <td>室外机高风挡噪音（dB）</td>
+         <td>50</td>
+        </tr>
+        <tr>
+         <td>电辅助加热输入功率（W）</td>
+         <td>1050</td>
+        </tr>
+        <tr>
+         <td>变频机能效比（APF）</td>
+         <td>4.22</td>
+        </tr>
+        <tr>
+         <td>额定制冷量（w）</td>
+         <td>2600</td>
+        </tr>
+        <tr>
+         <td>额定制热量（w）</td>
+         <td>3700</td>
+        </tr>
+        <tr>
+         <td>冷媒类型</td>
+         <td>R410A</td>
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+     <div class="spec_wrap"> 
+      <div class="spec_title">
+       包装信息
+      </div> 
+      <table class="spec_table"> 
+       <tbody>
+        <tr>
+         <td>产品尺寸(mm)：</td>
+         <td>长830x宽290x高210</td>
+        </tr> 
+        <tr>
+         <td>产品净重(kg)：</td>
+         <td>10</td>
+        </tr> 
+        <tr>
+         <td>包装尺寸(mm)：</td>
+         <td>长910x宽390x高290</td>
+        </tr> 
+        <tr>
+         <td>包装重量(kg)：</td>
+         <td>13</td>
+        </tr> 
+        <tr>
+         <td>包装清单：</td>
+         <td>遥控器*1，7号电池*2,连接管*1，包扎带*1，密封胶泥*2，排水管*1，墙孔挡板*1，安装板*1，自攻螺钉*5，塑料胀管*5，使用安装说明书*1，排水接头*1，排水接头密封圈*1</td>
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <!-- E 规格参数 --> 
+    <!-- S 服务支持 --> 
+    <div class="tabs_content service_support" id="service_support"> 
+     <!-- S 服务支持图 --> 
+     <div class="service_section" id="servicePic"> 
+      <h3>美的官网服务与支持</h3> 
+      <img style="width: 100%;" src="__ROOT__/Public/Home/product/PC_30_01.jpg" init_src="//img.mdcdn.cn/pc/img/detail/service/PC_30_01.jpg?t=20170413" alt="美的官网服务与支持" /> 
+      <img style="width: 100%;" src="__ROOT__/Public/Home/product/PC_30_02.jpg" init_src="//img.mdcdn.cn/pc/img/detail/service/PC_30_02.jpg?t=20170413" alt="美的官网服务与支持" /> 
+      <img style="width: 100%;" src="__ROOT__/Public/Home/product/PC_30_03.jpg" init_src="//img.mdcdn.cn/pc/img/detail/service/PC_30_03.jpg?t=20170413" alt="美的官网服务与支持" /> 
+     </div> 
+     <!-- E 服务支持图 --> 
+     <!-- S 说明书下载 --> 
+     <!-- E 说明书下载 --> 
+     <!-- S 安装、售后服务 --> 
+     <div class="service_section "> 
+      <h3>安装/售后服务</h3> 
+      <div class="subtitle">
+       <i class="detail_sprite_information"></i>我们提供多种预约安装、售后服务的渠道，为您提供贴心的服务支持。
+      </div> 
+      <div class="service_wrap"> 
+       <div class="service left"> 
+        <div class="description"> 
+         <h3 class="title">官网</h3> 
+         <p>在线自助提交安装、维修申请，我们会尽快联系您上门服务！</p> 
+         <a target="_blank" href="https://mall.midea.com/my/warranty/service"> 
+          <div class="default_btn_small">
+           马上预约
+          </div> </a> 
+        </div> 
+        <i class="detail_sprite detail_sprite_guanwang"></i> 
+       </div> 
+       <div class="service center"> 
+        <div class="description"> 
+         <h3 class="title">微信</h3> 
+         <p>添加&quot;美的商城&quot;或&quot;i_midea&quot;微信号，随时随地预约安装报修，实时跟踪服务进度。</p> 
+         <p>扫一扫，立即关注微信号</p> 
+        </div> 
+        <i class="detail_sprite detail_sprite_weixin"></i> 
+       </div> 
+       <div class="service right"> 
+        <div class="description"> 
+         <h3 class="title">服务电话</h3> 
+         <p class="tel_num">400-8899-315</p> 
+         <p>拨打全国统一售后服务报修电话24小时畅通为您提供贴心服务</p> 
+        </div> 
+        <i class="detail_sprite detail_sprite_kefu"></i> 
+       </div> 
+      </div> 
+     </div> 
+     <!-- E 安装、售后服务 --> 
+     <!-- S 服务政策 --> 
+     <!-- E 服务政策 --> 
+    </div> 
+    <!-- E 服务支持 --> 
+    <!-- S 相关问题 --> 
+    <div class="tabs_content related_question" id="related_question"> 
+     <div class="tabs_content_hinter">
+      非常抱歉，本产品暂无“相关问题”，您可查看其它服务。
+     </div> 
+    </div> 
+    <!-- E 相关问题 --> 
+    <!-- S 评价  --> 
+    <div class="tabs_content evaluate_wrap" id="user_evaluation"> 
+     <div class="evaluate_tab_content evaluate_content_wrap"> 
+      <h2>用户评价</h2> 
+      <div class="evaluate_inner"> 
+       <div class="J_comment_main"> 
+        <div class="evaluate_score_box"> 
+         <h4>总体评分</h4> 
+         <div class="score_box"> 
+          <div class="star_box"> 
+           <div class="star_box_light" id="scoreBox" style="width: 116px;"></div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="tagBox" class="evaluate_tag_box"> 
+         <h4>用户印象</h4> 
+         <div class="tag_box" id="tagList"> 
+          <span class="tags_span">非常满意(19)</span> 
+          <span class="tags_span">极其不满意(1)</span> 
+         </div> 
+        </div> 
+        <div class="comment_tip">
+         以下评价皆来自美的官方直营渠道的真实用户评价
+        </div> 
+       </div> 
+       <div class="evaluate_list_box" id="commentList"> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">非常不错！ </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]感谢您这么简洁给力的评价，我们一定会加油越做越好的，您的满意您的肯定就是我们奋斗的动力。宝贝抗菌防霉，健康除醛；二级能效，节能环保；智能控制，随心所欲；时尚美观，自然柔美；相信宝贝您一定会喜欢的，祝您使用愉快！</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2819742" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           毛***熊
+          </div> 
+          <div class="comment_time">
+           2017年07月04日 10:19
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">头天下午下单，第二天中午就送到了，安装师傅态度很好，冒雨安装，必须给赞? </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]美好的服务争取给您营造一段愉快的购物旅程，您的满意是我们最大的回报。宝贝抗菌防霉，健康除醛；二级能效，节能环保；智能控制，随心所欲；时尚美观，自然柔美；相信宝贝您一定会喜欢的，祝您使用愉快！</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2824520" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           池***敏
+          </div> 
+          <div class="comment_time">
+           2017年07月02日 12:07
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">试过的。用了不错/师傅细心 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]感谢您选择美的电器，我们的宗旨是让您买的放心，服务更舒心。宝贝抗菌防霉、智能云控、高频速冷热，这世间所有的相遇都是久别重逢，我们遇见的那一刻您一定记得。</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2821203" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           5***5
+          </div> 
+          <div class="comment_time">
+           2017年07月01日 10:50
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">非常满意的一次购物，做活动，0安装非常满意。安装师傅安装了一个下午，太辛苦了。还送的五谷杂粮。 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <ul class="list_img_wrap"> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/5955c207e4c1f.jpg" /></span>
+            </div> </li> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/5955c22500c89.jpg" /></span>
+            </div> </li> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/5955c24c1a7c4.jpg" /></span>
+            </div> </li> 
+          </ul> 
+          <img class="list_img_big J_img_big hide" src="" alt="用户评价大图" /> 
+          <p class="list_reply">[官方回复]您这般夸赞，我们视如珍宝，字字牢记心间。肯定的话语总会让店铺所有成员的坚持有了意义。咱们的产品抗菌防霉、智能云控、高频速冷热，这世间所有的相遇都是久别重逢，我们遇见的那一刻您一定记得。 </p> 
+          <div class="evaluate_operate J_comment_like" commentid="2824409" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           向***磊
+          </div> 
+          <div class="comment_time">
+           2017年06月30日 11:15
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">安装服务满意 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <ul class="list_img_wrap"> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/59506da7ad331.jpg" /></span>
+            </div> </li> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/59506db73f6bd.jpg" /></span>
+            </div> </li> 
+          </ul> 
+          <img class="list_img_big J_img_big hide" src="" alt="用户评价大图" /> 
+          <p class="list_reply">[官方回复]感谢您选择美的电器，我们的宗旨是让您买的放心，服务更舒心。宝贝抗菌除醛，真健康的呢；云端掌控，真智能；采用国家二级能效，节能又省电的哦。感谢您的惠顾，祝您生活愉快。</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2824228" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           4***9
+          </div> 
+          <div class="comment_time">
+           2017年06月26日 10:13
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">很好 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]一个“好”字充分体现了您对美的的支持和厚爱，非常感谢您的支持。宝贝采用含银复合抗菌剂材料，抗菌更长效持久哦。手机智能远程控制，使用方便快捷又省心的呢。喜欢就记得帮我们多多推荐喔~~感谢您对美的电器的支持，祝您生活更美的。</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2824029" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           5***4
+          </div> 
+          <div class="comment_time">
+           2017年06月23日 16:30
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">还可以 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <div class="evaluate_operate J_comment_like" commentid="2818860" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           3***2
+          </div> 
+          <div class="comment_time">
+           2017年06月20日 13:19
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">师傅安装的很及时，很好，很满意 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]美好的服务争取给您营造一段愉快的购物旅程，您的满意是我们最大的回报。宝贝采用含银复合抗菌剂材料，抗菌更长效持久哦。手机智能远程控制，使用方便快捷又省心的呢。喜欢就记得帮我们多多推荐喔~~感谢您对美的电器的支持，祝您生活更美的。</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2818814" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           张***娇
+          </div> 
+          <div class="comment_time">
+           2017年06月19日 17:16
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">师傅安装很到位，制冷效果一级棒 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <ul class="list_img_wrap"> 
+           <li class="item J_comment_img"> <span class="triangle"></span> <span class="box_border"></span> 
+            <div class="small_img_wrap">
+             <span class="small_img_inner"><img class="small_img" alt="用户评价图片" src="__ROOT__/Public/Home/product/594663734da84.jpg" /></span>
+            </div> </li> 
+          </ul> 
+          <img class="list_img_big J_img_big hide" src="" alt="用户评价大图" /> 
+          <p class="list_reply">[官方回复]您的句句认可和肯定，真实的话语，让我们不由间又多了一份信心。宝贝采用含银复合抗菌剂材料，抗菌更长效持久哦。手机智能远程控制，使用方便快捷又省心的呢。感谢您的惠顾，祝您生活愉快。</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2801530" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           成***
+          </div> 
+          <div class="comment_time">
+           2017年06月18日 19:27
+          </div> 
+         </div> 
+        </div> 
+        <div class="list_box"> 
+         <div class="list_box_center"> 
+          <p class="list_comment">非常满意 </p> 
+          <div class="list_tags_wrap"> 
+           <span class="tags_span">非常满意</span> 
+          </div> 
+          <p class="list_reply">[官方回复]感谢您对美的的支持与信任，能够得到您的认可是我们的最大动力哈，如果您使用满意的话，请多多分享给亲朋好友哦！期待您的再次光临！</p> 
+          <div class="evaluate_operate J_comment_like" commentid="2801213" ratecount="0"> 
+           <span class="evaluate_icon"></span> 
+           <span class="evaluate_count">( 0 )</span> 
+          </div> 
+         </div> 
+         <div class="list_box_right"> 
+          <div class="comment_name">
+           飘***逸
+          </div> 
+          <div class="comment_time">
+           2017年06月12日 21:05
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <!--分页--> 
+       <div class="rate_page"> 
+        <!-- S 翻页 新 --> 
+        <div class="pagination"> 
+         <div class="pagination_inner">
+          <div class="paginator">
+           <span class="page-start">&lt;</span>
+           <span class="page-this">1</span>
+           <a href="#nolink" pagetag="go" pageid="2">2</a>
+           <a href="#nolink" class="page-next" pagetag="go" pageid="2">&gt;</a>
+          </div>
+         </div> 
+        </div> 
+        <!-- E 翻页 新 --> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- E 评价  --> 
+   </div> 
+   <!-- E 产品详情内容 --> 
+   <!--E 最近浏览--> 
+   <!-- S 最近浏览 --> 
+   <!--S 右下角漂浮栏--> 
+<!--    <div id="detail_floating"> 
+    <div class="item"> 
+     <a target="_blank" href="javascript:void(0)" id="to_kefu" mtag="30007.14.1"><i class="detail_sprite detail_sprite_detail_floating_qq"></i></a> 
+    </div> 
+    <div class="item"> 
+     <a target="_blank" href="https://mall.midea.com/service/index?mtag=30007.14.2"><i class="detail_sprite detail_sprite_detail_floating_info"></i></a> 
+    </div> 
+    <div class="item" id="floating_wxcode" mtag="30007.14.3"> 
+     <a href="javascript:void(0)"><i class="detail_sprite detail_sprite_detail_floating_wxcode"></i></a> 
+    </div> 
+    <div class="item" id="scroll_to_top" mtag="30007.14.4"> 
+     <a href="javascript:void(0)"><i class="detail_sprite detail_sprite_detail_floating_top"></i></a> 
+    </div> 
+    <div id="floating_wxcode_content"> 
+     <span class="triangle"></span> 
+     <img src="__ROOT__/Public/Home/product/weixin_code.png" alt="美的商城微信服务号" /> 
+    </div> 
+   </div>  -->
+   <!--E 右下角漂浮栏--> 
+  </div> 
+  <!--E 商品详情页面--> 
+  <!--S 提示框：两个按钮--> 
+  <div class="mod_layer" id="confirmDouble"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <i class="js_hinter_ico suc_ico"></i> 
+    <p class="prompt_txt J_get_status">状态</p> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="javascript:void(0)" class="layer_btn J_close_text" data-mpopup-close="">关 闭</a> 
+    <a class="layer_btn J_get_href" data-mpopup-confirm="">查看我的收藏</a> 
+   </div> 
+  </div> 
+  <!--E 提示框：两个按钮--> 
+  <!--S 提示框：1个按钮--> 
+  <div class="mod_layer mod_layer_singer" id="confirmSingle"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <i class="js_hinter_ico suc_ico"></i> 
+    <p class="prompt_txt J_get_status">状态</p> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="javascript:void(0)" class="layer_btn J_close_text" data-mpopup-close="">关 闭</a> 
+   </div> 
+  </div> 
+  <!--E 提示框：1个按钮--> 
+  <!--S 提示框：刷新按钮--> 
+  <div class="mod_layer mod_layer_singer" id="confirmRefresh"> 
+   <div class="mod_layer_hd"></div> 
+   <div class="mod_layer_bd"> 
+    <i class="suc_ico js_hinter_ico"></i> 
+    <p class="prompt_txt J_get_status"></p> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="javascript:void(0)" class="layer_btn" onclick="location.reload();">刷新</a> 
+   </div> 
+  </div> 
+  <!--E 提示框：刷新按钮--> 
+  <!--S 提示框：无按钮--> 
+  <div class="mod_layer" id="confirmNone"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <i class="suc_ico fail_ico js_hinter_ico"></i> 
+    <p class="prompt_txt J_get_status">不可重复点赞</p> 
+   </div> 
+  </div> 
+  <!--E 提示框：无按钮--> 
+  <!--S 提示框：购物车购买--> 
+  <div class="mod_layer" id="confirmBuy"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <i class="suc_ico fail_ico js_hinter_ico"></i> 
+    <p class="prompt_txt J_get_status">状态</p> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="https://mall.midea.com/cart" class="layer_btn">整理购物车</a> 
+    <a href="javascript:void(0)" class="layer_btn" id="btnCartBuy">立即购买</a> 
+   </div> 
+  </div> 
+  <!--E 提示框：购物车购买--> 
+  <!--S 到货提醒--> 
+  <div class="mod_layer alarm_layer" id="confirmReminder"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <i class="suc_ico"></i> 
+    <p class="prompt_txt title">到货提醒预约成功</p> 
+    <p class="prompt_txt sub_content J_alarm_product_name"> 商品：家用空调 变频大1P 智能冷暖 二级能效 KFR-26GW/WXAA2@</p> 
+    <p class="prompt_txt sub_content J_alarm_address"> 区域：广东省-广州市-天河区</p> 
+    <div class="midea_service_box"> 
+     <img id="qrcode" src="__ROOT__/Public/Home/product/midea_service.png" alt="到货提醒二维码" /> 
+     <p class="prompt_txt title">关注美的商城，到货后可收到微信提醒</p> 
+    </div> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="javascript:void(0)" class="layer_btn" data-mpopup-close="">确 定</a> 
+   </div> 
+  </div> 
+  <!--E 到货提醒--> 
+  <!--S 降价提醒--> 
+  <div class="mod_layer alarm_layer cut_price_remind_layer" id="confirmCutReminder"> 
+   <div class="mod_layer_hd">
+    <i class="close_ico" data-mpopup-close=""></i>
+   </div> 
+   <div class="mod_layer_bd"> 
+    <div class="cut_price_remind_mess"> 
+     <i class="suc_ico"></i> 
+     <p class="prompt_txt title">收藏成功</p> 
+    </div> 
+    <div class="midea_wx_alarm"> 
+     <p class="alarm_text"><span class="item_choose_wrap"><span class="item_choose item_choose_checked" id="selectCut"></span></span>订阅该商品的降价提醒</p> 
+     <img id="qrcode" alt="商品降价提醒二维码" src="__ROOT__/Public/Home/product/showqrcode" /> 
+     <p class="alarm_text">扫码关注美的商城，<br />及时获取订阅商品的降价提醒</p> 
+    </div> 
+   </div> 
+   <div class="mod_layer_ft"> 
+    <a href="javascript:void(0)" class="layer_btn" id="btnConfirmCutReminder">确 定</a> 
+   </div> 
+  </div> 
+  <!--E 降价提醒--> 
+  <!--分销商品--> 
+  <!--微信分享        --> 
+  <div class="wxshare_popup js_wxshare_popup hide"> 
+   <span>分享到微信朋友圈</span> 
+   <a href="javascript:void(0);" class="wxshare_popup_close" id="closeWxShare">&times;</a> 
+   <div id="qrcodeWxShare" class="qr_img" title="https://w.midea.com/detail/index?itemid=1000000000100511156886"> 
+    <canvas width="190" height="190" style="display: none;"></canvas>
+   </div> 
+   <div class="wxshare_popup_foot">
+    打开微信，点击底部的“发现”，
+    <br />使用“扫一扫”即可将网页分享至朋友圈。
+   </div> 
+  </div> 
+  <div id="detailCover" class="detail_cover hide"></div> 
+  <!--商品对比列表--> 
+  <div class="compare_list_wrap"> 
+   <div class="tip" id="contrast_tip"> 
+   </div> 
+   <div class="list_nav"> 
+    <div class="nav_item">
+     对比栏
+    </div> 
+    <div class="nav_item hide_item js_show_hide">
+     隐藏
+    </div> 
+   </div> 
+   <div class="compare_list clear" id="contrastBody"> 
+   </div> 
+  </div> 
+  <!--E 评论模板--> 
+  <!--S 用户印象模板--> 
+  <!--E 用户印象模板--> 
+  <!--S 地址模板--> 
+  <!--E 地址模板--> 
+  <!--S 优惠套装模板--> 
+  <!--E 优惠套装模板--> 
+  <!--E 猜你喜欢模板--> 
+  <!--E 猜你喜欢模板--> 
+  <!--E 猜你喜欢模板--> 
+  <!--E 猜你喜欢模板--> 
+  <div id="_env_"></div> 
+  <!-- 360分析 --> 
+  <!-- E 底部 --> 
+  <!-- S 登录浮窗 --> 
+  <div class="js_md_login hide"> 
+   <div class="login_layer_mask"></div> 
+   <div class="md_login_layer"> 
+    <a class="md_login_layer_close" href="javascript:;">关闭</a> 
+    <div class="md_login_layer_inner"> 
+     <div class="login_type login_type1 "> 
+      <div class="login_form ap_form "> 
+       <form action="//mall.midea.com/login/login_with_passwd" method="post"> 
+        <div class="login_form_tit">
+         账号密码登录
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          手机号
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_telephone" name="mobile" maxlength="13" placeholder="手机号" type="text" /> 
+         </div> 
+         <div class="login_from_error_tips js_telephone_tips"> 
+          <span>请输入正确的手机号</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          密码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_password" maxlength="20" onselectstart="return false" onpaste="return false" placeholder="密码" type="password" /> 
+          <input class="js_password_txt" name="passwd" type="hidden" /> 
+          <input class="js_rurl_txt" name="rurl" type="hidden" /> 
+         </div> 
+         <div class="login_from_error_tips js_password_tips"> 
+          <span>请输入用户密码</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_cnt"> 
+          <a class="login_btn" href="javascript:;">登 录</a> 
+         </div> 
+        </div> 
+        <div class="login_links clear"> 
+         <a href="javascript:;" class="reg">注册</a> 
+         <a href="https://mall.midea.com/login/find_password" class="forget_pwd">找回密码</a> 
+        </div> 
+       </form> 
+      </div> 
+      <div class="login_form mobile_form"> 
+       <form action="//mall.midea.com/login/create_member_by_mobile" method="post"> 
+        <div class="login_form_tit">
+         短信验证码登录
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          手机号
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_telephone" name="mobile" maxlength="13" placeholder="手机号" type="text" /> 
+          <a class="login_form_cnt_extra login_get_code" href="javascript:;">获取验证码</a> 
+          <!--change--> 
+         </div> 
+         <div class="login_from_error_tips js_telephone_tips"> 
+          <span>请输入正确的手机号</span> 
+         </div> 
+        </div> 
+        <!--START---------------------新增优化----------------------> 
+        <div class="login_form_row  hide js_image_code_row"> 
+         <div class="login_form_label" style="display: none;">
+          请输入右侧图形验证码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_img_code" name="verifycode" maxlength="4" placeholder="请输入右侧图形验证码" type="text" /> 
+          <div class="login_form_cnt_extra js_reCode"> 
+           <div class="login_form_cnt_extra code">
+            <img class="js_img_code_place" src="__ROOT__/Public/Home/product/code_img.png" />
+           </div> 
+           <a class="login_form_cnt_extra refresh_btn" href="javascript:;"></a> 
+          </div> 
+          <input class="js_rurl_txt" name="rurl" type="hidden" /> 
+         </div> 
+        </div> 
+        <!--END---------------------------------------------------> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          短信验证码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_verifycode" name="verifycode" maxlength="6" placeholder="短信验证码" type="text" /> 
+          <!--<a class="login_form_cnt_extra login_get_code" href="javascript:;">获取验证码</a>--> 
+          <input class="js_rurl_txt" name="rurl" type="hidden" /> 
+         </div> 
+         <div class="login_from_error_tips js_verifycode_tips"> 
+          <span>短信验证码错误</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_cnt"> 
+          <a class="login_btn" href="javascript:;">登 录</a> 
+         </div> 
+        </div> 
+        <div class="login_links clear"> 
+         <a href="javascript:;" class="reg">注册</a> 
+         <a href="https://mall.midea.com/login/find_password" class="forget_pwd">找回密码</a> 
+        </div> 
+       </form> 
+      </div> 
+      <div class="login_way"> 
+       <ul class="login_way_list clear"> 
+        <li class="login_way_item login_way_qq"><a href="javascript:;"><i class="ico"></i><span>QQ登录</span></a></li> 
+        <li class="login_way_item login_way_wx"><a href="javascript:;"><i class="ico"></i><span>微信登录</span></a></li> 
+        <li class="login_way_item login_way_msg"><a href="javascript:;" class="js_login_way_msg"><i class="ico"></i><span>短信验证登录</span></a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="register hide"> 
+      <div class="login_form reg_form"> 
+       <form action="//mall.midea.com/login/regist_with_passwd" method="post"> 
+        <div class="login_form_tit">
+         使用手机号注册
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          手机号
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_telephone" name="mobile" maxlength="13" placeholder="手机号" type="text" /> 
+          <a class="login_form_cnt_extra login_get_code" href="javascript:;">获取验证码</a> 
+          <!--change--> 
+         </div> 
+         <div class="login_from_error_tips js_telephone_tips"> 
+          <span>请输入写正确的手机号</span> 
+         </div> 
+        </div> 
+        <!--START---------------------新增优化----------------------> 
+        <div class="login_form_row  hide js_image_code_row"> 
+         <div class="login_form_label" style="display: none;">
+          请输入右侧图形验证码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_img_code" name="verifycode" maxlength="4" placeholder="请输入右侧图形验证码" type="text" /> 
+          <div class="login_form_cnt_extra js_reCode"> 
+           <div class="login_form_cnt_extra code">
+            <img class="js_img_code_place" src="__ROOT__/Public/Home/product/code_img.png" />
+           </div> 
+           <a class="login_form_cnt_extra refresh_btn" href="javascript:;"></a> 
+          </div> 
+          <input class="js_rurl_txt" name="rurl" type="hidden" /> 
+         </div> 
+        </div> 
+        <!--END---------------------------------------------------> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          短信验证码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_verifycode" name="verifycode" maxlength="6" placeholder="短信验证码" type="text" /> 
+          <!--<a class="login_form_cnt_extra login_get_code" href="javascript:;">获取验证码</a>--> 
+         </div> 
+         <div class="login_from_error_tips js_verifycode_tips"> 
+          <span>短信验证码错误</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          密码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_password" maxlength="20" onselectstart="return false" onpaste="return false" placeholder="密码" type="password" /> 
+          <input class="js_password_txt" name="passwd" type="hidden" /> 
+         </div> 
+         <div class="login_from_error_tips js_password_tips"> 
+          <span>密码格式不正确</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_form_label" style="display: none;">
+          确认密码
+         </div> 
+         <div class="login_form_cnt"> 
+          <input class="js_password_confirm" maxlength="20" onselectstart="return false" onpaste="return false" placeholder="确认密码" type="password" /> 
+          <input class="js_rurl_txt" name="rurl" type="hidden" /> 
+         </div> 
+         <div class="login_from_error_tips js_password_confirm_tips"> 
+          <span>两次密码不一致</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <div class="login_from_tips"> 
+          <span>密码由6-20位英文字母、数字或者符号组成</span> 
+         </div> 
+        </div> 
+        <div class="login_form_row"> 
+         <a class="login_btn" href="javascript:;">注册</a> 
+        </div> 
+        <div class="login_links clear"> 
+         <!--<a href="javascript:;" class="has_account">已有账号直接登录</a>--> 
+         <a href="javascript:;" class="other_login">已有账号？请登录</a> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="mod_login_cover hide"> 
+   <!--<i class="icon_atom icon_cover_close Js_cover_cancel"></i>--> 
+   <div class="notice">
+    正在加载中…
+   </div> 
+  </div> 
+  <div></div>
+  <div></div>
+  <iframe name="390605" style="display: none;" src="__ROOT__/Public/Home/product/mv.htm" width="0" height="0"></iframe>
+  <!--S 评论模板-->
+ </body>
+</html>
+</block>

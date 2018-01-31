@@ -1,0 +1,264 @@
+    <!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="icon" href="__PUBLIC__/huanyu.jpg" type="image/x-icon" /> 
+    <title>寰宇数码登录</title>
+    <link rel="icon" href="https://www./favicon.ico">
+    <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Login/a.css" source="widget">
+    <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Login/tinyscrollbar.css">
+    <script type="text/javascript" async="" src="__ROOT__/Public/Home/Login/s.js"></script><script type="text/javascript" async="" src="__ROOT__/Public/Home/Login/wl_002.js"></script><script type="text/javascript" async="" src="__ROOT__/Public/Home/Login/wl.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/Home/Login/jquery-1.js"></script>
+	<script type="text/javascript">
+     	$(function(){
+                window.SysConfig = {
+                encryptInfo:  true ,
+                rememberMeShowEnable:  false                 };
+         });
+    </script>
+    <script type="text/javascript" src="__ROOT__/Public/Home/Login/jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+        .msg-error{
+            display:true;
+        }
+    </style>
+		</head>
+<body>
+<!-- SDK 登录 -->
+<div class="w">
+    <div id="logo">
+        <a  clstag="pageclick|keycount|20150112ABD|45">
+            <img src="__PUBLIC__/tlogo.png" alt="寰宇" width="180" height="60">
+        </a>
+        <b></b>
+    </div>
+			<a href="" target="_blank" class="q-link"><b></b>登录页面，调查问卷</a>
+    </div>
+<div id="content">
+    <div class="login-wrap">
+		<div class="w">
+            <div class="login-form">              
+                <div class="login-box" style="display: block; visibility: visible;">
+                    <div class="mt tab-h">
+                            <span style="text-align:center;line-height:35px;width:300px;display:block;font-size:20px;font-family:'Microsoft YaHei';color:#E4393C;font-weight:600">账户登录</span>   
+                    </div>
+                    <div class="msg-wrap">
+						  <div class="msg-error hide"><b></b></div>
+                    </div>
+                    <div class="mc">
+                        <div class="form">
+                          
+                            <form  action="__MODULE__/Login/dologin" id="formlogin" method="post"  onsubmit="return checkForm()" >
+    
+                               <div class="item item-fore1">
+                                    <label for="loginname" class="login-label name-label"></label>
+                                    <input type="hidden" name="returnurl" value="{$_GET['returnurl']}">
+                                    <input id="loginname"  class="itxt" name="username" tabindex="1" autocomplete="off" placeholder="邮箱/用户名/已验证手机" type="text" value="">
+                                    <span class="clear-btn"></span>
+                                </div>
+                                
+                                <div id="entry" class="item item-fore2" style="visibility: visible;">
+                                    <label class="login-label pwd-label" for="nloginpwd"></label>
+                                    <input id="loginpwd" name="password" class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码" type="password">
+                                    <span class="clear-btn"></span>
+                                    <span class="capslock" style="display: none;"><b></b>切换大小写</span>
+
+                                </div>
+
+                                 <div class="item item-fore5">
+                                    <div class="login-btn" style="border:none">
+                                        <input class="btn-img btn-entry" type="submit" value="登录">
+                                    </div>
+                                </div>
+                                
+                                <a href="__URL__/findpwd" style="float:right">忘记密码</a>
+                            </form>
+                            <script type="text/javascript">
+                                $("body").keydown(function(e){
+                                    if(e.keyCode === 20){
+                                        $(".capslock").css("display","block");
+                                        $(".capslock").fadeOut(2000);
+                                    }
+                                });
+                            </script>
+                   
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qrcode-login" style="display: none; visibility: visible;">
+                    <div class="mc">
+                        <div class="qrcode-error-2016" style="left: 0px; display: none;">
+                            <div class="qrcode-error-mask">
+                            </div>
+                            <p class="err-cont">服务器出错</p>
+                            <a href="javascript:void(0)" class="refresh-btn">刷新</a>
+                        </div>
+                        <div class="qrcode-main">
+                            <div class="qrcode-img" style="left: 64px;">
+                                <img src="__ROOT__/Public/Home/Login/show.png" alt=""><div class="qrcode-error02 hide" id="J-qrcoderror" style="display: none;">							<a href="#none">								<span class="error-icon"></span>								<div class="txt">网络开小差咯<span class="ml10">刷新二维码</span></div>							</a>						</div>
+                            </div>
+                            <div class="qrcode-help" style="display: none;"></div>
+                        </div>
+                        <div class="qrcode-panel">
+                            <ul>
+                                <li class="fore1">
+									<span>打开</span>
+                                    <a href="https://passport./uc/links?tag=apps" target="_blank" clstag="pageclick|keycount|201607144|9">
+									<span class="red">手机寰宇</span></a>
+                                </li>
+								<li>扫描二维码</li>
+                            </ul>
+                        </div>
+                        <div class="coagent qr-coagent" id="qrCoagent">
+                            <ul>
+                                <li><b></b><em>免输入</em></li>
+                                <li><b class="faster"></b><em>更快&nbsp;</em></li>
+                                <li><b class="more-safe"></b><em>更安全</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				             <div class="coagent" id="kbCoagent">
+                    <ul>
+                        						                        <li>
+                            <b></b>
+                            <a href="javascript:void(0)" onclick="window.location='//qq./new/qq/login.aspx'+window.location.search;return false;" clstag="pageclick|keycount|201607144|6" class="pdl"><b class="QQ-icon"></b><span>QQ</span></a>
+                                                        <span class="line">|</span>
+                                                    </li>
+                                                                        <li>
+                            <a href="javascript:void(0)" onclick="window.location='//qq./new/wx/login.action'+window.location.search;return false;" clstag="pageclick|keycount|201607144|7" class="pdl"><b class="weixin-icon"></b><span>微信</span></a>
+								                        </li>
+                                                                                                <li class="extra-r">
+                            <div>
+                                <div class="regist-link"><a href="__MODULE__/Login/register" target="_blank"><b></b>立即注册</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>            </div>
+        </div>
+        <div  style="background-color: #d03231">		              
+            <div class="w">			         
+        <div id="banner-bg"  class="i-inner" style="background-image: url(__PUBLIC__/log_bg.jpg)"></div>		    </div>		       
+         </div>
+    </div>
+</div>
+<div class="w">
+    <div id="footer-2013">
+        <div class="links">
+            <a rel="nofollow"  href="">
+                关于我们
+            </a>
+            |
+            <a rel="nofollow"  href="">
+                联系我们
+            </a>
+            |
+            <a rel="nofollow"  href="">
+                人才招聘
+            </a>
+            |
+            <a rel="nofollow" href="">
+                商家入驻
+            </a>
+            |
+            <a rel="nofollow" href="">
+                广告服务
+            </a>
+            |
+            <a rel="nofollow" href="">
+                手机寰宇
+            </a>
+            |
+            <a target="_blank" href="__MODULE__/Index/link">
+                友情链接
+            </a>
+            |
+            <a target="_blank" href="">
+                销售联盟
+            </a>
+            |
+            <a href="" target="_blank">
+                寰宇社区
+            </a>
+            |
+            <a href="" target="_blank">
+                寰宇公益
+            </a>
+            |
+            <a href="" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+        </div>
+        <div class="copyright">
+            Copyright&nbsp;&#169;&nbsp;2004-2017&nbsp;&nbsp;寰宇&nbsp;版权所有
+        </div>
+    </div>
+</div><script type="text/javascript" src="__ROOT__/Public/Home/Login/base.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/Home/Login/jsencrypt.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Home/Login/login2016.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Home/Login/login.js" source="widget"></script>
+
+<script type="text/javascript">	~function () {		var data = [						{			  src:"//img13.360buyimg.com/da/jfs/t2749/276/1020747574/33213/870500f1/5731485aN1134b4f0.png",			  bgColor:"#e93854",                          weight: "4"			}			];						         var getRandom = function (arr) {			var _temp = 0, _random = 0, _weight, _newArr = [];						for (var i = 0; i < arr.length; i++) {				_weight = parseInt(arr[i].weight) ? parseInt(arr[i].weight) : 1;				_newArr[i] = [];				_newArr[i].push(_temp);				_temp += _weight;				_newArr[i].push(_temp);			}						_random = Math.ceil(_temp * Math.random());						for (var i = 0; i< _newArr.length; i++){				if(_random > _newArr[i][0] && _random <= _newArr[i][1]){					return arr[i];				}			}			};				var tpl = '<div class="login-banner" style="background-color: {bgColor}">\		              <div class="w">\			         <div id="banner-bg"  clstag="pageclick|keycount|20150112ABD|46" class="i-inner" style="background: url({imgURI}) 0px 0px no-repeat;background-color: {bgColor}"></div>\		              </div>\		           </div>';							var bgData = getRandom(data);		var bannerHtml = tpl.replace(/{bgColor}/g, bgData.bgColor).replace(/{imgURI}/g, bgData.src);				$('.login-banner').replaceWith(bannerHtml);	}();</script>
+<script type="text/javascript">
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://cscssl' : '//csc') + './wl.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+
+
+<script src="__ROOT__/Public/Home/Login/td.js"></script><script src="__ROOT__/Public/Home/Login/y.htm"></script>
+<script>
+    $(function () {
+        getJdEid(function (eid, fpid) {
+            var eValue = eid;
+            var fpValue = fpid;
+            var ee = $("#eid").prop("value", eValue);
+            var fp = $("#sessionId").prop("value", fpValue);
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var _jraq = _jraq || [];
+    _jraq.push(['account', 'UA-J2011-12']);
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://jrclick' : '//jrclick') + './wl.dev.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+
+
+<script type="text/javascript" src="__ROOT__/Public/Home/Login/jseqf.htm"></script>
+
+<!-- SDK 登录 -->
+ <script type="text/javascript">  
+
+    function checkForm(){  
+        var userName=document.getElementById("loginname").value;  
+        var pwd=document.getElementById("loginpwd").value;  
+        var matchResult=true; 
+             if(userName==""&&pwd==""){  
+               $('.msg-wrap>.msg-error').removeClass('hide').html('<b></b>请输入账户名和密码'); 
+                matchResult=false;  
+            }else if(userName==""){  
+                 $('.msg-wrap>.msg-error').removeClass('hide').html('<b></b>请输入用户名'); 
+                matchResult=false;  
+            }else if(pwd==""){  
+                $('.msg-wrap>.msg-error').removeClass('hide').html('<b></b>请输入密码'); 
+                matchResult=false; 
+            }
+    return matchResult;
+    }  
+</script> 
+
+
+</body></html>

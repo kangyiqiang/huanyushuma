@@ -1,0 +1,86 @@
+	<!doctype html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>登录寰宇后台</title>
+	<link rel="stylesheet" href="__ROOT__/Public/Admins/login/css/admin.css">
+	 <link rel="icon" href="__PUBLIC__/huanyu.jpg" mce_href="//www.jd.com/favicon.ico" type="image/x-icon" /> 
+	<style>
+	body{
+
+	background-color:#f1f1f1;
+
+	}
+	input{
+		outline: none;
+	}
+
+		a{
+			cursor:pointer;
+		}
+	
+	#dd{
+		background-color:#0639AE; 
+	}
+	</style>
+	</head>
+	<body>
+
+	<div id="adv"> </div>
+	<div id="login1">
+	<a href="../index.php"><img src="__ROOT__/Public/logLogo.jpg" alt=""style="float:left" width="160px"></a>
+	<div id="login2">
+		<i><font size="7">后台登录</font></i>
+	</div>
+	</div>
+	<div id="adv1"></div>
+	<div id="adv"> </div>
+	<!-- <div id="login4">[English]
+	</div> -->
+	<div id="login3">
+	<div id="login5"style="float:left">
+		
+	<img src="__ROOT__/Public/huanyu.jpg" alt="" width="520px" height="360px">
+	</div>
+	<div id="login51"></div>
+	<form action="__URL__/dologin"method='post'>
+	<div id="login6">
+		<span>
+	管理员账号
+		</span>
+	<div id="login61">
+	<input type="text" name="username" id="z" >
+	<img src="__ROOT__/Public/Admins/login/images/d.png" alt="">
+	</div>
+	<span>
+	管理员密码</span>
+	<div id="login62">
+	<input type="password" name="password" id="z" >
+	<img src="__ROOT__/Public/Admins/login/images/m3.png" alt="">
+	</div>
+	<div id="login63">
+	验证码<br>
+	<img id="yy"src="__URL__/verify" alt="" onclick='this.src="__URL__/verify?rand="+Math.random()'>看不清？<a onclick='a.src="__URL__/verify?rand="+Math.random()'>换一张</a><br>
+输入验证码<br>
+	<input type="text" name="fcode" id="zz">	
+	</div><br>
+
+	<a href=""><input type="submit" value="登录" id="dd"></a>
+
+	</div>
+
+
+	<!-- sfdgsfgjhjdhj -->
+	</div>
+	<div id="login7">
+	<!-- <a href="reg.php"><img src="__ROOT__/Public/Admins/login/images/flogin.png" alt=""></a> -->
+	</div>
+	<div id="login8"></div>
+	<!-- bghrjj -->
+	</form>
+	</body>
+	<script>
+	var a=document.getElementById('yy');
+</script>
+	</html>
+

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="root61">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="pragma" content="no-cache" /> 
+  <meta http-equiv="Cache-Control" content="no-cache,must-revalidate" /> 
+  <title>个人注册</title> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Register/a.css" /> 
+  <script type="text/javascript" async="" src="__ROOT__/Public/Home/Register/sdk.js"></script> 
+  <script type="text/javascript" async="" src="__ROOT__/Public/Home/Register/s.js"></script> 
+  <script type="text/javascript">window.pageConfig = { compatible: true }; </script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Register/a_002"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Register/a"></script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Register/check.js"></script> 
+  <script>
+        seajs.off("load");
+        seajs.off("fetch");
+        seajs.data.charset = 'gb2312';
+    </script> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Register/tinyscrollbar.css" /> 
+  <link type="text/css" rel="stylesheet" href="__ROOT__/Public/Home/Register/a_002.css" source="widget" /> 
+  <style type="text/css">
+  .cur{border:1px solid red;}
+   #e-regis{
+    float: right;
+  }
+  </style> 
+ </head> 
+ <body> 
+  <div id="form-header" class="header"> 
+   <div class="logo-con w clearfix"> 
+    <a href="https://www.jd.com/" class="logo"> </a> 
+    <div class="logo-title">
+      欢迎注册 
+    </div> 
+    <div class="have-account">
+      已有账号？ 
+     <a href="__MODULE__/Login/login">请登录</a> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container w"> 
+  
+   <!--  <div class="main clearfix" id="form-main"> 
+    <div class="reg-form fl"> 
+
+     <form action="" id="register-form" method="post" novalidate="novalidate"> 
+      <div class="form-item form-item-account" id="form-item-account"> 
+       <label>用　户　名</label> 
+      <input id="form-account" name="regName" class="field"  maxlength="20" placeholder="您的账户名和登录名" default="&lt;i class=&quot;i-def&quot;&gt;&lt;/i&gt;支持中文、字母、数字、“-”“_”的组合，4-20个字符" type="text" /> 
+       <i class="i-status"></i> 
+      </div> 
+      <div class="input-tip"> 
+        <span class="tip">此用户已经注册</span> 
+      </div>
+
+      <div class="form-item"> 
+       <label>设 置 密 码</label> 
+       <input name="pwd" id="form-pwd" class="field" maxlength="20" placeholder="建议至少使用两种字符组合" default="&lt;i class=i-def&gt;&lt;/i&gt;建议使用字母、数字和符号两种及以上的组合，6-20个字符" type="password" /> 
+       <i class="i-status"></i> 
+       <div class="capslock-tip tips">
+        大写已开启
+        <b class="arrow"></b>
+        <b class="arrow-inner"></b>
+       </div>
+       <div class="capslock-tip tips">
+        大写已开启
+        <b class="arrow"></b>
+        <b class="arrow-inner"></b>
+       </div>
+      </div> 
+      <div class="input-tip"> 
+       <span></span> 
+      </div> 
+      <div class="form-item"> 
+       <label>确 认 密 码</label> 
+       <input name="pwdRepeat" id="form-equalTopwd" class="field" placeholder="请再次输入密码" maxlength="20" default="&lt;i class=&quot;i-def&quot;&gt;&lt;/i&gt;请再次输入密码" type="password" /> 
+       <i class="i-status"></i> 
+       <div class="capslock-tip tips">
+        大写已开启
+        <b class="arrow"></b>
+        <b class="arrow-inner"></b>
+       </div>
+       <div class="capslock-tip tips">
+        大写已开启
+        <b class="arrow"></b>
+        <b class="arrow-inner"></b>
+       </div>
+      </div> 
+      <div class="input-tip"> 
+       <span></span> 
+      </div> 
+      <div class="item-email-wrap" style="display: none;"> 
+       <div class="form-item"> 
+        <label>邮 箱 验 证</label> 
+        <input name="email" id="form-email" class="field ignore" autocomplete="off" placeholder="建议使用常用邮箱" default="&lt;i class=&quot;i-def&quot;&gt;&lt;/i&gt;完成验证后，你可以用该邮箱登录和找回密码" type="text" /> 
+        <i class="i-status"></i> 
+        <ul class="suggest-container email-suggest">
+         <li class="">
+          <div class="value">
+           @qq.com
+          </div></li>
+         <li class="">
+          <div class="value">
+           @163.com
+          </div></li>
+         <li class="">
+          <div class="value">
+           @126.com
+          </div></li>
+         <li class="">
+          <div class="value">
+           @Sina.com
+          </div></li>
+         <li class="">
+          <div class="value">
+           @Sohu.com
+          </div></li>
+         <li class="suggest-li-last ">
+          <div class="value">
+           @Gmail.com
+          </div></li>
+        </ul>
+       </div> 
+       <div class="input-tip"> 
+        <span></span> 
+       </div> 
+       <div class="orPhone">
+        <a href="javascript:;">手机验证</a>
+       </div> 
+      </div> 
+      <div class="item-phone-wrap"> 
+       <div id="country_code_layer" style="display: none;"> 
+        <iframe scrolling="no" style="background-color:transparent; position: absolute; z-index: -1; width: 100%; height: 100%; top: 0; left:0;" frameborder="0"></iframe> 
+        <a class="arrow"></a> 
+        <div class="switchbar"> 
+      
+        <ul class="ui-switchable-panel-main">
+         <div class="ui-switchable-panel" data-switchable-clone="1" style="display: none;">
+       <div class="form-item form-item-phone"> 
+        <label class="select-country" id="select-country" country_id="0086">中国 0086<a href="javascript:void(0)" tabindex="-1" class="arrow"></a></label> 
+        <input id="form-phone" name="phone" class="field" placeholder="建议使用常用手机" autocomplete="off" maxlength="11" default="&lt;i class=&quot;i-def&quot;&gt;&lt;/i&gt;完成验证后，你可以用该手机登录和找回密码" type="text" /> 
+        <i class="i-status"></i> 
+       </div> 
+       <div class="input-tip"> 
+        <span></span> 
+       </div> 
+       <div class="orEmail">
+        <a href="javascript:;" tabindex="-1">邮箱验证</a>
+       </div> 
+      </div> 
+      <div class="form-item form-item-authcode"> 
+       <label>验　证　码</label> 
+       <input autocomplete="off" name="authCode" id="authCode" maxlength="6" class="field form-authcode" placeholder="请输入验证码" default="&lt;i class=&quot;i-def&quot;&gt;&lt;/i&gt;看不清？点击图片更换验证码" type="text" /> 
+       <img class="img-code" title="换一换" id="imgAuthCode" onclick="this.src= document.location.protocol +'//authcode.jd.com/verify/image?a=0&amp;acid=9a503152-8074-4fc4-a018-1ceb7b10b36a&amp;uid=9a503152-8074-4fc4-a018-1ceb7b10b36a&amp;srcid=reg&amp;is=3bfa6dceda1d3f94f808c071fab4948a&amp;yys='+new Date().getTime()" ver_colorofnoisepoint="#888888" src="__ROOT__/Public/Home/Register/image.jpg" /> 
+      </div> 
+      <div class="input-tip"> 
+       <span></span> 
+      </div> 
+      <div class="form-item form-item-phonecode"> 
+       <label>手机验证码</label> 
+       <input name="mobileCode" maxlength="6" id="phoneCode" class="field phonecode" placeholder="   请输入手机验证码" autocomplete="off" type="text" /> 
+       <button id="getPhoneCode" class="btn-phonecode" type="button">获取验证码</button> 
+       <i class="i-status"></i> 
+      </div> 
+      <div class="input-tip"> 
+       <span></span> 
+      </div> 
+      <div class="form-agreen"> 
+       <div>
+        <input name="agreen" checked="checked" type="checkbox" />阅读并同意
+        <a href="javascript:;" id="protocol">《寰宇用户注册协议》</a> 
+        <a href="javascript:;" class="blue" id="privacyProtocolTrigger">《隐私政策》</a> 
+       </div> 
+       <div class="input-tip"> 
+        <span></span> 
+       </div> 
+      </div> 
+      <div> 
+       <button type="submit" class="btn-register">立即注册</button> 
+      </div> 
+     </form> 
+    </div>  
+ -->
+
+     <div class="main clearfix" id="form-main">
+    <div class="reg-form fl"> 
+     <form onsubmit="return checkForm()" action="__URL__/doRegister2"  method="post"> 
+       <!-- <input name="eid" id="eid" value="HANWJGYJBMSBE4MYTQ6LJYFVREPG3IPHVHMVNQS4K2TDM63NF33S74QNBVXR2LBWSNGQESZRK45ACGFC3PDSU3YVDQ" type="hidden"> -->
+      <div class="form-item form-item-account name" id="form-item-account"> 
+       <label>用 户 名</label> 
+       <input placeholder="您的账户名和登录名" style="width:250px;height:45px;border:none" maxlength="20" type="text" name="username" class="✎&nbsp;支持字母、数字、下划线“_”的组合，4-20个字符" /> 
+      </div> 
+      <div class="input-tip username"> 
+       <span></span> 
+      </div> 
+      <div class="form-item form-item-account pwd" id="form-item-account"> 
+       <label>设 置 密 码</label> 
+       <input placeholder="建议至少使用两种字符组合" style="width:250px;height:45px;border:none" maxlength="20" type="password" name="password" class="✎&nbsp;建议使用字母、数字和符号两种及以上的组合，6-18个字符" /> 
+      </div> 
+      <div class="input-tip password"> 
+       <span class="tip"></span> 
+      </div> 
+      <div class="form-item form-item-account repwd" id="form-item-account"> 
+       <label>确 认 密 码</label> 
+       <input placeholder="请再次输入密码" style="width:250px;height:45px;border:none" maxlength="20" type="password" name="repassword" class="✎&nbsp;请再次输入密码" /> 
+      </div> 
+      <div class="input-tip repassword"> 
+       <span class="tip"></span> 
+      </div>
+      <div class="form-item form-item-account email" id="form-item-account"> 
+       <label>邮 箱 验 证</label> 
+       <input placeholder="请再次邮箱" style="width:250px;height:45px;border:none" maxlength="20"  type="text" name="email" class="✎&nbsp;完成注册后请登录邮箱激活账号"/> 
+      </div> 
+      <div class="input-tip temail"> 
+       <span class="tip"></span> 
+       <a href="__URL__/register" id="e-regis">手机注册</a>
+      </div> 
+      
+     
+      <div class="form-item form-item-account codebox" id="form-item-account"> 
+       <label>验 证 码</label> 
+       <input placeholder="请输入验证码" style="width:250px;height:45px;border:none" maxlength="20" type="text" name="code" class="✎&nbsp;看不清？点击图片更换验证码" /> 
+       <img class="img-code" src="__URL__/verify" alt="" onclick="this.src=&quot;__URL__/verify?rand=&quot;+Math.random()" />
+       <br /> 
+      </div> 
+      <div class="input-tip tcode"> 
+       <span class="tip"></span> 
+      </div> 
+      
+     
+      <div> 
+       <button type="submit" class="btn-register">立即注册</button> 
+      </div> 
+     </form> 
+    </div> 
+
+    <div id="form-company" class="reg-other"> 
+     <div class="company-reg"> 
+      <a  target="_blank" clstag="pageclick|keycount|201612011|3"> <i class="i-company"></i> <span>企业用户注册</span> </a> 
+     </div> 
+     <div class="inter-cust"> 
+      <a  target="_blank" clstag="pageclick|keycount|201612011|4"> <i class="i-global"></i> <span>INTERNATIONAL<br />CUSTOMERS</span> </a> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="protocoldiv" style="display:none"> 
+    <div class="protocol-con"> 
+      <!--阅读内容  -->
+    </div> 
+    <div class="protocol-button"> 
+     <button>同意并继续</button> 
+    </div> 
+   </div> 
+   <div id="privacyProtocol" style="display:none"> 
+    <div class="protocol-con"> 
+     <!-- 阅读内容 -->
+    </div> 
+    <div class="protocol-button"> 
+     <button>同意并继续</button> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="form-footer" class="footer w"> 
+   <div class="links"> 
+    <a rel="nofollow" target="_blank" href="https://www.jd.com/intro/about.aspx"> 关于我们</a>| 
+    <a rel="nofollow" target="_blank" href="https://www.jd.com/contact/">联系我们</a>| 
+    <a rel="nofollow" target="_blank" href="https://zhaopin.jd.com/">人才招聘</a>| 
+    <a rel="nofollow" target="_blank" href="https://www.jd.com/contact/joinin.aspx">商家入驻</a>| 
+    <a rel="nofollow" target="_blank" href="https://www.jd.com/intro/service.aspx">广告服务</a>| 
+    <a rel="nofollow" target="_blank" href="https://app.jd.com/">手机寰宇</a>| 
+    <a target="_blank" href="https://club.jd.com/links.aspx">友情链接</a>| 
+    <a target="_blank" href="https://media.jd.com/">销售联盟</a>| 
+    <a href="https://club.jd.com/" target="_blank">寰宇社区</a>| 
+    <a href="https://gongyi.jd.com/" target="_blank">寰宇公益</a>| 
+    <a target="_blank" href="https://en.jd.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a> 
+   </div> 
+   <div class="copyright">
+     Copyright&copy;2004-2016&nbsp;&nbsp;寰宇JD.com&nbsp;版权所有 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+    var localmisc = $("#localmisc");
+    if(1==localmisc.val()){
+        seajs.use('../misc2016/js/localRegister', function (reg) {
+            reg.init();
+        })
+    }else{
+        seajs.use('//misc.360buyimg.com/user/reg/1.0.0/js/register.1130', function (reg) {
+            reg.init();
+        })
+    }
+</script> 
+  <script type="text/javascript" src="__ROOT__/Public/Home/Register/jseqf.htm"></script> 
+  <script src="__ROOT__/Public/Home/Register/td.js"></script> 
+  <script src="__ROOT__/Public/Home/Register/y.htm"></script> 
+  <script type="text/javascript">
+        $(function () {
+            getJdEid(function (eid, fpid) {
+                $("#eid").val(eid);
+                $("#sessionId").val(fpid);
+            });
+        });
+    </script> 
+  <script>
+    (function uncl(t,e){t[e]=t[e]||function(){(t[e].q=t[e].q||[]).push(arguments)},t[e].t=1*new Date;var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="//static.queit.in/sdk.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a)})(window,"uncl");uncl('create', 'jd');uncl('set', 'session-id', $("#sessionId").val());
+</script> 
+  <a target="_blank" href="https://surveys.jd.com/index.php?r=survey/index/sid/447941/lang/zh-Hans" class="feedback" style="margin-top: -85px; position: fixed; right: 0px; bottom: 50%;"></a>  
+  <script type="text/javascript">
+    //检测input 提交状态
+    var CNAME=false;
+    var CPASS=false;
+    var CREPASS=false;
+    var CODE=false;
+    var CEMAIL=false;
+      /******************用户名***************************/
+      //1.获取焦点
+      $("input[name='username']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('class');
+        //把s赋值给当前元素的下一个span
+        $('.username>span').css('color','gray').html(s);
+        $('.name').removeClass('cur');
+        
+      });
+      //2.失去焦点
+      $("input[name='username']").blur(function(){
+        //获取用户名
+        var name=$(this).val();
+        if(name==''){
+           $('.username>span').empty();
+        }else{
+          //正则匹配
+          if(name.match(/^\w{4,20}$/)==null){
+             $('.username>span').css('color','red').html('<b>✘</b> 用户名格式有误,请重新输入');
+               $('.name').addClass('cur');
+          }else{
+            //清除提示信息
+            $('.username>span').empty();
+            //判断用户名是否存在
+            $.post('__MODULE__/Login/checkName',{name:name},function(data){
+              if(data==1){
+                //用户名存在
+                $('.username>span').css('color','red').html('该用户名已被注册');
+               $('.name').addClass('cur');
+              }else{
+                //用户名可用
+                $('.username>span').css('color','green').html('<b>✔</b> 用户名可用');
+                CNAME=true;
+              }
+            }); 
+          }   
+        }
+      });
+      /*****************设置密码**************************/
+       //1.获取焦点
+      $("input[name='password']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('class');
+        //把s赋值给当前元素的下一个span
+        $('.password>span').css('color','gray').html(s);
+        $('.pwd').removeClass('cur');
+        
+      });
+      //2.失去焦点
+      $("input[name='password']").blur(function(){
+        var pwd=$(this).val();
+        if(pwd==''){
+           $('.password>span').empty();
+        }else{
+          //正则匹配
+          if(pwd.match(/^([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}$/)==null){
+             $('.password>span').css('color','red').html('<b>✘</b> 密码格式有误,请重新输入');
+               $('.pwd').addClass('cur');
+          }else{
+            $('.password>span').css('color','green').html('<b>✔</b> 密码可用');
+            CPASS=true;
+          }          
+        }
+      });
+
+      /*****************确认密码*************************/
+      // //1.获取焦点
+      $("input[name='repassword']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('class');
+        //把s赋值给当前元素的下一个span
+        $('.repassword>span').css('color','gray').html(s);
+        $('.repwd').removeClass('cur');
+      });
+      //失去焦点
+       $("input[name='repassword']").blur(function(){
+        //获取重复密码值
+        var repwd=$(this).val();
+        //获取密码值
+        var pwd=$("input[name='password']").val();
+        if(repwd==''){
+           $('.repassword>span').empty();
+        }else{
+          if(pwd==repwd && pwd!=''){
+            $('.repassword>span').css('color','green').html('<b>✔</b> 重复密码正确');
+            $('.repwd').removeClass('cur');
+            CREPASS=true;
+          }else{ 
+            $('.repassword>span').css('color','red').html('<b>✘</b> 两次密码不一致,请重新输入');
+            $('.repwd').addClass('cur');
+          }
+        }
+      });
+       /****************邮箱验证**************************/
+      //1.获取焦点
+      $("input[name='email']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('class');
+        //把s赋值给当前元素的下一个span
+        $('.temail>span').css('color','gray').html(s);
+        $('.email').removeClass('cur');
+      });
+      
+      $("input[name='email']").blur(function(){
+        //获取邮箱值
+        var email=$(this).val(); //123@qq.com 
+
+        if(email==''){
+           $('.temail>span').empty();
+        }else{
+            //正则的匹配  
+            if(email.match(/^\w+@\w+(\.\w+)$/)==null){
+              // alert('sss');
+              $('.temail>span').css('color','red').html('<b>✘</b> 邮箱格式不对');
+              $('.email').addClass('cur');
+
+            }else{
+              $.post("__MODULE__/Login/checkEmail",{email:email},function(data){
+                if(data==1){
+                  //给span元素赋值
+                   $('.temail>span').css('color','red').html('邮箱已经存在');
+                    $('.email').addClass('cur');
+                }else{
+                  $('.temail>span').css('color','green').html('<b>✔</b> 邮箱可用');
+                    $('.email').removeClass('cur');
+                    CEMAIL=true;
+                }
+              });
+            }      
+        }
+
+      })
+
+ 
+       /****************图片验证码************************/
+      //1.获取焦点
+      $("input[name='code']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('class');
+        //把s赋值给当前元素的下一个span
+        $('.tcode>span').css('color','gray').html(s);
+        $('.codebox').removeClass('cur');
+      });
+
+      //失去焦点
+       $("input[name='code']").blur(function(){
+        
+        //获取验证码
+        var code=$(this).val();
+        if(code==''){
+             $('.tcode>span').empty();
+        }else{
+           $.post('__MODULE__/Login/checkCode',{code:code},function(data){
+              if(data==1){
+                //验证码正确
+                $('.tcode>span').css('color','green').html('<b>✔</b> 验证码正确');
+                CODE=true;
+              }else{
+                //验证码错误
+                $('.tcode>span').css('color','red').html('<b>✘</b> 验证码输入有误,请点击图片刷新,重新输入');
+                 $('.codebox').addClass('cur');
+              }
+            }); 
+        }
+      });
+
+      /*************************提交登录*****************************/
+      function checkForm(){
+        
+      if(CNAME&&CPASS&&CREPASS&&CODE&&CEMAIL){
+          return true;
+      }else{
+        $("input").each(function(){
+        var val=$(this).val();
+        if(val==''){
+            $(this).parent().addClass('cur'); 
+            // var a=$(this).parent().next('.input-tip>span').html('fdsfdsf');
+        }
+        });
+        alert('红框中信息不能为空!');
+        return false;
+      }
+
+    }
+    </script> 
+ </body>
+</html>

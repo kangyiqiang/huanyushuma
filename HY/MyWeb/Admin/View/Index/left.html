@@ -1,0 +1,159 @@
+<extend name="Public:public"/>
+<block name="admin">
+<style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background: #35353a;
+        width: 100%;
+    }
+</style>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar" style="width: 200px;">
+        
+            <!-- Hidden Nav Collapse Button -->
+            <div id="mws-nav-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Searchbox -->
+            <<!-- div id="mws-searchbox" class="mws-inset">
+                <form action="typography.html">
+                    <input type="text" class="mws-search-input" placeholder="Search...">
+                    <button type="submit" class="mws-search-submit"><i class="icon-search"></i></button>
+                </form>
+            </div> -->
+            
+            <!-- Main Navigation -->
+            <div id="mws-navigation" class="toggled">
+                <ul>
+                    <li class="active"><a href="__MODULE__/Index/right" target="right"><i class="icon-home"></i>首页</a></li>
+                    <?php 
+                     $arr = explode(",",$_SESSION['rule']);
+                        
+                        if(in_array(1,$arr) || $_SESSION['level']==4){
+                    ?>
+                        <li>
+                            <a href="#"><i class="icon-user"></i> 用户管理</a>
+                            <ul class="closed">
+                                <!--跳转地址格式如下 第一个User是控制器 第二个User是方法 -->
+                                <li><a href="__MODULE__/User/add" target="right">添加用户</a></li>
+                                <li><a href="__MODULE__/User/index" target="right">浏览用户</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                        <if condition="$_SESSION['level'] eq 4">
+                              <li>
+                                <a href="#"><i class="icon-android"></i> 权限管理</a>
+                                <ul class="closed">
+                                    <li><a href="__MODULE__/User/list1" target="right">普通管理员列表</a></li>
+                                </ul>
+                            </li>
+                        </if>
+                        
+                    <?php
+                         if(in_array(2,$arr) || $_SESSION['level']==4){
+                    ?>
+                        <li>
+                            <a href="#"><i class="icon-list"></i> 分类管理</a>
+                            <ul class="closed">
+                                <li><a href="__MODULE__/Type/add" target="right">添加分类</a></li>
+                                <li><a href="__MODULE__/Type/index" target="right">浏览分类</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+
+                    <?php
+                         if(in_array(3,$arr) || $_SESSION['level']==4){
+                    ?>
+                         <li>
+                            <a href="#"><i class="icon-archive"></i>商品管理</a>
+                            <ul class="closed">
+                                <li><a href="__MODULE__/Goods/add" target="right">添加商品</a></li>
+                                <li><a href="__MODULE__/Goods/index" target="right">浏览商品</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                    
+
+                     <?php
+                         if(in_array(4,$arr) || $_SESSION['level']==4){
+                    ?>
+                    <li>
+                            <a href="#"><i class="icon-bell"></i> 订单管理</a>
+                            <ul class="closed">
+                                <li><a href="__MODULE__/orders/index" target="right">查看订单</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                     <?php
+                         if(in_array(5,$arr) || $_SESSION['level']==4){
+                    ?>
+                    <li>
+                        <a href="#"><i class="icon-feather"></i> 文章管理</a>
+                        <ul class="closed">
+                            <li><a href="__MODULE__/Article/add" target="right">添加文章</a></li>
+                            <li><a href="__MODULE__/Article/index" target="right">浏览文章</a></li>
+                        </ul>
+                    </li>
+                     <?php
+                        }
+                    ?>
+                        
+                     <?php
+                         if(in_array(6,$arr) || $_SESSION['level']==4){
+                    ?>
+                     <li>
+                            <a href="#"><i class="icon-bullhorn"></i> 广告管理</a>
+                            <ul class="closed">
+                                <li><a href="__MODULE__/Advert/add" target="right">添加首页广告</a></li>
+                                <li><a href="__MODULE__/Advert/index" target="right">修改首页广告</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                     <?php
+                         if(in_array(7,$arr) || $_SESSION['level']==4){
+                    ?>
+                         <li>
+                            <a href="#"><i class="icon-refresh"></i> 轮播图管理</a>
+                            <ul class="closed">
+                                <li><a href="__MODULE__/Lunbo/add" target="right">添加轮播图</a></li>
+                                <li><a href="__MODULE__/Lunbo/index" target="right">修改轮播图信息</a></li>
+                            </ul>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                      <?php
+                         if(in_array(8,$arr) || $_SESSION['level']==4){
+                    ?>
+                     <li>
+                        <a href="#"><i class="icon-link"></i> 友情链接管理</a>
+                        <ul class="closed">
+                            <li><a href="__MODULE__/Link/add" target="right">添加友情链接</a></li>
+                            <li><a href="__MODULE__/Link/index" target="right">查看当前连接</a></li>
+                            <li><a href="__MODULE__/Link/apply" target="right">申请列表</a></li>
+                        </ul>
+                    </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </div>         
+        </div>
+</block>

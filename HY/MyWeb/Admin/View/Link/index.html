@@ -1,0 +1,100 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div id="mws-container" class="clearfix" style="margin-left: 0px;">
+        <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-table"></i>友情链接列表</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+                        <form action="__MODULE__/Link/index" method="get">
+                            <div class="dataTables_filter" id="DataTables_Table_1_filter"><label>按名称搜索:  </label>
+                            <input type="text" aria-controls="DataTables_Table_1" name="name" value="{$nameStr}" />
+
+                            <input type="submit" value="搜索" class="btn btn-info">
+                            </div>
+                        </form>
+                        <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+                            <thead>
+                                <tr role="row">
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 183.2px;"><input type="checkbox" id="selectall">全选/<input type="checkbox" id="selectno">反选</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 147px;">id</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 183.2px;">链接名称</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 169.2px;">路径</th>
+                                    <th role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 127.2px;">操作</th>
+                                </tr>
+                            </thead> 
+                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                            <if condition="$count gt 0">
+                                <foreach name="data" item="row">
+                                <tr class="odd" align="center">
+                                    <td><input type="checkbox" name="id[]" value="{$row.id}"></td>
+                                    <td class="">{$row.id}</td>
+                                    <td class="">{$row.name}</td>
+                                    <td class=""><a href="{$row.url}" style="color: blue;" target="_blank">{$row.url}</a></td>
+                                    <td class="">
+                                        <a href="__MODULE__/Link/dele/id/{$row.id}" onclick="if (confirm('确定删除？')) return true; else return false;" class="btn btn-danger"><i class="icon-trash"></i></a>
+                                        <a href="__MODULE__/Link/edit/id/{$row.id}" class="btn btn-success"><i class="icon-wrench"></i></a>
+                                    </td>
+                                </tr>
+                                </foreach>
+                            <else /><tr><td colspan="5"><span><i class="icol-exclamation"></i>暂无数据</span></td></tr>
+                            </if>
+                        </tbody>
+                        </table>
+                        <div class="dataTables_info" id="DataTables_Table_0_info"><a href="javascript:void(0)" class="btn" onclick="del();">批量删除</a></div>
+                        <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+                        {$pageinfo}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script src="__PUBLIC__/Admin/js/libs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    $("#selectall").change(function(){
+        if($(this).attr("checked")){
+           $("input[name='id[]'").attr("checked",true); 
+        }else{
+             $("input[name='id[]'").attr("checked",false);
+        }
+    });
+    $("#selectno").change(function(){
+        if($(this).attr("checked")){
+           // $("input[name='id[]'").attr("checked",!$("input[name='id[]']").attr("checked")); 
+           $("input[name='id[]']").each(function(){
+                if($(this).attr("checked")){
+                    $(this).attr("checked",false);
+                }else{
+                    $(this).attr("checked",true);
+                }
+           });
+        }else{
+            $("input[name='id[]']").each(function(){
+                if($(this).attr("checked")){
+                    $(this).attr("checked",false);
+                }else{
+                    $(this).attr("checked",true);
+                }
+           });
+        }
+    });
+    var id=[];
+    
+    function del(){
+        $("input[name='id[]'").each(function(){
+            if($(this).attr("checked")){
+                id.push($(this).val());
+            }
+        })
+        if(confirm("确定删除这些链接？")){
+            $.get("__URL__/del",{id:id},function(data){
+                alert(data);
+                for(var i=0;i<id.length;i++){
+                    $("input[value="+id[i]+"]").parents("tr").remove();
+                }
+            });
+        }
+    }
+</script>
+</block>

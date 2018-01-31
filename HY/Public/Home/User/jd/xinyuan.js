@@ -1,0 +1,1 @@
+seajs.use('//nfa.jd.com/loadFa.js?aid=0_0_8211')

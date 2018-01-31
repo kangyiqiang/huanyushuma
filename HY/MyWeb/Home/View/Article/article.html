@@ -1,0 +1,380 @@
+<extend name="Public:public"/>
+<block name="title">{$data.title}</block>
+<block name="admin">
+        <script type="text/javascript">
+            (function(w) {
+                var ua  = w.navigator.userAgent.toLocaleLowerCase();
+                var url = window.location.href;
+                url=url.replace(/group.jd.com/, "group.m.jd.com");
+                if(url.indexOf("index")>0){
+                    url=url.replace(/index/, "site");
+                }else{
+                    if(url.indexOf("site")>0){
+                        url=url.replace(/\/\d+.htm/,'')+'.htm';
+                    }
+                }
+                var matchedRE = /iphone|android|symbianos|windows\sphone/g;
+                if ( matchedRE.test(ua)) {
+                    w.location.href = url;
+                }
+
+            })(window);
+        </script>
+        <script type="text/javascript">
+            window.pageConfig={
+                compatible:true
+            };
+        </script>
+        <script type="text/javascript" src="__PUBLIC__/Article/saved_resource(1)"></script>
+        <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Article/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Article/ueditor.all.js"></script>
+        <link type="text/css" rel="stylesheet" href="__PUBLIC__/Article/saved_resource(2)" source="widget">
+        <script type="text/javascript" src="__PUBLIC__/Article/saved_resource(3)"></script>
+        <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Article/ueditor.app.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/Article/club.tag.js" source="widget"></script>
+        <script type="text/javascript" src="__PUBLIC__/Article/thread.js"></script>
+    <style type="text/css">.jdfb-margin{margin-right:17px;}</style></head>
+
+    <!-- main -->
+    <div id="container" class="container">
+    <div class="w">
+            <div class="breadcrumb">
+                <a href="__MODULE__/Article/community/type/{$data.type}"><if condition="$data.type eq 1">
+                        摄影社区
+                        <elseif condition="$data.type eq 2" />智能社区
+                        <else />造乐社区
+                    </if>
+                </a>&nbsp;&gt;&nbsp;<strong>{$data.title}</strong>
+            </div>
+        </div>
+    <div class="w">
+    <div class="left">
+
+        <!--  /widget/posts/posts.tpl -->
+        <!-- <input id="applyEndTime" value="2015/04/19 10:00:00" type="hidden">
+         -->
+        <div class="posts-box">
+
+
+            <div class="posts-tit">
+                <h1>
+                    <a href="javascript:void(0)">
+&nbsp;{$data.title}
+                    </a>
+                </h1>
+                <div class="des clearfix">
+                    <span class="name">
+                        <a href="__MODULE__/Article/community/type/{$data.type}"><if condition="$data.type eq 1">
+                        摄影社区
+                        <elseif condition="$data.type eq 2" />智能社区
+                        <else />造乐社区
+                    </if></a></span>
+                    <span class="time"><span class="icon"></span>{$data.addtime|date="y-m-d h:i:s",###}</span>
+                    <span class="comment"><span class="icon"></span>{$commall}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="posts-tic">
+                <!-- 正文部分 -->
+                {$data.descr}
+            </div>
+            <div class="opt-btns clearfix">
+                <div class="btns_right">
+                <if condition="$_SESSION['islogin'] eq 2">
+                    <if condition="$click eq 1">
+                       <a href="javascript:void(0);" class="zan zan_has" id="zan" art="{$data.id}" user="{$_SESSION['userid']}"><span class="icon"></span>赞（{$zan}）</a> 
+                       <else /><a href="javascript:void(0);" class="zan" id="zan" art="{$data.id}" user="{$_SESSION['userid']}"><span class="icon"></span>赞（{$zan}）</a>
+                    </if>
+                <else /><a href="javascript:void(0);" onclick="alert('您还没有登录哦')" class="zan"><span class="icon"></span>赞（{$zan}）</a>  
+                </if>
+                </div>
+            </div>
+            <div class="opt-zan">
+                <div class="st">
+                    <div class="cursor" style="right: 45px;"></div>
+                </div>
+                <div class="sc clearfix">
+                    <span class="avatar"><span class="icon_zan"></span></span>
+                    <if condition="$userzan eq null">
+                        <else /><foreach name="userzan" item="val">
+                            <a href="javascript:void(0);" class="avatar"><img src="{$val}"></a>
+                        </foreach>
+                        <span class="avatar"><span class="icon_end"></span></span>
+                    </if>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("#zan").click(function(){
+                var artid = $(this).attr("art");
+                var userid = $(this).attr("user");
+                var zan = parseInt($(this).html().substring(28,29));
+                if($(this).attr("class")=="zan zan_has"){
+                    zan = zan-1;
+                    $(this).html('<span class="icon"></span>赞（'+zan+'）');
+                    $(this).children("span").slideDown("slow");
+                    $(this).removeClass("zan_has");
+                    $.get("__MODULE__/Article/removezan",{userid:userid,artid:artid});
+                }else{
+                    zan = zan+1;
+                    $(this).html('<span class="icon"></span>赞（'+zan+'）');
+                    $(this).children("span").slideDown("slow",function(){return false;});
+                    $(this).addClass("zan_has");
+                    $.get("__MODULE__/Article/addzan",{userid:userid,artid:artid});
+                }
+            });
+        </script>
+    <div id="post_area" class="comments">
+        <div class="tt">
+                <a class="tit curr" href="javascript:void(0);">全部评论（{$commall}）</a>
+        </div>
+    <div class="tc">
+        <if condition="$commall gt 0">
+            <foreach name="judge" item="row" key="key">
+                <div class="item clearfix">
+                    <div class="avatar">
+                        <a href="javascript:void(0);" clstag="pageclick|keycount|dabao_201507016|2"><img src="{$row.pic}"></a>
+                    </div>
+                    <div class="des">
+                        <div class="st" data_pin="gykx75610" data_id="21436886">
+                            <if condition="$_GET['p'] eq null">
+                                <if condition="($key+1) eq 1"><span class="label_1">沙发</span>
+                                <elseif condition="($key+1) eq 2" /><span class="label_2">板凳</span>
+                                <elseif condition="($key+1) eq 3" /><span class="label_3">桌子</span>
+                                <else /><span class="floor">{$key+1}楼</span>
+                                </if>
+                                <else /><if condition="($key+1)*($_GET['p']) eq 1"><span class="label_1">沙发</span>
+                                        <elseif condition="($key+1)*($_GET['p']) eq 2" /><span class="label_2">板凳</span>
+                                        <elseif condition="($key+1)*($_GET['p']) eq 3" /><span class="label_3">桌子</span>
+                                        <else /><span class="floor">{$_GET['p']*($key+1)}楼</span>
+                                        </if>
+                            </if>
+                            <a href="javascript:void(0)" target="_blank" class="name" clstag="pageclick|keycount|dabao_201507016|3">
+                            {$row.user_name}
+                            </a>
+                            <span class="time">{$row.addtime|date="y-m-d H:i:s",###} 发布</span>
+                        </div>
+                        <div class="cont">
+                            {$row.comment}
+                        </div>
+                        <if condition="$_SESSION['level'] eq 4">
+                            <a href="__MODULE__/Article/delete/id/{$row.id}/art_id/{$_GET['id']}" onclick="if (confirm('确定删除这条评论？')) return true; else return false;" class="return" id="del">删除</a>
+                        </if>
+                    </div>
+                </div>
+            </foreach>
+        <else />暂无评论
+        </if>
+    </div>
+    <!-- 分页 postType-->
+    <form id="page_param" action="https://group.jd.com/thread/20000391/21072973.htm">
+        <input id="circleId" type="hidden" name="circleId" value="20001365">
+    </form>
+    <!--  /widget/page/page.tpl -->
+<style type="text/css">
+    #pageSpn span{
+        float: left;
+        border: 0 none;
+        padding: 1px 9px;
+        background: 0 0;
+        filter: none;
+        color: #e4393c;
+        cursor: default;
+        height: 36px;
+        line-height: 36px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+</style>
+<div class="page clearfix">
+    <div class="p-wrap">
+        <span class="p-num" id="pageSpn">
+        <!-- 分页占位 -->
+        {$pageinfo}
+        </span>
+
+    </div>
+</div>
+
+</div>
+    
+    <div class="editor clearfix">
+        <if condition="$_SESSION['islogin'] eq 2">
+        <form action="__MODULE__/Article/comment" method="post" onsubmit="return check()">
+            <a href="javascript:void(0);" class="avatar">
+                <if condition="$flag eq 1">
+                    <img src="{$user['pic']}">
+                <else /><img src="__PUBLIC__/Article/touxiang.jpg">
+                </if>
+            
+            </a>
+            <div class="cont">
+                <script id="editor" type="text/plain" name="descr" style="width:700px;height:300px;"></script>
+                <input type="hidden" name="user_id" value="{$_SESSION['userid']}">
+                <input type="hidden" name="art_id" value="{$data.id}">
+                <textarea name="comment" id="comment" cols="103" rows="10" style="resize: none;float: right;"></textarea>
+                <div class="fl mt25">
+                    <div class="msg-error" id="yanzheng"></div>
+                </div>
+                <input type="submit" class="btn btn_return" value="回复">
+            </div>
+        </form>
+            <script type="text/javascript">
+                ckcom = false;
+                $("#comment").blur(function(){
+                    if($(this).val() == ''){
+                        $("#yanzheng").html("<font color='red'>评论内容不能为空</font>");
+                    }else{
+                        $("#yanzheng").html("");
+                        ckcom = true;
+                    }
+                });
+                function check(){
+                    if(ckcom){
+                        return true;
+                    }else{
+                        $("#yanzheng").html("<font color='red'>评论内容不能为空</font>");
+                        return false;
+                    }
+                }
+            </script>
+        <else /><div class="nologin-post">
+            亲，想要回复请先登录哦
+        </div>
+        </if>
+        
+    </div>
+    <div class="reply_short">
+    </div>
+    <!--/ /widget/posts/posts.tpl -->
+</div>
+    <div class="right">
+
+        <!--  /widget/info/info.tpl -->
+        <div class="user-panel">
+            <div class="user-info">
+                <a href="" target="_blank" "="" class="user-img" clstag="pageclick|keycount|dabao_201507016|1">
+                <if condition="$data.type eq 1"><img src="__PUBLIC__/Article/sheying.png" alt="">
+                <elseif condition="$data.type eq 2"/><img src="__PUBLIC__/Article/zhineng.jpg" alt="">
+                <else /><img src="__PUBLIC__/Article/zaole.jpg" alt="">
+                </if>
+                <span class="label">楼主</span></a>
+                <div class="user-msg">
+                    <div class="user-name">
+                        <if condition="$data.type eq 1"><a href="__MODULE__/Article/community/type/1" class="name_tit" target="_blank" clstag="pageclick|keycount|dabao_201507016|1">摄影社区</a>
+                        <elseif condition="$data.type eq 2"/><a href="__MODULE__/Article/community/type/2" class="name_tit" target="_blank" clstag="pageclick|keycount|dabao_201507016|1">智能社区</a>
+                        <else /><a href="__MODULE__/Article/community/type/2" class="name_tit" target="_blank" clstag="pageclick|keycount|dabao_201507016|1">造乐社区</a>
+                        </if>
+                        
+                        <span class="level">LV2</span>
+                    </div>
+                    <div class="wrap_rank">
+                        <span class="rank r5"></span><a href="javascript:void(0);">钻石会员</a>
+                    </div>
+                </div>
+            </div>
+            <div class="info-counts clearfix">
+                <div class="jifen"><a class="num" href="javascript:void(0);">480</a>积分</div>
+                <div class="fav"><a class="num" href="javascript:void(0);">0</a>收藏</div>
+                <div class="posts"><a class="num" href="javascript:void(0);">100</a>帖子</div>
+            </div>
+        </div>
+<div class="hot-circle">
+    <div class="mt">
+        <h3>热门圈子</h3>
+    </div>
+    <div class="mc">
+        <div class="circle-cont">
+            <ul>
+                <li>
+                    <div class="item">
+                        <div class="item-pic">
+                            <a href="__MODULE__/Article/community/type/1"><img data-lazyload="done" src="__PUBLIC__/Article/sheying.png" alt="" width="50" height="50"></a>
+                        </div>
+                        <div class="item-msg">
+                            <div class="p-name">
+                                <a href="__MODULE__/Article/community/type/1" target="_blank">摄影社区</a>
+                            </div>
+                            <div class="p-extra clearfix">
+                                <span class="icon"></span>4031
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="item-pic">
+                            <a href="__MODULE__/Article/community/type/2"><img data-lazyload="//img30.360buyimg.com/club_community/jfs/t1870/110/63312868/3997/2bb45b46/55ebe44eN73e71b62.png" src="__PUBLIC__/Article/zhineng.jpg" alt="" width="50" height="50"></a>
+                        </div>
+                        <div class="item-msg">
+                            <div class="p-name">
+                                <a href="__MODULE__/Article/community/type/2" target="_blank">智能社区</a>
+                            </div>
+                            <div class="p-extra clearfix">
+                                <span class="icon"></span>511
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="item-pic">
+                            <a href="__MODULE__/Article/community/type/3"><img data-lazyload="//img30.360buyimg.com/club_community/jfs/t2959/173/1507451381/17237/ac63dfc2/57861821N2fb63887.jpg" src="__PUBLIC__/Article/zaole.jpg" alt="" width="50" height="50"></a>
+                        </div>
+                        <div class="item-msg">
+                            <div class="p-name">
+                                <a href="__MODULE__/Article/community/type/3" target="_blank">造乐社区</a>
+                            </div>
+                            <div class="p-extra clearfix">
+                                <span class="icon"></span>90
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+        <!--/ /widget/side-circle/side-circle.tpl -->
+
+        <!--  /widget/side-recommend-sku/side-recommend-sku.tpl -->
+        <div class="m side-sku" id="g-slider" style="display: none;">
+            <div class="mt clearfix">相关商品
+                <div class="sku_page">
+                    <span class="prev">&lt;</span>
+                    <span class="page_curr">1</span>/<span class="page_total"></span>
+                    <span class="next">&gt;</span>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var club_ads = {"success":false,"result":{"groupProductAdvertVoList":""}};
+                            </script>
+
+            <div class="mc">
+                <div class="g-slider">
+                    <div id="g-scroll">
+                        <ul class="silder-panel">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ /widget/side-recommend-sku/side-recommend-sku.tpl -->
+
+    </div>
+    <div class="clr"></div>
+</div>
+</div>
+<!-- /main -->
+<!--  /widget/footer/footer.tpl -->
+<!--/ /widget/footer/footer.tpl -->
+
+<!--  /widget/analysis-2015/analysis-2015.tpl -->
+<script type="text/javascript" src="__PUBLIC__/Article/wl.js"></script>
+<!--/ /widget/analysis-2015/analysis-2015.tpl -->
+<script type="text/javascript" src="__PUBLIC__/Article/club.tag.js" source="widget"></script>
+<script type="text/javascript" src="__PUBLIC__/Article/saved_resource(4)" source="widget"></script>
+
+<script src="__PUBLIC__/Article/td.js"></script><script src="__PUBLIC__/Article/y.html"></script>
+</block>

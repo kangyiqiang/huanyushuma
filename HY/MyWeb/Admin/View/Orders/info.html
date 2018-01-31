@@ -1,0 +1,85 @@
+<extend name="Public:public"/>
+<block name="admin">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icol-application-view-tile"></i>订单详情</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+     
+     
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info" > 
+      <thead> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+                <tr><td colspan="4"><h3>收货人信息:</h3></td></tr>
+                <tr><td class="odd" align="center"><font color="red">用户ID:</font><td colspan="3">{$row['id']}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">收货人:</font></td><td colspan="3">{$row['name']}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">收货手机:</font></td><td colspan="3">{$row['phone']}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">收货地址:</font></td><td colspan="3">{$row['address']}</td></tr>
+                <!-- <tr><td colspan="3" class="odd" align="center"></td></tr>
+                <tr><td colspan="3" class="odd" align="center"></td></tr>
+                <tr><td colspan="3" class="odd" align="center"></td></tr> -->
+                <tr><td colspan="4"><h3>订单信息:</h3></td></tr>
+
+                <tr><td class="odd" align="center"><font color="red">订单编号:</font></td><td colspan="3">{$row['ordernum']}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">下单时间:</font></td><td colspan="3">{$row['ordertime']|date="Y-m-d H:i:s",###}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">支付方式:</font></td><td colspan="3">{$row['paymethod']=='0'?'在线支付':'货到付款'}</td></tr>
+                <tr><td class="odd" align="center"><font color="red">取消状态:</font></td><td colspan="3">{$row['cancel']=='0'?'未取消':'已取消'}</td></tr>
+
+                <!-- <tr><td class="odd" align="center"><font color="red">订单金额:</font></td><td>￥{$row['total']}</td></tr> -->
+                <tr><td colspan="4"><h3>商品信息:</h3></td></tr>
+
+
+                <tr>
+                    <th class="odd" align="center" width="50%">商品名称</th>
+                    <th class="odd" align="center" width="10%">单价</th>
+                    <th class="odd" align="center" width="10%">数量</th>
+                    <th class="odd" align="center" width="30%">小计</th>
+                </tr>
+                <foreach name="list" item="info">
+                <tr>
+                    <td><div style="float:left"><img src="__ROOT__/Public/Uploads/goods_spic/{$info['pic']}" width="50px" height="50px"></div><div style="float:left"><p><font color="blue">{$info['gname']}</font></p><p>{$info['vname']} : {$info['cname']}</p></div></td>
+                    <td align="center"><font color="red">￥{$info['price']}.0</font></td>
+                    <td align="center">({$info['gnum']})</td>
+                    <td align="center"><font color="red">￥{$info['price']*$info['gnum']}.0</td>
+                </tr>
+                </foreach>
+                 <tr><td class="odd" align="center">总价格:</td><td colspan="3" align="center"><font color="red" size="5px">￥{$row['total']}.0</font></td></tr>
+                <!-- <tr>
+                    <td class="odd" align="center">下单时间:</td>
+                    <td>{$row['ordertime'] | date="Y-m-d H:i:s",###}</td>
+                    <td>{$row['ordertime'] | date="Y-m-d H:i:s",###}</td>
+                    <td>{$row['ordertime'] | date="Y-m-d H:i:s",###}</td>
+                </tr>
+                <tr>
+                    <td class="odd" align="center">取消状态:</td>
+                    <td>{$row['cancel']=='0'?'未取消':'已取消'}</td>
+                    <td>{$row['cancel']=='0'?'未取消':'已取消'}</td>
+                    <td>{$row['cancel']=='0'?'未取消':'已取消'}</td>
+                </tr> -->
+
+
+
+      </tbody>
+     </table>
+     
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+      Showing 1 to 10 of 57 entries
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+     </div>
+    </div>
+   </div> 
+  </div>
+ </body>
+</html>
+
+</block>
+<block name="title">
+  分类列表页
+</block>

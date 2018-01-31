@@ -1,0 +1,66 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+		<div class="hy_tt">
+		<php>$mod=M('Orders');$tot=$mod->where("uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index">全部订单<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=0 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/0">待付款<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=1 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/1">待发货<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=2 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/2" >待收货<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=3 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/3" >已完成<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("cancel='1' AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/9" >已取消<span>({$tot})</span></a>
+		</div>
+		<div class="hy_tablelist">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>评价详情</th>
+				<th width="170">评分</th>
+				<th colspan="2">商品信息</th>
+			</tr>
+	<foreach name="list" item="row">
+			<tr>
+				<td valign="top" style="text-align:left;overflow: hidden">{$row['comment_text']}<p class="c999 mat5 font12">[{$row.addtime|date='Y-m-d H:i:s',###}]</p></td>
+				<td>
+					<for start="0" end="$row.comment_star">
+					<img src="__PUBLIC__/Home/Comment/images/star-on.png">
+					</for>
+				</td>
+				<?php
+					$gid=$row['goodsid'];
+					$oid=$row['orderid'];
+					$mod=M("orders_goods");
+					$info=$mod->where("goods_id=$gid AND orderid=$oid")->find();
+				?>
+				<td width="50"><a  class="dingdan_img" target="_blank"><img src="__ROOT__/Public/Uploads/goods_spic/{$info['pic']}" /></a></td>
+				<td class="aleft" width="250" style="padding-left:0;overflow:hidden"><a target="_blank" class="cblue">{$info['gname']}</a></td>
+
+			</tr>
+	</foreach>
+	<if condition="empty($list)">
+		<tr>
+		<td colspan="3">
+		暂时还没有评论信息!
+		</td>
+		</tr>
+	</if>
+			</table>
+		</div>
+		<div class="fenye mat10">{$pageinfo}</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</block>
+
+</script>

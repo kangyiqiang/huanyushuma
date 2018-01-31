@@ -1,0 +1,53 @@
+<extend name="Public:public"/>
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+
+                        <span><i class="icol-add"></i>　添加版本</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__MODULE__/Goods/insertVersion" method="post"/>
+                        <input type="hidden" name="goods_id" value="{$goods_id}">
+                            <div class="mws-form-inline">
+                                <br>
+                             　　<button type="button" class="btn lable btn-info"><i class="icon-plus"></i>　继续添加版本</button>
+                          <div class="repeat">
+                              <div class="mws-form-row">
+                                  <div class="mws-form-item">
+                                      <input class="small" type="text" name="version[]" placeholder="版本" required>
+                                  </div>
+                              </div>
+                              <div class="mws-form-row">
+                                  <div class="mws-form-item">
+                                      <input class="small" type="number" name="price[]" placeholder="价格" required>
+                                  </div>
+                              </div>
+                              <div class="mws-form-row">
+                                  <div class="mws-form-item">
+                                      <input class="small" type="number" name="store[]" placeholder="库存" required>
+                                  </div>
+                              </div>
+                          </div>
+                            <div class="mws-button-row">
+                                <input value="重置" class="btn" type="reset">
+                                <input value="完成添加" class="btn btn-success" type="submit">
+                            </div>
+
+                        </form>
+                    </div>      
+                </div>
+
+<script type="text/javascript">
+
+$(".lable").click(function(){
+var repeat=$('.repeat').html();
+$(".repeat").after(repeat);
+
+});
+</script>
+
+</block>
+<block name="title">
+        后台类别添加操作
+</block>

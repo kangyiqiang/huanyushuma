@@ -1,0 +1,458 @@
+<extend name="Public:public"/>
+<block name="title">我的购物车</block>
+<block name="width">style="margin: 27px 30px 0 165px;"</block>
+<block name="admin">
+    <script type="text/javascript" async="" src="__PUBLIC__/Cart/wl.js"></script>
+    <script type="text/javascript" async="" src="__PUBLIC__/Cart/idigger.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Cart/jquery-1.6.4.js"></script> 
+    <script type="text/javascript" src="__PUBLIC__/Cart/base.js"></script> 
+    <link source="widget" href="__PUBLIC__/Cart/saved_resource(1)" rel="stylesheet" type="text/css" /> 
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/Cart/saved_resource(2)" source="widget" /> 
+<style>
+  .item-list{
+    line-height: 200px;
+  }
+
+</style>
+
+    <div id="container" class="cart" ecarddg="0" cartalwaysdg="0" t="0"> 
+       <div class="w"> 
+        <div id="chunjie" class="mb10"></div> 
+        <div class="cart-filter-bar"> 
+         <ul class="switch-cart" style="margin-bottom: 10px;"> 
+          <li class="switch-cart-item curr"> <a href="https://cart.jd.com/cart.action"> <em>购物车</em> </a> </li> 
+         </ul> 
+         <div class="clr"></div> 
+         <div class="w-line"> 
+          <div class="floater" style="width: 78px; left: 0px;"></div> 
+         </div> 
+         <div class="tab-con ui-switchable-panel-selected" style="display: block;"></div> 
+         <div class="tab-con hide" style="display: none;"></div> 
+        </div> 
+       </div> 
+       <form action="__MODULE__/Cart/balance" method="post" onsubmit="return checkForm()">
+       <div class="cart-warp"> 
+        <div class="w"> 
+         <div id="jd-cart"> 
+          <div class="cart-main cart-main-new"> 
+           <div class="cart-thead"> 
+            <!-- 我的冰箱 --> 
+            <div id="fridge-a" style="display:none"> 
+             <a href="https://cart.jd.com/myfridge.action" clstag="pageclick|keycount|cart_20170414|01" class="fridge-guide"><i></i></a> 
+            </div> 
+            <div class="column t-checkbox"> 
+             <div class="cart-checkbox"> 
+             
+              <label for="">勾选全部商品</label> 
+             </div>
+            </div> 
+            <div class="column t-goods">
+             商品信息
+            </div> 
+            <div class="column t-props" style="width: 346px;"></div> 
+            <div class="column t-price">
+             单价
+            </div> 
+            <div class="column t-quantity">
+             数量
+            </div> 
+            <div class="column t-sum">
+             小计
+            </div> 
+            <div class="column t-action">
+             操作
+            </div> 
+           </div> 
+           <div id="cart-list"> 
+            <input type="hidden" id="allSkuIds" value="4675696,13515848376" /> 
+            <input type="hidden" id="outSkus" value="" /> 
+            <input type="hidden" id="isLogin" value="1" /> 
+            <input type="hidden" id="isNoSearchStockState" value="0" /> 
+            <input type="hidden" id="isNoDD" value="0" /> 
+            <input type="hidden" id="isNoCoupon" value="0" /> 
+            <input type="hidden" id="isFavoriteDowngrade" value="0" /> 
+            <input type="hidden" id="isUnmarketDowngrade" value="0" /> 
+            <input type="hidden" id="isPriceNoticeDowngrade" value="0" /> 
+            <input type="hidden" id="isNoVenderFreight" value="0" /> 
+            <input type="hidden" id="isNoDeliveryService" value="0" /> 
+            <input type="hidden" id="isNoXzyf" value="0" /> 
+            <input type="hidden" id="isNoXzyfCd" value="0" /> 
+            <input type="hidden" id="isGiftServiceDowngrade" value="0" /> 
+            <input type="hidden" id="hiddenLocationId" /> 
+            <input type="hidden" id="hiddenLocation" /> 
+            <input type="hidden" id="ids" value="4675696" /> 
+            <input type="hidden" id="isNgsdg" value="0" /> 
+            <!-- 老js新action兼容，下次上线删除 --> 
+            <input type="hidden" id="isCpsdg" value="1" /> 
+            <input type="hidden" id="overseasLoc" value="0" /> 
+            <input type="hidden" id="isOadg" value="0" /> 
+            <input type="hidden" id="isMdxxdg" value="0" /> 
+            <input type="hidden" id="isWmdg" value="0" /> 
+            <input type="hidden" id="isLdg" value="0" /> 
+            <!-- 修改数量之前的值 --> 
+            <input type="hidden" id="changeBeforeValue" value="" /> 
+            <input type="hidden" id="changeBeforeId" value="" /> 
+            <input type="hidden" value="1" id="checkedCartState" /> 
+            <input type="hidden" value="86510" id="venderIds" /> 
+            <input type="hidden" value="4675696_2694_1" id="zySkuCid" /> 
+            <input type="hidden" value="8888,86510" id="venderFreightIds" /> 
+            <input type="hidden" value="2488.00,0" id="venderTotals" /> 
+            <input type="hidden" value="2" id="uclass" /> 
+            <input type="hidden" value="0.00" id="freshTotalPrice" autocomplete="off" /> 
+            <input type="hidden" value="2488.00" id="notFreshTotalPrice" autocomplete="off" /> 
+            <input type="hidden" value="0.00" id="walmartTotalPrice" autocomplete="off" /> 
+            <!-- 需要引用的全局信息 --> 
+            <div class="cart-item-list" id="cart-item-list-01"> 
+            
+            <div class="cart-item-list" id="cart-item-list-02"> 
+             <div class="cart-tbody" id="vender_86510"> 
+               <php> $tot = '';</php> 
+              <!-- 遍历开始  -->
+              <foreach name="list" item="row">
+                <div class="item-list" style="z-index: auto;"> 
+                 <!--单品--> 
+                 <!-- 单品--> 
+                 <!-- 京配 --> 
+                 <div class="item-single  item-item " id="product_13515848376" cid="6908" style="z-index: auto;"> 
+                  <div class="item-form"> 
+                   <div class="cell p-checkbox"> 
+                    <div class="cart-checkbox"> 
+                     <!--单品--> 
+                     <input p-type="13515848376_1" type="checkbox" name="checkItem[]" value="{$row.id}" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku" /> 
+                     <label for="">勾选商品</label> 
+                     <span class="line-circle"></span> 
+                    </div> 
+                   </div> 
+                   <div class="cell p-goods" style="width: 510px;"> 
+                    <div class="goods-item"> 
+                     <div class="p-img"> 
+                      <a href=""  class="J_zyyhq_13515848376"><img src="__ROOT__/Public/Uploads/goods_spic/{$row.spic}" width="80px" height="80px" /></a> 
+                     </div> 
+                     <div class="item-msg"> 
+                      <div class="p-name"> 
+                       <a clstag="clickcart|keycount|xincart|cart_sku_name" href="https://item.jd.com/13515848376.html" target="_blank">商品名称:　{$row.gname}</a> 
+                      </div> 
+                      <div class="p-extend p-extend-new"> 
+                       <span class="promise return-y">促销语：　{$row.sale}</span> 
+                       <span class="promise" _yanbao="yanbao_13515848376_"><!-- <i class="jd-service-icon"></i><a data-tips="选延保" class="ftx-03 jd-service" href="https://cart.jd.com/cart?rd=0.7753947235770464#none">选延保</a> --></span> 
+                      </div> 
+                     </div> 
+                    </div> 
+                   </div> 
+                   <div class="cell p-props p-props-new"> 
+                    <div class="props-txt" title="黑色">
+                     颜色：{$row.cname}
+                    </div> 
+                    <div class="props-txt" title="42">
+                     版本信息：{$row.vname}
+                    </div> 
+                   </div> 
+                   <div class="cell p-price"> 
+                    <strong>&yen;<span id="danjia">{$row.price}</span>.00</strong> 
+                   </div> 
+                   <div class="cell p-quantity"> 
+                    <!--单品--> 
+                    <div class="quantity-form"> 
+
+                     <span clstag="clickcart|keycount|xincart|cart_num_down" class="decrement" style="cursor:pointer"> - </span> 
+
+                     <input autocomplete="off" type="text" class="itxt" value="{$row.gnum}" id="gnum" minnum="1" /> 
+
+                     <span clstag="clickcart|keycount|xincart|cart_num_up" class="increment" style="cursor:pointer"> + </span> 
+
+                     <!-- 库存隐藏域 -->
+                    <input type="hidden" id="kucun" value="{$row.store}">
+
+                    </div> 
+      
+         
+
+                    <div class="ac ftx-03 quantity-txt" _stock="stock_13515848376">
+                     有货
+                    </div> 
+                   </div> 
+                   <div class="cell p-sum">
+                    <strong id="xiaoji">&yen;<php>
+                        $pri = $row['price']*$row['gnum'];
+                        $tot += $pri;
+                        echo $pri.'.00';
+                      </php></strong> 
+                   </div> 
+                   <div class="cell p-ops"> 
+                    <!--单品--> 
+                    <a id="remove_86510_13515848376_1" clstag="clickcart|keycount|xincart|cart_sku_del" data-name="【京东专供 专柜正品】KAD精选牛皮 柜台同..." data-more="removed_299.00_1" class="cart-remove" href="__URL__/delete/id/{$row.id}">删除</a> 
+                   </div> 
+                  </div> 
+                  <div class="item-extra mb10"> 
+                   <!-- 落地配服务 --> 
+                  </div> 
+                  <div class="item-line"></div> 
+                 </div> 
+                </div> 
+              </foreach>
+              <!-- 遍历结束  -->
+
+
+             </div> 
+            </div> 
+
+           </div> 
+          </div> 
+         </div> 
+         <div id="cart-floatbar"> 
+          <div class="ui-ceilinglamp-1" style="width: 990px; height: 52px;">
+           <div class="cart-toolbar" style="width: 1209px; height: 50.4px;"> 
+            <div class="toolbar-wrap" style="width: 1209px;"> 
+             <div class="selected-item-list hide" style="display: none;"> 
+             </div> 
+             <div class="options-box"> 
+              <div class="select-all"> 
+               <div class="cart-checkbox"> 
+                <input type="checkbox" id="toggle-checkboxes_down" name="toggle-checkboxes" class="jdAll" clstag="clickcart|keycount|xincart|cart_allCheckDown"/> 
+           
+               </div> 全选 
+              </div> 
+              <div class="operation"> 
+               <a href="__URL__/deleteAll" clstag="" class="remove-batch">清空购物车</a> 
+              </div> 
+              <div class="clr"></div> 
+              <div class="toolbar-right"> 
+               <div class="normal"> 
+                <div class="comm-right"> 
+                 <div class="btn-area"> 
+                  <!-- <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrder" class="submit-btn" data-bind="1"> 去结算<b></b></a>  -->
+                  <input type="submit" style="border:0px" value="去结算" clstag="clickcart|keycount|xincart|cart_gotoOrder" class="submit-btn" data-bind="1"/>
+                                    
+                 </div> 
+                 <div class="price-sum"> 
+                  <div> 
+                   <span class="txt txt-new">总价：</span> 
+                   <span class="price sumPrice"><em data-bind="2488.00">&yen;<span id="tot">0</span></em></span> 
+                   <b class="ml5 price-tips"></b> 
+                   <div class="price-tipsbox" style="display: none; left: 159.85px;"> 
+                    <div class="ui-tips-main">
+                     不含运费及送装服务费
+                    </div> 
+                    <span class="price-tipsbox-arrow"></span> 
+                   </div> 
+                  </div> 
+                 </div> 
+                <!--  <div class="amount-sum">
+                   已选择
+                  <em>1</em>件商品
+                 </div>  -->
+                 <div class="clr"></div> 
+                </div> 
+               </div> 
+               <div class="combine" style="display: none;"> 
+                <div class="comm-right"> 
+                 <div class="btn-area"> 
+                  <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrderOut" class="jdInt-submit-btn"> 去全球购结算<b></b></a> 
+                  <a href="javascript:void(0);" onclick="return false;" clstag="clickcart|keycount|xincart|cart_gotoOrder" class="common-submit-btn"> 去京东结算<b></b></a> 
+                 </div> 
+                 <div class="price-sum"> 
+                  <!-- <div> 
+                   <span class="txt txt-new">总价：</span> 
+                   <span class="price sumPrice"><em data-bind="2488.00">&yen;2488.00</em></span> 
+                   <b class="ml5 price-tips"></b> 
+                   <div class="price-tipsbox" style="display: none; left: 159.85px;"> 
+                    <div class="ui-tips-main">
+                     不含运费及送装服务费
+                    </div> 
+                    <span class="price-tipsbox-arrow"></span> 
+                   </div> 
+                   <br /> 
+                   <span class="txt">已节省：</span> 
+                   <span class="price totalRePrice">- &yen;0.00</span> 
+                  </div>  -->
+                 </div> 
+                 <div class="amount-sum">
+                   已选择
+                  <em>1</em>件商品
+                  <b class="up"></b> 
+                 </div> 
+                 <div class="clr"></div> 
+                </div> 
+                <div class="clr"></div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div>
+          </div> 
+         </div>  
+        </div> 
+       </div> 
+  </div> 
+  </form>
+  <script>
+
+  /************************************/
+      function checkForm(){
+          var sum=$(".sumPrice em>span").html();
+          if(sum==0){
+            alert("请先选择商品!");
+            return false;
+          }else{
+            return true;
+          }
+      }
+  /************************************/
+
+
+  /****************************购物车操作开始*****************************************/
+          //初始化总价
+          window.onload=function(){
+            $("#vender_86510 .item-list").find(".jdcheckbox").each(function(){
+              if($(this).attr("checked")){
+                $(this).parents(".item-list").addClass("curr");
+              }
+            });
+            sum();
+          };
+
+          //减
+          $("#vender_86510 .quantity-form .decrement").click(function(){
+              v = $(this).next('input').val();
+              if(v <= 1){
+                 $(this).next('input').val(1);
+                 va = 1;
+              }else{
+                 $(this).next('input').val(v-1);
+                 va = v-1;            
+              }
+
+             //获取购物车表id
+              id = $(this).parents(".item-list").find(".jdcheckbox").val();
+              //ajax修改数据
+               $.get("__URL__/upNum",{va:va,id:id});
+
+
+
+              single = $(this).parents(".item-form").find("#danjia").html();
+              number = $(this).next('input').val();
+              price = single*number;
+              price = price.toFixed(2);
+              $(this).parents(".item-form").find("#xiaoji").html("￥"+price);
+              sum();              
+          });
+        
+          //加
+          $("#vender_86510 .quantity-form .increment").click(function(){
+              v = $(this).prev('input').val();
+              v = parseInt(v);
+              
+              //库存
+              stor = $(this).next('input').val();
+              if(v>=stor){
+                  $(this).prev('input').val(stor);
+                  va = stor;
+              }else{
+                  $(this).prev('input').val(v+1);
+                  va = v+1;
+              }
+              
+              //获取购物车表id
+              id = $(this).parents(".item-list").find(".jdcheckbox").val();
+              //ajax修改数据
+               $.get("__URL__/upNum",{va:va,id:id});
+
+
+              single = $(this).parents(".item-form").find("#danjia").html();
+              number = $(this).prev('input').val();
+              price = single*number;
+              price = price.toFixed(2);
+              $(this).parents(".item-form").find("#xiaoji").html("￥"+price);
+              sum();              
+          });
+
+          //输入数量值
+          $("#vender_86510 .quantity-form .itxt").blur(function(){
+              num = parseInt($(this).val());
+              stor = parseInt($(this).next("span").next("input").val());
+              if(!checkNum(num)){
+                alert("输入的数量不合法");    
+                $(this).val(1);
+              }else if(num == 0){
+                alert("输入的数量至少为1");   
+                $(this).val(1);
+              }else if(num > stor){
+                alert("输入的数量大于库存");  
+                $(this).val(stor);
+              }
+              single = $(this).parents(".item-form").find("#danjia").html();
+              number = $(this).val();
+              price = single*number;
+              price = price.toFixed(2);
+              $(this).parents(".item-form").find("#xiaoji").html("￥"+price);
+              sum();
+          });
+
+          //验证购买数量是否为整数
+          function checkNum(num){
+              partn = /^[0-9]+$/;
+              if(partn.test(num)){
+                return true;
+              }
+              return false;
+          }
+          
+          //计算函数
+          function sum(){
+            var sumprice = 0;
+            $("#vender_86510 .curr #xiaoji").each(function(){
+              sumprice += parseInt($(this).html().substring(1));
+            });
+            sumprice = sumprice.toFixed(2);
+            $(".sumPrice em>span").html(sumprice);
+          }
+
+          
+
+          //实现全选
+          $("#jd-cart").find(".jdAll").click(function(){
+              if($(this).attr("checked")){
+                  $("#jd-cart").find(".jdcheckbox").each(function(){
+                    $(this).attr({'checked':true,'disabled':true});
+                    $(this).parents(".item-list").addClass("curr");
+                  });
+              }else{
+                 $("#jd-cart").find(".jdcheckbox").each(function(){
+                    $(this).attr({"checked":false,'disabled':false});
+                    $(this).parents(".item-list").removeClass("curr");
+                  });
+
+              }
+
+             sum();
+
+          });
+
+          //判断是否选中购物车内容
+          $("#vender_86510 .item-list").find(".jdcheckbox").click(function(){
+
+
+              if($(this).attr("checked")){
+                $(this).parents(".item-list").addClass("curr");
+                sum();
+              }else{
+                $(this).parents(".item-list").removeClass("curr");
+                sum();
+              }
+          
+          });
+
+
+
+  /****************************购物车操作结束*****************************************/
+  </script>
+
+
+  <script type="text/javascript" src="__PUBLIC__/Cart/config.js"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Cart/cart-recommend.js"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Cart/ceilinglamp.js"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Cart/im_cart_v1.js"></script> 
+  <script type="text/javascript" src="__PUBLIC__/Cart/saved_resource(4)"></script> 
+  <script src="__PUBLIC__/Cart/td.js"></script>
+  <script src="__PUBLIC__/Cart/y.html"></script>
+</block>

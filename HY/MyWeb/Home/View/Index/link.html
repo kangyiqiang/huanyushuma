@@ -1,0 +1,275 @@
+<extend name="Public:public"/>
+<block name="title">友情链接</block>
+<block name="admin">
+
+    <script type="text/javascript">
+        window.pageConfig={
+            compatible:true
+        };
+        
+    </script>
+    <link type="text/css" rel="stylesheet" href="__ROOT__/Public/link/link.2012.css">    <script type="text/javascript" src="__ROOT__/Public/link/base.js"></script>
+    <title>友情链接</title>
+<div id="nav-2014">
+</div>
+
+    <div class="w">
+        <div class="link_box">
+            <div class="link_top"><div class="top_right"></div><div class="top_left"></div></div>   
+            <div class="link_content">
+                <h3 class="link_tit">友情链接</h3>
+                <ul class="link_list">
+                    <foreach name="data" item="row">
+                        <li><a href="{$row['url']}" target="_blank">{$row['name']}</a></li>
+                    </foreach>
+                </ul>
+                <div class="Pagination">
+                    {$pageinfo}
+                            <!-- <a class="current">1</a>
+                        
+                            <a href="https://club.jd.com/links.action?page=2">2</a>
+                        
+                        <a class="next" href="https://club.jd.com/links.action?page=2">下一页<b></b></a> -->
+                </div>
+            </div>
+            <div class="link_bottom"><div class="bottom_right"></div><div class="bottom_left"></div></div>
+        </div>
+        <div class="link_box_a">
+            <div class="link_top">
+                <div class="top_right"></div>
+                <div class="top_left"></div>
+            </div>
+            <div class="link_content">
+                <h3 class="link_tit">申请友情链接</h3>
+                <ul class="link_step">
+                    <li class="link_step_tit">申请步骤：</li>
+                    <li>
+                        <div class="float_Left">
+                            1.</div>
+                        <div class="margin_l_12">
+                            请先在贵网站做好本网站的文字友情链接
+                            </div>
+                    </li>
+                    <li>2.做好链接后，请在右侧填写申请信息。本网站只接受申请文字友情链接。</li>
+                    <li>
+                        <div class="float_Left"> 3.</div>
+                        <div class="margin_l_12">
+                            已经开通我站友情链接且内容健康，符合本站友情链接要求的网站，经管理员审核后，可以显示在此友情链接页面。</div>
+                    </li>
+                    <li>
+                        <div class="float_Left"> 4.</div>
+                        <div class="margin_l_12">
+                            请通过右侧提交申请，注明：友情链接申请。</div>
+                    </li>
+                </ul>
+                <form id="frm_submit" action="__MODULE__/Index/apply" method="post" onsubmit="return check();">
+                <table cellpadding="0" cellspacing="0" class="link_table" width="309">
+                    <tbody><tr>
+                        <td height="29" colspan="2" valign="top" class="link_step_tit">
+                            申请信息</td>
+                    </tr>
+                    <tr>
+                        <td height="29">
+                            网站名称：
+                        </td>
+                        <td height="29">
+                            <input id="name" name="name" type="text" class="w247">
+                            <br><span id="namemsg"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="29">
+                            网&nbsp;&nbsp;&nbsp;&nbsp;址：
+                        </td>
+                        <td height="29">
+                            <input id="url" name="url" type="text" class="w247" value="http://">
+                            <br><span id="urlmsg" ></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="35">
+                            电子邮箱：
+                        </td>
+                        <td height="29">
+                            <input id="email" name="email" type="text" class="w247">
+                            <br><span id="emailmsg"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="61" height="29" valign="top">
+                            网站介绍：
+                        </td>
+                        <td width="348" valign="top">
+                            <textarea id="intro" name="introduce" cols="" rows="" class="w247h60"></textarea>
+                            <br><span id="intromsg"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="45" colspan="2" align="center" valign="middle">
+                            <input type="submit" value="提交申请" id="btnSubmit" class="link_button">
+                        </td>
+                    </tr>
+                </tbody></table>
+                </form>
+            </div>
+            <div class="link_bottom">
+                <div class="bottom_right"></div>
+                <div class="bottom_left"></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    ckname = false;
+    ckurl = false;
+    ckemail = false;
+    ckintro = false;
+    $("#name").focus(function(){
+        $("#namemsg").html("输入正确的网站名称");
+    }).blur(function(){
+        if($(this).val()==''){
+            $("#namemsg").html("<font color='red'>网站名称不能为空</font>");
+        }else if(!namecheck($(this).val())){
+            $("#namemsg").html("<font color='red'>网站名称仅支持中文、英文、数字，且最多20个字符</font>");
+        }else{
+            $("#namemsg").html(" ");
+            ckname = true;
+        }
+    });
+    function namecheck(str){
+        var patrn = /^[A-Za-z0-9_\u4E00-\uFA29]{1,20}$/u;
+        if(!patrn.test(str)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    $("#url").focus(function(){
+        $("#urlmsg").html("输入申请的链接地址");
+    }).blur(function(){
+       if($(this).val()==''){
+            $("#urlmsg").html("<font color='red'>网址不能为空</font>");
+        }else if(!urlcheck($(this).val())){
+            $("#urlmsg").html("<font color='red'>请输入正确的网址</font>");
+        }else{
+             $("#urlmsg").html(" ");
+             ckurl=true;
+        }
+    });
+    function urlcheck(str){
+        var patrn = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/;
+        if(!patrn.test(str)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    $("#email").focus(function(){
+        $("#emailmsg").html("输入正确的邮箱地址");
+    }).blur(function(){
+        if($(this).val()==''){
+            $("#emailmsg").html("<font color='red'>邮箱地址不能为空</font>");
+        }else if(!emailcheck($(this).val())){
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+        }else{
+            $("#emailmsg").html(" ");
+            ckemail = true;
+        }
+    });
+    function emailcheck(str){
+        var patrn = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(!patrn.test(str)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    $("#intro").blur(function(){
+        if($(this).val()==''){
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+        }else{
+            $("#intromsg").html(" ");
+            ckintro = true;
+        }
+    });
+    function check(){
+        if(ckname && ckurl && ckemail && ckintro){
+            return true;
+        }else if(!ckname && ckurl && ckemail && ckintro){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            return false;
+        }else if(!ckname && !ckurl && ckemail && ckintro){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            return false;
+        }else if(!ckname && !ckurl && !ckemail && ckintro){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            return false;
+        }else if(!ckname && !ckemail && ckurl && ckintro){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            return false;
+        }else if(!ckname && !ckintro && ckurl && ckemail){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckname && !ckurl && !ckintro && ckemail){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckname && !ckemail && !ckintro && ckurl){
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckurl && ckname && ckemail && ckintro){
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            return false;
+        }else if(!ckurl && !ckemail && ckname && ckintro){
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            return false;
+        }else if(!ckurl && !ckintro && ckname && ckemail){
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckurl && !ckemail && !ckintro && ckname){
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckemail && ckurl && ckintro && ckname){
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            return false;
+        }else if(!ckemail && !ckintro && ckname && ckurl){
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else if(!ckintro && ckname && ckurl && ckemail){
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }else{
+            $("#namemsg").html("<font color='red'>网站名称格式错误</font>");
+            $("#urlmsg").html("<font color='red'>网站地址格式错误</font>");
+            $("#emailmsg").html("<font color='red'>邮箱格式错误</font>");
+            $("#intromsg").html("<font color='red'>网站介绍不能为空</font>");
+            return false;
+        }
+    }
+</script>
+<script type="text/javascript" src="__ROOT__/Public/link/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="__ROOT__/Public/link/jquery.validate.js"></script>
+    <script type="text/javascript">
+    seajs.use(['jdf/1.0.0/unit/globalInit/2.0.0/globalInit.js'],function(globalInit){
+        globalInit();
+    });
+    seajs.use("jdf/1.0.0/unit/hotwords/1.0.0/hotwords",function(hotwords){
+        hotwords();
+    });
+</script>
+<script type="text/javascript" src="__ROOT__/Public/link/wl.js"></script>
+
+<script src="__ROOT__/Public/link/td.js"></script><script src="__ROOT__/Public/link/y.html"></script>
+</block>

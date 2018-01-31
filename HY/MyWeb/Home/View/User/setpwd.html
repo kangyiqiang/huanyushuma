@@ -1,0 +1,118 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+		<div class="hy_tt"><a href="javascript:;" class="sel">修改密码</a></div>
+		<div class="hy_table">
+		<form method="post" onsubmit="return checkForm()" id="form" action="__URL__/pwd_update">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="text-align:right;" width="150"><span class="cred1">*</span> 原&nbsp;&nbsp;密 码：</td>
+			<td><input type="password" name="password" class="inputall input200" autocomplete="off" content="必须与原始密码相同!"/><div></div></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;"><span class="cred1">*</span> 新&nbsp;&nbsp;密 码：</td>
+			<td><input type="password" name="newpassword" class="inputall input200" autocomplete="off" content="密码为6-18位!"/><div></div></td>
+		</tr>
+		<tr>
+			<td style="text-align:right;"><span class="cred1">*</span> 确认新密码：</td>
+			<td><input type="password" name="repassword" class="inputall input200" autocomplete="off" content="两次密码必须一致!"/><div></div></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="hidden" name="" value="" />
+				<input type="submit" value="提 交" class="tjbtn" />
+			</td>
+		</tr>
+		</table>
+		</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<script type="text/javascript">
+	var CPWD=false;
+	var CNEWPWD=false;
+	var CREPWD=false;
+	/******************原始密码***********************/
+	$("input[name='password']").focus(function(){
+		s=$(this).attr('content');
+		$("input[name='password']+div").css('color','red').html(s);
+	});
+	$("input[name='password']").blur(function(){
+		password=$(this).val();
+		$.post("__MODULE__/User/checkPWD",{password:password},function(data){
+                if(data==0){
+                  //给div元素赋值
+                   $("input[name='password']+div").css('color','red').html('密码输入错误!');
+                }else{
+                  $("input[name='password']+div").css('color','green').html('<b>✔</b> 密码正确');
+                    CPWD=true;
+                }
+        });
+	});
+
+	/*****************设置密码**************************/
+       //1.获取焦点
+      $("input[name='newpassword']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='newpassword']+div").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='newpassword']").blur(function(){
+        var newpwd=$(this).val();
+        if(newpwd==password){
+           $("input[name='newpassword']+div").css('color','red').html('<b>✘</b> 新密码不能与原始密码相同	!');
+        }
+        else if(newpwd==''){
+           $("input[name='newpassword']+div").css('color','red').html('<b>✘</b> 密码不为空!');
+        }else{
+          //正则匹配
+          if(newpwd.match(/^([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}$/)==null){
+             $("input[name='newpassword']+div").css('color','red').html('<b>✘</b> 密码格式有误,请重新输入');
+          }else{
+            $("input[name='newpassword']+div").css('color','green').html('<b>✔</b> 密码可用');
+            CNEWPWD=true;
+          }          
+        }
+      });
+
+      /*****************确认密码*************************/
+      // //1.获取焦点
+      $("input[name='repassword']").focus(function(){
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='repassword']+div").css('color','red').html(s);
+      });
+      //失去焦点
+       $("input[name='repassword']").blur(function(){
+        //获取重复密码值
+        var repwd=$(this).val();
+        //获取新密码值
+        var newpwd=$("input[name='newpassword']").val();
+         if(newpwd==repwd && newpwd!=''){
+            $("input[name='repassword']+div").css('color','green').html('<b>✔</b> 重复密码正确');
+            CREPWD=true;
+          }else{ 
+            $("input[name='repassword']+div").css('color','red').html('<b>✘</b> 两次密码不一致,请重新输入');
+          }
+      });
+
+      function checkForm(){
+        
+      if(CPWD&&CNEWPWD&&CREPWD){
+          return true;
+      }else{
+        return false;
+      }
+
+    }
+</script>
+
+</script>
+</block>

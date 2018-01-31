@@ -1,0 +1,82 @@
+<extend name="Public:public"/>
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icol-add"></i> 添加基本信息</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__MODULE__/Goods/addInfo" method="post" enctype="multipart/form-data"/>
+                            <div class="mws-form-inline">
+                               
+                                
+                               <div class="mws-form-row">
+                                    <label class="mws-form-label">所属类别</label>
+                                    <div class="mws-form-item">
+                                        <select class="large" name="type_id">
+                                           
+                                            <foreach name="list" item="row">
+                                                 <option value="{$row['id']}" <if condition="($row['pid'] eq 0) OR ($row['path'] eq '0'.','.$row['pid'])">disabled</if>>{$row['name']}</option>
+                                            </foreach>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                            <div id class="mws-form-row">
+                                <label class="mws-form-label">商品名称 <span class="required">*</span></label>
+                                <div class="mws-form-item">
+                                    <input type="text" name="goods_name" class="required large" placeholder="商品名称最多60个汉字"><br>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="mws-form-row">
+                                <label class="mws-form-label">商品促销语 <span class="required">*</span></label>
+                                <div class="mws-form-item">
+                                    <input type="text" name="sale" class="required email large">
+                                </div>
+                            </div>
+                             <div class="mws-form-row">
+                                <label class="mws-form-label">增值业务 <span class="required">*</span></label>
+                                <div class="mws-form-item">
+                                    <input type="text" name="add_server" class="large">
+                                </div>
+                            </div>
+                            <div class="mws-form-row">
+                                <label class="mws-form-label">商品描述 <span class="required">*</span></label>
+                                <div class="mws-form-item">
+                                     <input type="text" name="descr" class="large">
+                                </div>
+                            </div>
+                             <div class="mws-form-row">
+                                <label class="mws-form-label">重 量</label>
+                                <div class="mws-form-item">
+                                    <input class="large" type="text" name="weight">
+                                </div>
+                            </div>
+                             <div class="mws-form-row">
+                                <label class="mws-form-label">是否上架</label>
+                                <div class="mws-form-item clearfix">
+                                    <ul class="mws-form-list inline" name="status">
+                                        <li><input type="radio" value="1" name="status" checked> <label>立刻上架</label></li>
+                                        <li><input type="radio" value="0" name="status"> <label>放入仓库</label></li>
+                                    </ul>
+                                </div>
+                            </div>  
+                             <div class="mws-form-row">
+                                <label class="mws-form-label">商品详情图</label>
+                                <div class="mws-form-item">
+                                    <input name="bpic[]" type="file" value="" multiple='multiple' /><br>
+                                  </div>                              
+                            </div>
+                            <div class="mws-button-row">
+                                <input value="重置" class="btn" type="reset">
+                                <input value="下一步" class="btn btn-success" type="submit">
+                            </div>
+
+                        </form>
+                    </div>      
+                </div>
+</block>
+<block name="title">
+        后台类别添加操作
+</block>

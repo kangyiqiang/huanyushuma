@@ -1,0 +1,238 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+		<div class="hy_tt"><a href="__URL__/index1">基本资料</a><a href="__URL__/info" class="sel">详细信息</a></div>
+		<div class="hy_table">
+			<form method="post" onsubmit="return checkForm()" id="form" action="__URL__/info_insert" enctype="multipart/form-data">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="text-align:right;">真实姓名：</td>
+				<td><input type="text" name="name" value="{$info['name']}"  class="inputall input200" placeholder="姓名不为空" content="✎&nbsp;请输入姓名!"/><div></div></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">当前积分：</td>
+				<td><span class="c999">{$info['score']} 点</span></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">用户头像：</td>
+				<td><input type="file" name="pic" value="" class="inputall input200" {$required}/></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;"></td>
+				<td><span class="corg"><img src="{$info['pic']}" width="100px" height="100px"></span></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">年龄：</td>
+				<td><input type="text" name="age" value="{$info['age']}" class="inputall input200" content="✎&nbsp;请输入有效的年龄!" placeholder="请输入有效的年龄!" /> <div></div></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">性别：</td>
+				<td><input type="radio" name="sex" value="m" {$info['sex']=='m'?'checked':''} {$required}/>男
+				<input type="radio" name="sex" value="w" {$info['sex']=='w'?'checked':''} {$required}/>女
+				 <div></div></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">家庭住址：</td>
+				<td><input type="text" name="address" value="{$info['address']}" class="inputall input200" content="✎&nbsp;地址不为空!" placeholder="地址不为空!" /><div></div></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;">爱好：</td>
+				<td><input type="text" name="hobby" value="{$info['hobby']}" class="inputall input200" content="✎&nbsp;爱好不为空!" placeholder="爱好不为空!" /><div></div></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>
+					<input type="hidden" name="uid" value="{$info['uid']}" />
+
+					<input type="submit" value="提 交"  class="tjbtn" />
+				</td>
+			</tr>
+			</table>
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+	<a target="_blank" href="https://surveys.jd.com/index.php?r=survey/index/sid/447941/lang/zh-Hans" class="feedback" style="margin-top: -85px; position: fixed; right: 0px; bottom: 50%;"></a>  
+  <script type="text/javascript">
+
+    //检测input 提交状态
+    if("{$required}"){
+	    var CNAME=false;
+	    var CAGE=false;
+	    var CADDRESS=false;
+	    var CHOBBY=false;
+	}else{
+		var CNAME=true;
+    	var CAGE=true;
+    	var CADDRESS=true;
+    	var CHOBBY=true;
+	}
+      /******************姓名***************************/
+      //1.获取焦点
+      $("input[name='name']").focus(function(){
+      	CNAME=false;
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='name']+div").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='name']").blur(function(){
+        //获取用户名
+        var name=$(this).val();
+        if(name==''){
+        	$("input[name='name']+div").empty();
+           $("input[name='name']+div").css('color','red').html('<b>✘</b> 姓名不为空!');
+
+        }else if(name.match(/^[\u4E00-\u9FA5A-Za-z0-9]+$/)==null){
+        	$("input[name='name']+div").css('color','red').html('<b>✘</b> 不能含有非法字符!')
+        }else{
+           // $("input[name='name']+div").empty();
+           $("input[name='name']+div").css('color','green').html('<b>✔</b>');
+           CNAME=true;
+        }
+      });
+
+      /*****************年龄**************************/
+       //1.获取焦点
+      $("input[name='age']").focus(function(){
+      	CAGE=false;
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='age']+div").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='age']").blur(function(){
+        var age=$(this).val();
+        if(age>=1 && age<=150){
+           $("input[name='age']+div").empty();
+           $("input[name='age']+div").css('color','green').html('<b>✔</b>');
+           CAGE=true;
+        }else{
+           $("input[name='age']+div").css('color','red').html('<b>✘</b> 年龄非法!');
+        }
+        //   //正则匹配
+        //   if(pwd.match(/^([a-zA-Z0-9!@#$%^&*()_?<>{}]){6,18}$/)==null){
+        //      $('.password>span').css('color','red').html('<b>✘</b> 密码格式有误,请重新输入');
+        //        $('.pwd').addClass('cur');
+        //   }else{
+        //     $('.password>span').css('color','green').html('<b>✔</b> 密码可用');
+        //     CPASS=true;
+        //   }          
+        // }
+      });
+
+   /******************地址***************************/
+      //1.获取焦点
+      $("input[name='address']").focus(function(){
+      	CADDRESS=false;
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='address']+div").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='address']").blur(function(){
+        //获取用户名
+        var address=$(this).val();
+        if(address==''){
+        	$("input[name='address']+div").empty();
+           $("input[name='address']+div").css('color','red').html('<b>✘</b> 地址不为空!');
+
+        }else if(address.match(/^[\u4E00-\u9FA5A-Za-z0-9]+$/)==null){
+        	$("input[name='address']+div").css('color','red').html('<b>✘</b> 不能含有非法字符!')
+        }else{
+           // $("input[name='name']+div").empty();
+           $("input[name='address']+div").css('color','green').html('<b>✔</b>');
+           CADDRESS=true;
+        }
+      });
+      //爱好
+      /******************姓名***************************/
+      //1.获取焦点
+      $("input[name='hobby']").focus(function(){
+      	CNAME=false;
+        //获取提示信息
+        s=$(this).attr('content');
+        //把s赋值给当前元素的下一个span
+        $("input[name='hobby']+div").css('color','red').html(s);
+      });
+      //2.失去焦点
+      $("input[name='hobby']").blur(function(){
+        //获取用户名
+        var name=$(this).val();
+        if(name==''){
+        	$("input[name='hobby']+div").empty();
+           $("input[name='hobby']+div").css('color','red').html('<b>✘</b> 爱好不为空!');
+
+        }else if(name.match(/^[\u4E00-\u9FA5A-Za-z0-9]+$/)==null){
+        	$("input[name='hobby']+div").css('color','red').html('<b>✘</b> 不能含有非法字符!')
+        }else{
+           // $("input[name='name']+div").empty();
+           $("input[name='hobby']+div").css('color','green').html('<b>✔</b>');
+           CNAME=true;
+        }
+      });
+
+
+      //  /****************邮箱验证**************************/
+      // //1.获取焦点
+      // $("input[name='email']").focus(function(){
+      //   //获取提示信息
+      //   s=$(this).attr('class');
+      //   //把s赋值给当前元素的下一个span
+      //   $('.temail>span').css('color','gray').html(s);
+      //   $('.email').removeClass('cur');
+      // });
+      
+      // $("input[name='email']").blur(function(){
+      //   //获取邮箱值
+      //   var email=$(this).val(); //123@qq.com 
+
+      //   if(email==''){
+      //      $('.temail>span').empty();
+      //   }else{
+      //       //正则的匹配  
+      //       if(email.match(/^\w+@\w+(\.\w+)$/)==null){
+      //         // alert('sss');
+      //         $('.temail>span').css('color','red').html('<b>✘</b> 邮箱格式不对');
+      //         $('.email').addClass('cur');
+
+      //       }else{
+      //         $.post("__MODULE__/Login/checkEmail",{email:email},function(data){
+      //           if(data==1){
+      //             //给span元素赋值
+      //              $('.temail>span').css('color','red').html('邮箱已经存在');
+      //               $('.email').addClass('cur');
+      //           }else{
+      //             $('.temail>span').css('color','green').html('<b>✔</b> 邮箱可用');
+      //               $('.email').removeClass('cur');
+      //               CEMAIL=true;
+      //           }
+      //         });
+      //       }      
+      //   }
+
+      // })
+
+       
+      
+
+      /*************************提交*****************************/
+      function checkForm(){
+        
+      if(CNAME&&CAGE&&CADDRESS){
+          return true;
+      }else{
+        return false;
+      }
+
+    }
+    </script> 
+
+</block>

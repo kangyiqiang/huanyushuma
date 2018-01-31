@@ -1,0 +1,97 @@
+<extend name="Public:public"/>
+<block name="admin">
+	<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icon-android"></i>  为管理员　［{$row['username']}］　分配权限</span> 
+   </div> 
+   
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+     
+     
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+     
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <form action="__URL__/do_list" method="post">
+          <?php
+              $arr = explode(",",$row['rule']);
+          ?>
+  	       <tr class="odd"> 
+  	        <td>
+              <input type="checkbox" name="rule[]" value="1" <?php if(in_array(1, $arr)){echo "checked";} ?>>
+              <span>用户管理模块</span>
+            </td>
+  	       </tr>
+             <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="2" <?php if(in_array(2, $arr)){echo "checked";} ?>>
+              <span>分类管理模块</span>
+            </td>
+           </tr>
+              <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="3" <?php if(in_array(3, $arr)){echo "checked";} ?>>
+              <span>商品管理模块</span>
+            </td>
+           </tr>
+            <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="4" <?php if(in_array(4, $arr)){echo "checked";} ?>>
+              <span>订单管理模块</span>
+            </td>
+           </tr>
+           <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="5" <?php if(in_array(5, $arr)){echo "checked";} ?>>
+              <span>文章管理模块</span>
+            </td>
+           </tr>
+            <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="6" <?php if(in_array(6, $arr)){echo "checked";} ?>>
+              <span>广告管理模块</span>
+            </td>
+           </tr>
+            <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="7" <?php if(in_array(7, $arr)){echo "checked";} ?>>
+              <span>轮播图管理模块</span>
+            </td>
+           </tr>
+            <tr class="odd"> 
+            <td>
+              <input type="checkbox" name="rule[]" value="8" <?php if(in_array(8, $arr)){echo "checked";} ?>>
+              <span>友情链接管理模块</span>
+            </td>
+           </tr>
+              
+              <input type="hidden" name="id" value="{$row['id']}">
+           <tr> 
+            <td>
+               <div class="mws-button-row">
+                    <input type="submit" value="保存分配" class="btn btn-success">
+              </div>
+             
+            </td>
+           </tr>
+          </form>
+      </tbody>
+     </table>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+      Showing 1 to 10 of 57 entries
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+     	{$pageinfo}
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+	用户列表页
+</block>

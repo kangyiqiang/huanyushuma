@@ -1,0 +1,295 @@
+<extend name="Menu:menu"/>
+<block name="home">
+	<style type="text/css">
+	
+	   body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin:0;
+    }
+    #main {
+    height:1800px;
+    padding-top:90px;
+    text-align:center;
+    }
+    #fullbg {
+    background-color:gray;
+    left:0;
+    opacity:0.5;
+    position:absolute;
+    top:0;
+    z-index:3;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    }
+    #dialog {
+    background-color:#fff;
+    border:0px solid rgba(0,0,0, 0.4);
+    min-height:350px;
+    left:50%;
+    margin:-200px 0 0 -316px;
+    padding:1px;
+    position:fixed !important; /* 浮动对话框 */
+    position:absolute;
+    top:50%;
+    width:700px;
+    z-index:5;
+    border-radius:5px;
+    display:none;
+    }
+    #dialog p {
+    margin:0 0 12px;
+    height:24px;
+    line-height:24px;
+    background:#ccc;
+    }
+    #dialog p.close {
+    text-align:right;
+    padding-right:10px;
+    }
+    #dialog p.close a {
+    color:#fff;
+    text-decoration:none;
+    }
+
+</style>
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+		<div class="hy_tt">
+		<php>$mod=M('Orders');$tot=$mod->where("uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index">全部订单<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=0 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/0">待付款<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=1 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/1">待发货<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=2 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/2" >待收货<span>({$tot})</span></a>
+
+		<php>$mod=M('Orders');$tot=$mod->where("status=3 AND cancel=0 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/3" >已完成<span>({$tot})</span></a>
+
+		<!-- <php>$mod=M('Orders');$tot=$mod->where("commemt=0 AND cancel=0 AND status=3 AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Comment/index/where/3" >待评价<span>({$tot})</span></a>	 -->
+
+		<php>$mod=M('Orders');$tot=$mod->where("cancel='1' AND uid=".$_SESSION['userid'])->count();</php>
+			<a href="__MODULE__/Orders/index/where/9" >已取消<span>({$tot})</span></a>
+		</div>
+		<if condition="empty($orders)">
+			<div style="margin-top:50px;margin-left:380px;"><a href="__MODULE__/Index/index"><b>暂无此订单信息,点击去购物!</b></a></div>
+		</if>
+		<foreach name="orders" item="rows">
+		<div class="hy_ordertt">
+			<span class="fl num5">{$rows['ordertime']|date="Y-m-d H:i:s",###}</span>
+			<span class="fl" style="margin-left:30px">订单号：<span class="num5">{$rows['ordernum']}</span></span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hy_orderlist">
+		<tr>
+			<td style="text-align:left;">
+			<?php
+				$id=$rows['id'];
+				$mod=M("orders_goods");
+				$list=$mod->where("orderid=$id")->select();
+				// var_dump($list);
+			?>
+				<foreach name="list" item="row">
+				<div class="dingdan_list" >
+					<a href="{pe_url('product-'.$vv['product_id'])}" class="fl mar5 dingdan_img" target="_blank"><img src="__ROOT__/Public/Uploads/goods_spic/{$row['pic']}"></a>
+					<div class="fl">
+						<a href="" target="_blank" class="dd_name">{$row['gname']}</a>
+						
+						<p class="c888 mat5">{$row['vname']}&nbsp;&nbsp;{$row['cname']}&nbsp;</p>
+				
+					</div>
+					<span class="fr">￥{$row['price']}.0×({$row['gnum']})</span>
+					<div class="clear"></div>
+				</div>
+				</foreach>
+			</td>
+			<td width="120">
+				<p class="corg num1 font14 strong">￥{$rows['total']}.0</p>
+				<p class="c999"></p>
+				<p class="c666">{$rows['paymethod']=='0'?'在线付款':'货到付款'}</p>
+			</td>
+
+			<td width="100">
+			<if condition="$rows['cancel'] eq 0">
+				<if condition="$rows['status'] eq 0">
+				<span class="corg">等待付款</span>
+				</if>
+				<if condition="$rows['status'] eq 1">
+				<span class="corg">等待发货</span>
+				</if>
+				<if condition="$rows['status'] eq 2">
+				<span class="corg">已发货</span>
+				</if>
+				<if condition="$rows['status'] eq 3	">
+				<span class="cgreen">交易完成</span>
+				</if>
+			</if>
+				<if condition="$rows['cancel'] eq 1">
+				<del class="corg">交易关闭</del>
+				</if>
+				<p class="mat5"><a href="__MODULE__/Orders/info/id/{$rows['id']}">订单详情</a></p>
+			</td>
+			<td width="100">
+			<if condition="$rows['cancel'] eq 0">	
+				<if condition="$rows['status'] eq 0">
+				<a class="tag_org" href="__MODULE__/Orders/pay/id/{$rows['id']}" target="_blank">立即付款</a>
+				</if>
+				<if condition="$rows['status'] elt 1">
+				<p class="mat5"><a class="c999" href="__MODULE__/Orders/close/id/{$rows['id']}" onclick="if (confirm('您确定取消此订单？')) return true; else return false;">取消订单</a></p>
+				</if>
+			
+				<!-- <a class="c999" href="user.php?mod=order&act=close&id={$v['order_id']}" onclick="return pe_dialog(this, '取消订单', 550, 350)">取消订单</a>
+ -->			<if condition="$rows['status'] eq 2">
+				<a class="tag_green" href="__MODULE__/Orders/receive/id/{$rows['id']}">确认收货</a>
+				</if>
+ 				<if condition="$rows['status'] eq 3">
+ 				<if condition="$rows['comment'] eq 0">
+				<a class="tag_gray" href="javascript:showBg();">发表评论</a>
+				</if>
+				<div id="fullbg"></div> 
+
+	  <div id="dialog"> 
+          <p class="close"><a href="#" onclick="closeBg();"><b>×</b></a></p>
+
+		<form method="post" action="__MODULE__/Comment/add">
+<div class="hy_tablelist" style="margin-top:0;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0px">
+<tr>
+	<th width="280">商品详情</th>
+	<th width="380">评价内容</th>
+	<th></th>
+</tr>
+<?php
+	$id=$rows['id'];
+	$mod=M("orders_goods");
+	$list=$mod->where("orderid=$id")->select();
+?>	
+
+<foreach name="list" item="row">
+<tr>
+	<td>
+		<a class="dingdan_img" target="_blank"><img src="__ROOT__/Public/Uploads/goods_spic/{$row['pic']}" style="width:100px;height:100px"></a>
+		<p class="mat20" style="overflow:hidden;">{$row.gname}</p>
+	</td>
+	<td valign="top">		
+		<textarea name="comment_text[]" style="width:348px;height:96px" placeholder="请填写评价内容"></textarea>
+		<div class="mat20">
+			<span class="fl">综合评分：</span>
+			<!-- <span id="star_{$row.id}" class="fr" style="margin-left:40px"></span> -->
+			<!-- <input type="radio" name="star[]" value="1">很差
+			<input type="radio" name="star[]" value="2">较差
+			<input type="radio" name="star[]" value="3">一般
+			<input type="radio" name="star[]" value="4">满意
+			<input type="radio" name="star[]" value="5">很满意 -->
+			<select name="star[]" style="width:150px;border:1px solid blue" class="js_prov inputselect">
+				<option value="5">很满意</option>
+				<option value="4">满意</option>
+				<option value="3">一般</option>
+				<option value="2">较差</option>
+				<option value="1">很差</option>
+			</select>
+
+			<input type="hidden" name="goodsid[]" value="{$row.goods_id}"> 
+			<input type="hidden" name="orderid[]" value="{$row.orderid}">
+			<div class="clear"></div>
+		</div>
+	</td>
+	<td><span id="comment_text"></span></td>
+</tr>
+</foreach>
+
+</table>
+</div>
+<div class="mat20" style="text-align:center;">
+	<input value="提 交" class="tjbtn" type="submit">		
+</div>
+</form> 
+
+<style type="text/css">
+.hy_tablelist td{padding:20px 8px; border-bottom:1px dashed #eaeaea}
+</style>
+
+         </div>
+				</if>
+				<if condition="$rows['comment'] eq 1">
+				<span>-</span>
+				</if>
+			</if>
+			<if condition="$rows['cancel'] eq 1">
+			<span>-</span>	
+			</if>	
+				<!-- <a class="tag_gray" href="user.php?mod=order&act=comment&id={$v['order_id']}" onclick="return pe_dialog(this, '发表评价', 800, 510)">发表评价</a> -->
+				<!--{else:}-->
+				<!-- - -->
+				<!--{endif;}-->
+			</td>
+		</tr>
+		</table>
+		</foreach>
+		<div class="fenye mat10" align="right">{$pageinfo}</div>
+	</div>
+	<div class="clear"></div>
+</div>
+ <script type="text/javascript">
+	//显示灰色 jQuery 遮罩层
+    function showBg() {
+        var bh = $("body").height();
+        var bw = $("body").width();
+    $("#fullbg").css({
+        height:bh,
+        width:bw,
+        display:"block"
+    });
+    $("#dialog").show();
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+
+$('.online-payment')
+.hover(function(){
+	$(this).addClass('payment-item-hover');
+},function(){
+	$(this).removeClass('payment-item-hover');
+}); 
+if($("#payment-list li").length<=4){
+	$('#payment-less').hide();
+	$('#payment-more').hide();
+	var payid=[5,2,8];
+	for(var i in payid){
+		$("#payment-list div[payid="+payid[i]+"]").show();
+	}
+}
+$('.payment-item-on').click(function(){
+	$('#payment-less').hide();
+	$('#payment-more').show();
+	var payid=[5,2,8];
+	for(var i in payid){
+		var payment = $("#payment-list div[payid="+payid[i]+"]");
+		if(!payment.hasClass("item-selected")){
+			payment.hide(100);
+		}
+	}
+});
+$('.payment-item-off').click(function(){
+	$('#payment-less').show();
+	$('#payment-more').hide();
+	var payid=[5,2,8];
+	for(var i in payid){
+		var payment = $("#payment-list div[payid="+payid[i]+"]");
+		if(!payment.hasClass("item-selected")){
+			payment.show(100);
+		}
+	}
+});
+</script> 
+</block>

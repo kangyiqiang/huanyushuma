@@ -1,0 +1,101 @@
+<extend name="Public:public"/>
+<block name="admin">
+<div id="mws-container" class="clearfix" style="margin-left: 0px;">
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>添加友情链接</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" action="__MODULE__/Link/insert" method="post" enctype="multipart/form-data" onsubmit="return check()">
+               <div class="mws-form-inline">
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">链接名称：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="text" class="small" name="name" id="name" onfocus="namefoc()" onblur="nameblur()">　<span id="namemsg"></span>
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="nameerr">
+                            </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">链接路径：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="text" class="small" name="url" id="url" value="http://" onblur="urlblur()" onfocus="urlfoc()">　<span id="urlmsg"></span>
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="urlerr">
+                            </div>
+                    </div>
+                    <input type="hidden" name="status" value="1">
+                </div>
+                <div class="mws-button-row">
+                    <input type="submit" value="添加" class="btn btn-danger">
+                    <input type="reset" value="重置" class="btn ">
+                </div>
+            </form>
+        </div>      
+    </div>
+</div>
+
+<script type="text/javascript">
+    ckname = false;
+    ckurl = false;
+    function namefoc(){
+        $("#namemsg").html("支持中文、数字、英文");
+    }
+    function nameblur(){
+        var str = $("#name").val();
+        if(str == ''){
+            $("#namemsg").html("<font color='red'>链接名称不能为空</font>");
+        }else if(!namecheck(str)){
+            $("#namemsg").html("<font color='red'>仅支持中文、英文、数字</font>");
+        }else{
+            $("#namemsg").html(" ");
+            ckname = true;
+        }
+    }
+    function namecheck(str){
+            var patrn = /^[A-Za-z0-9_\u4E00-\uFA29]{1,}$/u;
+            if(!patrn.test(str)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+    function urlfoc(){
+        $("#urlmsg").html("填写正确的网站地址");
+    }
+    function urlblur(){
+        var str = $("#url").val();
+        if(str == ''){
+            $("#urlmsg").html("<font color='red'>网站地址不能为空</font>");
+        }else if(!blurcheck(str)){
+            $("#urlmsg").html("<font color='red'>网站地址格式有误</font>");
+        }else{
+            $("#urlmsg").html(" ");
+            ckurl = true;
+        }
+    }
+    function blurcheck(str){
+        var patrn = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/;
+        if(!patrn.test(str)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    function check(){
+        if(ckname && ckurl){
+            return true;
+        }else if(!ckname && ckurl){
+            $("#nameerr").html("链接名称格式错误").fadeIn("slow");
+            return false;
+        }else if(ckname && !ckurl){
+            $("#urlerr").html("网站地址格式错误").fadeIn("slow");
+            return false;
+        }else{
+            $("#nameerr").html("链接名称格式错误").fadeIn("slow");
+            $("#urlerr").html("网站地址格式错误").fadeIn("slow");
+            return false;
+        }
+    }
+</script>
+</block>

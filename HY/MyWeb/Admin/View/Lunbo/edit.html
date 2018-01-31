@@ -1,0 +1,60 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>修改轮播图</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" action="__MODULE__/Lunbo/update" method="post" enctype="multipart/form-data" >
+               <div class="mws-form-inline">
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">当前图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <img src="__ROOT__{$row['pic']}{$data['pic']}" width="200px">
+                        </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">轮播图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="hidden" name="id" value="{$data['id']}">
+                            <input type="file" class="small" name="pic" id="pict">
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="picmsg">
+                            </div>
+                    </div>
+                    
+                    <!-- <div class="mws-form-row">
+                        <label class="mws-form-label">跳转路径</label>
+                        <div class="mws-form-item">
+                            <select class="medium">
+                                <option>Option 1</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="mws-button-row">
+                    <input type="submit" value="修改" class="btn btn-danger">
+                    <input type="reset" value="重置" class="btn ">
+                </div>
+            </form>
+        </div>      
+    </div>
+<script type="text/javascript">
+    function check(){
+        var msg = $("#pict").val();
+        var str = msg.lastIndexOf(".");
+        str = msg .substring(str+1,msg.length);
+        if(str == 'jpg' || str == 'png' || str == 'jpeg' || str == 'gif'){
+            return true;
+        }else if(str == ''){
+            return true;
+        }else{
+            $("#picmsg").html("图片格式错误").fadeIn("slow");
+            return false;
+        }
+    }
+</script>
+</block>

@@ -1,0 +1,196 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<style type="text/css">
+	   body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin:0;
+    }
+    #main {
+    height:1800px;
+    padding-top:90px;
+    text-align:center;
+    }
+    #fullbg {
+    background-color:gray;
+    left:0;
+    opacity:0.5;
+    position:absolute;
+    top:0;
+    z-index:3;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    }
+    #dialog {
+    background-color:#fff;
+    border:5px solid rgba(0,0,0, 0.4);
+    height:400px;
+    left:50%;
+    margin:-200px 0 0 -316px;
+    padding:1px;
+    position:fixed !important; /* 浮动对话框 */
+    position:absolute;
+    top:50%;
+    width:650px;
+    z-index:5;
+    border-radius:5px;
+    display:none;
+    }
+    #dialog p {
+    margin:0 0 12px;
+    height:24px;
+    line-height:24px;
+    background:#CCCCCC;
+    }
+    #dialog p.close {
+    text-align:right;
+    padding-right:10px;
+    }
+    #dialog p.close a {
+    color:#fff;
+    text-decoration:none;
+    }
+    .huiyuan_main{
+    	min-height:168px;
+    }
+</style>
+	<div class="fr huiyuan_main">
+		<!--<div class="hy_tt">
+			<a href="http://phper.com/demo2/user.php?mod=order">个人中心</a>
+		</div>-->
+		<div class="u_index_box mat5">
+			<div class="u_index_rtt">
+				<div class="fl">您好，{$row['username']}</div>
+				<!-- <div class="fr font12">头像:</div> -->
+				<div class="clear"></div>
+			</div>
+			<div class="u_index_l">
+				<!--<div class="u_tx"><img src="http://phper.com/demo2/data/cache/thumb/2017-07/thumb_150x150_noavatar.jpg"></div>-->
+				<div class="u_info">
+					<div style="margin-left:0px;">
+						<p>手机号码：
+							<span class="c99">{$row['phone']}</span>												
+						</p>
+						<p>电子邮箱：
+							<span class="c999">{$row['email']}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="u_index_m">
+				<div>待付款：<span class="c999"><a href="">0</a> 个</span></div>
+				<div>待发货：<span class="c999"><a href="">0</a> 个</span></div>
+			</div>
+			<div class="u_index_r">
+				<div class="u_ye_l">
+					<div>待发货：<span class="c999"><a href=""><font color="red">0</font></a> 个</span></div>
+					<div>积  分：<a href="" class="c999"><?php echo empty($info['score'])?'0':$info['score'] ?></a></div>
+				</div>
+				<div class="u_ye_r">
+					<if condition="!empty($info['pic'])">
+					<img src="{$info['pic']}" width="100px" height="100px">
+					</if>
+					<if condition="empty($info['pic'])">
+					<div style="width:100px;height:100px;line-height:100px;">暂无头像</div>
+					</if>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	<!-- 	<div class="u_jilu_tt">
+			<a href="" class="fl">最新订单</a>
+			<div class="clear"></div>
+		</div>
+
+			<if condition="empty($orders)">
+			<div style="margin-top:150px;margin-left:300px;"><a href="__MODULE__/Index/index"><b>还没有订单信息,点击去购物!</b></a></div>
+		</if>
+	<foreach name="orders" item="rows">
+		<div class="hy_ordertt">
+			<span class="fl num5">{$rows['ordertime']|date="Y-m-d H:i:s",###}</span>
+			<span class="fl" style="margin-left:30px">订单号：<span class="num5">{$rows['ordernum']}</span></span>
+			<div class="clear"></div>
+		</div>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="hy_orderlist">
+		<tr>
+			<td style="text-align:left;">
+			<?php
+				$id=$rows['id'];
+				$mod=M("orders_goods");
+				$list=$mod->where("orderid=$id")->select();
+			?>
+				<foreach name="list" item="row">
+				<div class="dingdan_list" >
+					<a href="{pe_url('product-'.$vv['product_id'])}" class="fl mar5 dingdan_img" target="_blank"><img src="__ROOT__/Public/Uploads/goods_spic/{$row['pic']}"></a>
+					<div class="fl">
+						<a href="" target="_blank" class="dd_name">{$row['gname']}</a>
+						
+						<p class="c888 mat5">{$row['vname']}&nbsp;&nbsp;{$row['cname']}&nbsp;</p>
+				
+					</div>
+					<span class="fr">￥{$row['price']}.0×({$row['gnum']})</span>
+					<div class="clear"></div>
+				</div>
+				</foreach>
+			</td>
+			<td width="120">
+				<p class="corg num1 font14 strong">￥{$rows['total']}.0</p>
+				<p class="c999"></p>
+				<p class="c666">{$rows['paymethod']=='0'?'在线付款':'货到付款'}</p>
+			</td>
+
+			<td width="100">
+			<if condition="$rows['cancel'] eq 0">
+				<if condition="$rows['status'] eq 0">
+				<span class="corg">等待付款</span>
+				</if>
+				<if condition="$rows['status'] eq 1">
+				<span class="corg">等待发货</span>
+				</if>
+				<if condition="$rows['status'] eq 2">
+				<span class="corg">已发货</span>
+				</if>
+				<if condition="$rows['status'] eq 3	">
+				<span class="cgreen">交易完成</span>
+				</if>
+			</if>
+				<if condition="$rows['cancel'] eq 1">
+				<del class="corg">交易关闭</del>
+				</if>
+				<p class="mat5"><a href="__MODULE__/Orders/info/id/{$rows['id']}">订单详情</a></p>
+			</td>
+			<td width="100">
+			<if condition="$rows['cancel'] eq 0">	
+				<if condition="$rows['status'] eq 0">
+				<a class="tag_org" href="__MODULE__/Orders/pay/id/{$rows['id']}" target="_blank">立即付款</a>
+				</if>
+				<if condition="$rows['status'] elt 1">
+				<p class="mat5"><a class="c999" href="__MODULE__/Orders/close/id/{$rows['id']}" onclick="if (confirm('您确定取消此订单？')) return true; else return false;">取消订单</a></p>
+				</if> -->
+			
+				<!-- <a class="c999" href="user.php?mod=order&act=close&id={$v['order_id']}" onclick="return pe_dialog(this, '取消订单', 550, 350)">取消订单</a>
+			<if condition="$rows['status'] eq 2">
+				<a class="tag_green" href="__MODULE__/Orders/receive/id/{$rows['id']}">确认收货</a>
+				</if>
+ 				<if condition="$rows['status'] eq 3">
+				<span>-</span>
+				</if>
+			</if> -->
+	<!-- 		<if condition="$rows['cancel'] eq 1">
+			<span>-</span>	
+			</if>	
+			
+			</td>
+		</tr>
+		</table>
+		</foreach>
+	
+		</div> -->
+	</div>
+
+	<script type="text/javascript">
+			showBg();
+	</script>
+</block>

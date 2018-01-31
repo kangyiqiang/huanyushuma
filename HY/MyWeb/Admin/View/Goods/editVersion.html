@@ -1,0 +1,60 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+      <div class="mws-panel-header">
+          <span><i class="icol-application-edit"></i> 商品修改</span>
+      </div>
+      <div class="mws-panel-body no-padding">
+          <form class="mws-form" action="__URL__/updateVersion" method="post">
+              <div class="mws-form-inline">
+                  <div class="mws-form-row">
+                        <a href="__URL__/addVersion?goods_id={$goods_id}" class="btn lable btn-info"><i class="icon-plus"></i>　继续添加版本</a>
+                        <div class="mws-form-item"> 
+                            <if condition="!empty($list)">
+                            <foreach name="list" item="row">
+                           <input type="hidden" name="id[]" value="{$row['id']}">
+                           <input type="hidden" name="goods_id" value="{$row['goods_id']}">
+                             <div class="mws-form-cols" >
+                                    <div class="mws-form-col-1-8">
+                                        <label class="mws-form-label">version</label>
+                                        <div class="mws-form-item">
+                                            <input type="text" placeholder="版本" name="version[]" value="{$row['version']}" required>
+                                        </div>
+                                    </div>
+                                    <div class="mws-form-col-1-8">
+                                        <label class="mws-form-label">price</label>
+                                        <div class="mws-form-item">
+                                            <input type="number" placeholder="价格" name="price[]" value="{$row['price']}"  required>
+                                        </div>
+                                    </div>
+                                    <div class="mws-form-col-1-8">
+                                        <label class="mws-form-label">store</label>
+                                        <div class="mws-form-item" >
+                                            <input type="number" placeholder="库存"  name="store[]" value="{$row['store']}"  required>
+                                        </div>
+                                   </div>
+                                   <div class="mws-form-col-1-8">
+                                        <label class="mws-form-label"></label>
+                                        <div class="mws-form-item" >
+                                            <a href="__URL__/deleteVersion/id/{$row['id']}" class="btn btn-danger">删除</a>
+                                        </div>
+                                   </div>
+                                </div>
+                                 </foreach>
+                                <else />
+                                <td colspan="7">没有数据</td> 
+                                </if>
+                              </tbody>
+                      </div>
+                  </div>
+                <div class="mws-button-row">
+                <a href="__URL__/edit?id={$_GET['id']}" class="btn btn-success">查看详情</a>
+                <input value="修改" class="btn btn-success" type="submit">
+              </div>
+          </form>
+      </div>      
+    </div>
+</block>
+<block name="title">
+        后台用户添加操作
+</block>

@@ -1,0 +1,53 @@
+<extend name="Public:public"/>
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        
+
+                        <span><i class="icol-add"></i> 类别添加　[注：顶级分类最多7个，二级三级最多6个，四级以后不显示]</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__URL__/insert" method="post">
+                            <div class="mws-form-inline">
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">类别名</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="name">
+                                    </div>
+                                </div>
+                               <div class="mws-form-row">
+                                    <label class="mws-form-label">是否在前台显示</label>
+                                    <div class="mws-form-item">
+                                        <select class="large" name="display">
+                                            <option value="0">显示</option>
+                                            <option value="1">隐藏</option>
+                                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                               <div class="mws-form-row">
+                                    <label class="mws-form-label">父类</label>
+                                    <div class="mws-form-item">
+                                        <select class="large" name="pid">
+                                            <option value="0">——默认顶级分类——</option>
+                                            <foreach name="list" item="row">
+                                                 <option value="{$row['id']}">{$row['name']}</option>
+                                            </foreach>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mws-button-row">
+                                <input value="添加" class="btn btn-success" type="submit">
+                                <input value="重置" class="btn " type="reset">
+                            </div>
+                        </form>
+                    </div>      
+                </div>
+</block>
+<block name="title">
+        后台类别添加操作
+</block>

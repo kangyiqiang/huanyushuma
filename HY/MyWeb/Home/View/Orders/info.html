@@ -1,0 +1,115 @@
+<extend name="Menu:menu"/>
+<block name="home">
+<div class="huiyuan_content">
+	<!--{include(pe_tpl('user_menu.html'));}-->
+	<div class="fr huiyuan_main">
+	<div class="order_view_tt mat10">订单状态</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="order_view mat10">
+	<tr>
+		<td align="right" width="80">订单编号：</td>
+		<td>{$info['ordernum']}</td>
+	</tr>
+	<tr>
+		<td align="right">当前状态：</td>
+		<td>
+			<if condition="$info['cancel'] eq 0">
+
+				<if condition="$info['status'] eq 0">
+					<a class="tag_org mal20" href="">立即付款</a>
+				</if>
+
+				<if condition="$info['status'] eq 1">
+				<a class="tag_gray mal10" href="">待发货</a>
+				</if>
+
+				<if condition="$info['status'] eq 2">
+				<a class="tag_green mal20" href="">确认收货</a>
+				</if>
+
+				<if condition="$info['status'] eq 3">
+				<a class="tag_green mal20" href="">交易完成</a>
+				</if>
+
+				<!-- <a class="tag_gray mal20" href="user.php?mod=order&act=comment&id={$info['order_id']}" onclick="return pe_dialog(this, '发表评价', 800, 510)">发表评价</a> -->
+			</if>
+			<if condition="$info['cancel'] eq 1">
+			<a class="tag_gray mal20" href="">已取消</a>
+			</if>
+		</td>
+	</tr>
+
+	<!-- <tr>
+		<td align="right">关闭说明：</td>
+		<td>{$info['order_closetext']}</td>
+	</tr> -->	
+	<!--{endif;}-->
+	</table>
+	<div class="shixian mat20"></div>
+	<div class="order_view_tt mat20">收货信息</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="order_view mat10">
+	<tr>
+		<td align="right" width="80">姓　　名：</td>
+		<td>{$info['name']}</td>
+	</tr>
+	<tr>
+		<td align="right">手机号码：</td>
+		<td>{$info['phone']}</td>
+	</tr>
+	<tr>
+		<td align="right">收货地址：</td>
+		<td>{$info['address']}</td>			
+	</tr>
+	
+	</table>
+	<div class="shixian mat20"></div>
+	<div class="order_view_tt mat20">订单信息</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="order_view mat10">
+	<tr>
+		<td align="right" width="80">下单时间：</td>
+		<td>{$info['ordertime']|date="Y-m-d H:i:s",###}</td>
+	</tr>
+	
+	<tr>
+		<td align="right" width="80">付款方式：</td>
+		<td>{$info['paymethod']=='0'?'在线付款':'货到付款'}</td>
+	</tr>
+	</table>
+	<div class="shixian mat20"></div>
+	<div class="order_view_tt mat20">商品清单</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="order_view_list mat20">
+	<tr>
+		<td class="bgtt1" colspan="2">商品名称</td>
+		<td class="bgtt1" width="100">单价</td>
+		<td class="bgtt1" width="100">数量</td>
+		<td class="bgtt1" width="150">商品描述</td>
+		<td class="bgtt1" width="100">小计</td>			
+	</tr>
+	<foreach name="rows" item="row">
+	<tr>
+		<td style="border-right:0;width:60px"><a href="{pe_url('product-'.$v['product_id'])}" class="dingdan_img"><img src="__ROOT__/Public/Uploads/goods_spic/{$row['pic']}"></a></td>
+		<td style="border-left:0;text-align:left;">
+			<a href="{pe_url('product-'.$v['product_id'])}" target="_blank" class="dd_name">{$row.gname}</a>
+			<!--{if($v['prorule_name']):}-->
+			<p class="c888 mat5"><!--{foreach(unserialize($v['prorule_name']) as $vv):}-->[{$row.vname}：{$row.cname}]&nbsp;&nbsp;<!--{endforeach;}--></p>
+			<!--{endif;}-->
+		</td>
+		<td><span class="font13">¥{$row.price}</span></td>
+		<td><span class="font13">{$row.gnum}</span></td>
+		<td>{$row.sale}</td>
+		<td><span class="font13">¥{$row['price']*$row['gnum']}</span></td>
+	</tr>
+	</foreach>
+	</table>
+	<div class="dingdan_jiesuan">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		
+		<tr>
+			<td>应付金额：</td>
+			<td class="font18 cred strong">¥{$info['total']}.0</td>
+		</tr>
+		</table>
+		<div class="clear"></div>
+	</div>
+	</div>
+</div>
+</block>

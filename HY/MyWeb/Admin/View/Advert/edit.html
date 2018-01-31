@@ -1,0 +1,75 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>修改广告图</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" action="__MODULE__/Advert/update" method="post" enctype="multipart/form-data" onsubmit="return check()">
+               <div class="mws-form-inline">
+                   <div class="mws-form-row">
+                                                 
+                        <label class="mws-form-label">广告链接：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="text" class="small" name="url"  id="url"  onblur="urlblur()" onfocus="urlfoc()" value="{$data['url']}">　
+                            <span id="urlmsg"></span>
+                        </div><br>   
+
+                    </div>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">当前图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <img src="__ROOT__{$data['pic']}" width="700px">
+                        </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">广告图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="hidden" name="id" value="{$data['id']}">
+                            <input type="file" class="small" name="pic" id="pict">
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="picmsg">
+                            </div>
+                    </div>
+                  
+                </div>
+                <div class="mws-button-row">
+                    <input type="submit" value="修改" class="btn btn-danger">
+                    <input type="reset" value="重置" class="btn ">
+                </div>
+            </form>
+        </div>      
+    </div>
+<script type="text/javascript">
+      ckurl = false;
+    function urlblur(){
+        var str = $("#url").val();
+        if(str == ''){
+            $("#urlmsg").html("<font color='red'>网站地址不能为空</font>");
+        }else if(!blurcheck(str)){
+            $("#urlmsg").html("<font color='red'>网站地址格式有误</font>");
+        }else{
+            $("#urlmsg").html(" ");
+            ckurl = true;
+        }
+    }
+    function urlfoc(){
+        $("#urlmsg").html("填写正确的网站地址");
+    }
+    function blurcheck(str){
+        var patrn = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/;
+        if(!patrn.test(str)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+  
+
+
+    function check(){
+         return ckurl;
+    }
+</script>
+</block>

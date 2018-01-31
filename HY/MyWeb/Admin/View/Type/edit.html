@@ -1,0 +1,40 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        
+                        <span><i class="icol-application-edit"></i> 类别修改</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__URL__/update" method="post">
+                            <div class="mws-form-inline">
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">类别名</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="name" value="{$result['name']}">
+                                    </div>
+                                </div>
+                               <div class="mws-form-row">
+                                    <label class="mws-form-label">是否在前台显示</label>
+                                    <div class="mws-form-item">
+                                        <select class="large" name="display">
+                                            <option value="0" >显示</option>
+                                            <option value="1" <?php echo ($result['display']==1)?'selected':'' ?> >隐藏</option>
+                                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" name="typeid" value="{$result['id']}">
+                            </div>
+                            <div class="mws-button-row">
+                                <input value="修改" class="btn btn-danger" type="submit">
+                                <input value="重置" class="btn " type="reset">
+                            </div>
+                        </form>
+                    </div>      
+                </div>
+</block>
+<block name="title">
+        后台类别修改操作
+</block>

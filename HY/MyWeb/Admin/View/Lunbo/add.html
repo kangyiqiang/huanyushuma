@@ -1,0 +1,60 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>添加轮播图　　<if condition="$full eq 0">注：最多支持7张轮播图</if></span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" action="__MODULE__/Lunbo/insert" method="post" enctype="multipart/form-data" onsubmit="return check()">
+            <if condition="$full eq 0">
+               <div class="mws-form-inline">
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">轮播图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="file" class="small" name="pic" id="pict">
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="picmsg">
+                            </div>
+                    </div>
+                    
+                    <!-- <div class="mws-form-row">
+                        <label class="mws-form-label">跳转路径</label>
+                        <div class="mws-form-item">
+                            <select class="medium">
+                                <option>Option 1</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="mws-button-row">
+                    <input type="submit" value="添加" class="btn btn-danger">
+                    <input type="reset" value="重置" class="btn ">
+                </div>
+            <else /><div class="mws-form-message info">
+                    当前轮播图数量已大于或等于7张，您可以修改轮播图信息或删除轮播图后再次添加新的轮播图
+                            </div>            
+            </if>
+                
+            </form>
+        </div>      
+    </div>
+<script type="text/javascript">
+    function check(){
+        var msg = $("#pict").val();
+        var str = msg.lastIndexOf(".");
+        str = msg .substring(str+1,msg.length);
+        if(str==''){
+            $("#picmsg").html("未上传文件").fadeIn("slow");
+            return false;
+        }else if(str == 'jpg' || str == 'png' || str == 'jpeg' || str == 'gif'){
+            return true;
+        }else{
+            $("#picmsg").html("图片格式错误").fadeIn("slow");
+            return false;
+        }
+    }
+</script>
+</block>

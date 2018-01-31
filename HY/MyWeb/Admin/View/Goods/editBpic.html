@@ -1,0 +1,35 @@
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>修改商品详情图</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" action="__MODULE__/Goods/uploadsBpic" method="post" enctype="multipart/form-data" >
+               <div class="mws-form-inline">
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">当前图片：</label>
+                        <div class="mws-form-item">
+                            <foreach name="info['pic']" item="rows">
+                             <img src="__PUBLIC__/Uploads/goods_bpic/{$rows}" style="width:100px;height:100px;border:5px solid #ccc;margin:5px;position:relative;"><a href="__MODULE__/Goods/delBpic?id={$info['id']}&bname={$rows}" style="position:relative;left:-30px;top:-50px;" class="icol32-cancel"></a>
+                             </foreach>
+                        </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <label class="mws-form-label">添加图片：</label>
+                        <div class="mws-form-item" style="width: 500px">
+                            <input type="hidden" name="id" value="{$info['id']}">
+                           <input name="bpic[]" type="file" value="" multiple='multiple' /><br>
+                        </div>
+                        <div class="mws-form-message error" style="width: 600px;display: none;" id="picmsg">
+                          </div>
+                    </div>
+                </div>
+                <div class="mws-button-row">
+                    <a href="__MODULE__/Goods/edit/id/{$info['id']}" class="btn">查看详情</a>
+                    <input type="submit" value="修改" class="btn btn-danger">
+                </div>
+            </form>
+        </div>      
+    </div>
+</block>

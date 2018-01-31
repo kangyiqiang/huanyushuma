@@ -1,0 +1,72 @@
+
+<extend name="Public:public"/>
+<block name="admin">
+    <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span>{$submit}用户详细信息</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <form class="mws-form" action="__MODULE__/User/info_{$action}" method="post" enctype="multipart/form-data">
+                            <div class="mws-form-inline">
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">姓名</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="name" value="{$row['name']}">
+                                        <input type="hidden" name="uid" value="{$id}">
+                                    </div>
+                                </div>
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">年龄</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="age" value="{$row['age']}">
+                                    </div>
+                                </div>
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">性别</label>
+                                    <div class="mws-form-item">
+                                        <input type="radio" name="sex" value="m" {$row['sex']=="m"?"checked":""}>男
+                                        <input type="radio" name="sex" value="w" {$row['sex']=='w'?'checked':''}>女
+                                    </div>
+                                </div>
+                                 <div class="mws-form-row">
+                                    <label class="mws-form-label">头像</label>
+                                    <div class="mws-form-item">
+                                       <input class="large" type="file" name="pic">
+                                    </div>
+                                </div>
+                                <div class="mws-form-row">
+                                   
+                                    <div class="mws-form-item">
+                                         <img src="{$row['pic']}" width="100px" height="100px">
+                                    </div>
+                                </div>
+                                 <div class="mws-form-row">
+                                    <label class="mws-form-label">地址</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="address" value="{$row['address']}">
+                                    </div>
+                                </div>
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">积分</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="score" value="{$row['score']}">
+                                    </div>
+                                </div>
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">爱好</label>
+                                    <div class="mws-form-item">
+                                        <input class="large" type="text" name="hobby" value="{$row['hobby']}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mws-button-row">
+                                <input value="{$submit}" class="btn btn-success" type="submit">
+                                <input value="重置" class="btn " type="reset">
+                            </div>
+                        </form>
+                    </div>      
+                </div>
+</block>
+<block name="title">
+        后台用户添加操作
+</block>
